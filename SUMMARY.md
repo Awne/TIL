@@ -13,7 +13,7 @@
 
 ##[TYPESCRIPT]()
 * [컴파일](list/typescript/compile.md)
-* [타입](list/typescript/type.md)
+* [타입](list/typescript/types.md)
 * [class와 interface](list/typescript/classandinterface.md)
 * [옵션인자](list/typescript/optionpara.md)
 * [interface](list/typescript/interface.md)

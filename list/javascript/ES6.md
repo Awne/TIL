@@ -1,6 +1,4 @@
-<details>
-<summary>비구조화 할당</summary>
-
+비구조화 할당
 ```javascript
 // 객체 깰땐 변수에 { }쓰고 배열 깰땐 [ ] 써준다.
 
@@ -37,10 +35,9 @@ let bunker = ["marine", "firebat", "ghost", "medic"];
 let [first, second, third, fourth] = bunker;
 console.log(first, second, third, fourth);
 ```
-</details>
 
-<details>
-<summary>전개 연산자</summary>
+ 
+ 전개 연산자 
 
 ```javascript
 let arr = [1,2,3,4,5,6,7,8,9];
@@ -55,8 +52,8 @@ let arr = [1,2,3,4,5,6,7,8,9];
 ```
 </details>
 
-<details>
-<summary>제너레이터</summary>
+ 
+ 제너레이터 
 
 ```javascript
 function* bjs () {
@@ -83,8 +80,8 @@ introduce.next();
 ```
 </details>
 
-<details>
-<summary>태그드 템플릿</summary>
+
+ 태그드 템플릿 
 
 ```javascript
 function introduce (stringP, name, age, location) { // stringP는 백틱 내 변수 외 스트링들을 배열로 모아놓음.
@@ -107,8 +104,8 @@ console.log(ldg);
 
 </details>
 
-<details>
-<summary>클래스와 상속 </summary>
+
+ 클래스와 상속  
 
 ```javascript
 // ES5에선 prototype을 이용해서 상속받았음.
@@ -220,8 +217,8 @@ tax2.calculateYourTax();
 
 </details>
 
-<details>
-<summary>프로미스</summary>
+ 
+ 프로미스 
 
 ```javascript
 // 프로미스는 비동기 처리를 위해 등장
@@ -256,8 +253,8 @@ Promise.all([form])
 ```
 </details>
 
-<details>
-<summary>반복문</summary>
+ 
+ 반복문 
 
 ```javascript
 //forEach
@@ -293,8 +290,8 @@ for (let n of Stargate) {
 ```
 </details>
 
-<details>
-<summary>this</summary>
+ 
+ this 
 
 ```javascript
 function test (arg) {
