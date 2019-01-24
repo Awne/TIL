@@ -1,0 +1,750 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ES6 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../typescript/compile.html" />
+    
+    
+    <link rel="prev" href="../html/multimedia.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">소개</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">HTML</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../html/aTag.html">
+            
+                <a href="../html/aTag.html">
+            
+                    
+                    a태그
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../html/image.html">
+            
+                <a href="../html/image.html">
+            
+                    
+                    이미지
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../html/multimedia.html">
+            
+                <a href="../html/multimedia.html">
+            
+                    
+                    멀티미디어
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JAVASCRIPT</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="es6.html">
+            
+                <a href="es6.html">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">TYPESCRIPT</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../typescript/compile.html">
+            
+                <a href="../typescript/compile.html">
+            
+                    
+                    컴파일
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../typescript/type.md">
+            
+                <span>
+            
+                    
+                    타입
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../typescript/classandinterface.html">
+            
+                <a href="../typescript/classandinterface.html">
+            
+                    
+                    class와 interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../typescript/optionpara.html">
+            
+                <a href="../typescript/optionpara.html">
+            
+                    
+                    옵션인자
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../typescript/interface.html">
+            
+                <a href="../typescript/interface.html">
+            
+                    
+                    interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">REACT</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../react/structure.html">
+            
+                <a href="../react/structure.html">
+            
+                    
+                    구조
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">VUE</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../vue/structure.html">
+            
+                <a href="../vue/structure.html">
+            
+                    
+                    구조
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >ES6</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <details>
+<summary>&#xBE44;&#xAD6C;&#xC870;&#xD654; &#xD560;&#xB2F9;</summary>
+
+```javascript
+// &#xAC1D;&#xCCB4; &#xAE70;&#xB550; &#xBCC0;&#xC218;&#xC5D0; { }&#xC4F0;&#xACE0; &#xBC30;&#xC5F4; &#xAE70;&#xB550; [ ] &#xC368;&#xC900;&#xB2E4;.
+
+
+function ldg () {
+    return {
+        name : &quot;Dong-gun Lee&quot;,
+        age : 27,
+        location : &quot;Busan&quot;
+    };
+}
+// &#xAC13;&#xB514;&#xC9C0;&#xC758; &#xC815;&#xBCF4;&#xB97C; &#xAC1D;&#xCCB4;&#xB85C; &#xBB36;&#xC5B4; &#xBC18;&#xD658;&#xD558;&#xB294; &#xD568;&#xC218;
+
+let { name, age, location } = ldg();
+// &#xC804;&#xC5ED;&#xBCC0;&#xC218; name, age, location &#xC5D0; &#xD568;&#xC218; &#xBC18;&#xD658;&#xAC12;&#xC744; &#xCC28;&#xB840;&#xB85C; &#xB2F4;&#xB294;&#xBAA8;&#xC2B5;
+
+console.log (name, age, location);
+//&#xCD9C;&#xB825;
+
+
+console.log(`LDG says : &quot;My name is ${name}, ${age}years old and I live in ${location}`);
+// &#xBC31;&#xD2F1;&#xC5D0; &#xB9AC;&#xD130;&#xB7F4; &#xD15C;&#xD50C;&#xB9BF;&#xAE4C;&#xC9C0; &#xC0AC;&#xC6A9;
+
+//&#xB9CC;&#xC57D; location &#xB300;&#xC2E0; city&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xC2F6;&#xB2E4;&#xBA74;
+let { name_, age_, location : city} = ldg();
+console.log(name, age, city);
+// &#xC67C;&#xCABD; &#xBCC0;&#xC218;&#xB294; &#xADF8;&#xB0E5; &#xC784;&#xC758;&#xB85C; &#xC120;&#xC5B8;&#xD558;&#xB294;&#xAC8C; &#xC544;&#xB2C8;&#xB77C; &#xAC1D;&#xCCB4;&#xB97C; &#xBD80;&#xC154;&#xC11C; &#xC548;&#xC758; &#xB0B4;&#xC6A9;&#xB4E4;&#xC744; &#xAD6C;&#xD574;&#xC8FC;&#xB294;&#xAC83;&#xC784;.
+// &#xADF8;&#xB798;&#xC11C; &#xAC1D;&#xCCB4; &#xC548; &#xB0B4;&#xC6A9;&#xB4E4;&#xACFC; &#xC774;&#xB984;&#xC774; &#xAC19;&#xC544;&#xC57C;&#xD568;. &#xADF8;&#xB798;&#xC11C; city&#xB85C; &#xBC14;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; undefined &#xC18C;&#xD658;.
+// location : city&#xB97C; &#xD1B5;&#xD574; location &#xC744; city&#xB85C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;&#xACE0; &#xC54C;&#xB824;&#xC57C;&#xD568;.
+
+
+//&#xBC99;&#xCEE4; &#xAD6C;&#xC131;&#xC6D0; &#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;
+let bunker = [&quot;marine&quot;, &quot;firebat&quot;, &quot;ghost&quot;, &quot;medic&quot;];
+let [first, second, third, fourth] = bunker;
+console.log(first, second, third, fourth);
+```
+</details>
+
+<details>
+<summary>&#xC804;&#xAC1C; &#xC5F0;&#xC0B0;&#xC790;</summary>
+
+```javascript
+let arr = [1,2,3,4,5,6,7,8,9];
+
+(function vvvv (...args) {
+    console.log(arr);
+    console.log(...arr);
+})();
+
+// &#xD568;&#xC218; &#xC778;&#xC790;&#xC5D0; ... &#xC4F0;&#xBA74; &#xB098;&#xBA38;&#xC9C0; &#xC5F0;&#xC0B0;&#xC790;&#xB85C; &#xADF8;&#xB0E5; &#xC778;&#xC218;&#xB97C; &#xACC4;&#xC18D; &#xBC1B;&#xC744;&#xC218;&#xC788;&#xB2E4;&#xB294;&#xAC70;&#xC784;.
+// &#xB2E4;&#xB978;&#xACF3;&#xC5D0; ...&#xBC30;&#xC5F4;&#xBA85; &#xC774;&#xB7F0;&#xC2DD;&#xC73C;&#xB85C; &#xC4F0;&#xBA74; &#xBC30;&#xC5F4;&#xC744; &#xD574;&#xCCB4;&#xD558;&#xC5EC; [&#xC640; ]&#xB97C; &#xC5C6;&#xC564; &#xAC12;&#xB9CC; &#xB098;&#xC5F4;.
+```
+</details>
+
+<details>
+<summary>&#xC81C;&#xB108;&#xB808;&#xC774;&#xD130;</summary>
+
+```javascript
+function* bjs () {
+    console.log (&quot;I&apos;m Junseong Park.&quot;);
+    yield;
+    console.log (&quot;I live in Busan.&quot;);
+    yield;
+    console.log (&quot;I&apos;m 27 years old.&quot;);
+    yield;
+    console.log(&quot;I will shout out.&quot;);
+    console.log(&quot;AHHHHHHHHHHHHHHHHHHHHHH~~~&quot;);
+    console.log(&quot;AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH~&quot;);
+}
+
+let introduce = bjs();
+introduce.next();
+introduce.next();
+introduce.next();
+introduce.next();
+
+// function* &#xB294; &#xD568;&#xC218;&#xC120;&#xC5B8;&#xCC98;&#xB7FC; &#xBCF4;&#xC774;&#xC9C0;&#xB9CC; &#xC81C;&#xB108;&#xB808;&#xC774;&#xD130; &#xC120;&#xC5B8;&#xC784;.
+// &#xC598; &#xD2B9;&#xC9D5;&#xC740; &#xBA85;&#xB839;&#xC124;&#xC815; &#xD6C4; yield;&#xB85C; &#xB05D;&#xC810; &#xB9CC;&#xB4E4;&#xC5B4;&#xC90C;. 
+// &#xC774;&#xB984;.next();&#xB97C; &#xD558;&#xBA74; &#xB05D;&#xC810;&#xC744; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xB2E4;&#xC74C; &#xC791;&#xC5C5; &#xC2DC;&#xC791;&#xD568;.
+```
+</details>
+
+<details>
+<summary>&#xD0DC;&#xADF8;&#xB4DC; &#xD15C;&#xD50C;&#xB9BF;</summary>
+
+```javascript
+function introduce (stringP, name, age, location) { // stringP&#xB294; &#xBC31;&#xD2F1; &#xB0B4; &#xBCC0;&#xC218; &#xC678; &#xC2A4;&#xD2B8;&#xB9C1;&#xB4E4;&#xC744; &#xBC30;&#xC5F4;&#xB85C; &#xBAA8;&#xC544;&#xB193;&#xC74C;.
+    console.log(stringP);
+    return `My name is ${name}, I am ${age} years old and I live in ${location}`    
+}
+
+let bjs = introduce(&quot; &quot;,&quot;Junseong&quot;, 27, &quot;Busan&quot;);
+console.log(bjs);
+
+let name_ = &quot;ldg&quot;;
+let age_ = 28;
+let location_ = &quot;Seo-Dong&quot;;
+
+let ldg = introduce` Hmm${name_}${age_}${location_}`
+console.log(ldg);
+
+// func (a,b,c) &#xB300;&#xC2E0; func`${a1}${a2}${a3}` &#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xB4EF;.
+```
+
+</details>
+
+<details>
+<summary>&#xD074;&#xB798;&#xC2A4;&#xC640; &#xC0C1;&#xC18D; </summary>
+
+```javascript
+// ES5&#xC5D0;&#xC120; prototype&#xC744; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xC0C1;&#xC18D;&#xBC1B;&#xC558;&#xC74C;.
+function Lair() {}
+function Hive() {}
+
+Lair.prototype = {
+    location  : function () {
+        console.log(Math.random()*10);
+    }   
+    //&#xD568;&#xC218;&#xC758; prototype &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xC5D0; &#xBA54;&#xC18C;&#xB4DC; &#xC0DD;&#xC131;
+}
+
+Hive.prototype = new Lair();
+var multi0 = new Lair();
+var multi1 = new Hive();
+var multi2 = new Hive();
+
+
+//ES6&#xC5D0;&#xC11C;&#xB294; &#xD074;&#xB798;&#xC2A4; &#xC0AC;&#xC6A9;&#xD568;
+class Lair_ {
+    location() {
+        console.log(Math.random()*10);
+    }
+    //&#xBA54;&#xC18C;&#xB4DC;&#xB294; &#xD074;&#xB798;&#xC2A4; &#xC548;&#xC5D0;&#xC11C; &#xC815;&#xC758;&#xD568;.
+}
+class Hive_ extends Lair_ {} // &#xD3B8;&#xD574;&#xC9D0; :)
+let multi3 = new Hive_();
+let multi4 = new Hive_();
+let multi5 = new Lair_();
+
+// &#xD074;&#xB798;&#xC2A4;&#xC5D4; constructor &#xBA54;&#xC18C;&#xB4DC;&#xAC00; &#xC788;&#xC74C;. - &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xAC00; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C8;&#xB54C;&#xB9C8;&#xB2E4; &#xBC1C;&#xB3D9; (&#xBA40;&#xD2F0;&#xD560;&#xB54C;&#xB9C8;&#xB2E4;)
+//&#xC778;&#xC790;&#xB97C; &#xBC1B;&#xC544;&#xC11C; &#xC778;&#xC790;&#xB97C; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xC5ED;&#xD560;&#xC744; &#xD568;.
+class Lair_2 {
+    constructor(timing) {
+        this.timing = timing;
+    }
+}
+
+
+//&#xD504;&#xB85C;&#xD37C;&#xD2F0;, &#xBA54;&#xC18C;&#xB4DC; &#xAE30;&#xBCF8;&#xC801;&#xC778;&#xAC70;
+class CommandCenter {   // &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xAD00;&#xD55C; &#xB0B4;&#xC6A9;&#xC744; &#xD638;&#xCD9C;&#xD558;&#xB824;&#xBA74; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xC788;&#xC5B4;&#xC57C;&#xD568;.
+                        //&#xD074;&#xB798;&#xC2A4; &#xC548;&#xC5D0;&#xB294; &#xC0DD;&#xC131;&#xC790;&#xC640; &#xBA54;&#xC18C;&#xB4DC;&#xB9CC; &#xB4E4;&#xC5B4;&#xC62C;&#xC218;&#xC788;&#xC74C;.
+    getMana() {        
+        return 0;
+    }
+}
+
+CommandCenter.HP = 1500;    // &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xD504;&#xB85C;&#xD37C;&#xD2F0; &#xC0BD;&#xC785;
+console.log(CommandCenter.HP);
+
+let ter_mul1 = new CommandCenter();  // &#xBA54;&#xC18C;&#xB4DC;&#xB294; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC5D0;&#xC11C;&#xB9CC; &#xD638;&#xCD9C;&#xAC00;&#xB2A5;
+console.log(ter_mul1.getMana());
+
+//getter setter
+
+let Protoss = {
+    one : &quot;Probe&quot;,
+    two : &quot;Zelot&quot;,
+    three : &quot;Dragoon&quot;,
+    four : &quot;Archon&quot;,
+    get six() {             //six&#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xC815;&#xC758;&#xD568;, &#xBC14;&#xB85C; &#xD638;&#xCD9C;&#xD558;&#xBA74; this.one&#xC744; &#xBC18;&#xD658;
+        return this.one
+    },
+    set six(unitName) {     //six &#xBA54;&#xC18C;&#xB4DC;&#xC5D0; &#xAC12;&#xC744; &#xC8FC;&#xACE0; &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xADF8; &#xAC12;&#xC774; this.one&#xC73C;&#xB85C; &#xB4E4;&#xC5B4;&#xAC04; &#xB4A4; &#xD638;&#xCD9C;&#xB428;.
+        this.one = unitName
+    } ,
+    doubleShoutThisOne () {
+        console.log (this.one, this.one)
+    }
+}
+
+console.log(Protoss.six);   //get &#xBC1C;&#xB3D9;
+console.log(Protoss.one)
+Protoss.six = &quot;Arbiter&quot;;    // set &#xBC1C;&#xB3D9;
+console.log(Protoss.six);
+console.log(Protoss.one);
+Protoss.doubleShoutThisOne();
+
+//super
+class Tax {
+    constructor (income) {
+        this.income = income
+        console.log(`Your income per a year is ${this.income}`)
+    }
+    calculateTax() {
+        console.log(&quot;Your basic tax is &quot; + this.income*0.1)
+    }
+}
+
+class YourTax extends Tax {
+    constructor (income, years) {
+        super(income);  // Tax&#xC758; &#xC0DD;&#xC131;&#xC790;&#xC5D0;&#xC11C; income&#xCC98;&#xB9AC;&#xACFC;&#xC815;&#xC744; &#xBCF5;&#xC0AC;
+        this.years = years;
+        console.log(&quot;You&apos;ve been here &quot; + this.years + &quot; years&quot;);
+    }
+    calculateYourTax() {
+        super.calculateTax();   // Tax&#xC758; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xADF8;&#xB300;&#xB85C; &#xBCF5;&#xC0AC;
+        console.log(&quot;Your additional tax is &quot; + this.income*0.08)    
+    }
+}
+
+let tax1 = new Tax(50000000);
+tax1.calculateTax();
+
+let tax2 = new YourTax(50000000, 27);
+tax2.calculateYourTax();
+```
+
+</details>
+
+<details>
+<summary>&#xD504;&#xB85C;&#xBBF8;&#xC2A4;</summary>
+
+```javascript
+// &#xD504;&#xB85C;&#xBBF8;&#xC2A4;&#xB294; &#xBE44;&#xB3D9;&#xAE30; &#xCC98;&#xB9AC;&#xB97C; &#xC704;&#xD574; &#xB4F1;&#xC7A5;
+// &#xCF5C;&#xBC31;&#xD568;&#xC218;&#xB294; &#xB300;&#xAE30;&#xC5F4;&#xC5D0; &#xB4E4;&#xC5B4;&#xAC14;&#xB2E4;&#xAC00; &#xBAA8;&#xB4E0; &#xBA85;&#xB839;&#xC774; &#xCC98;&#xB9AC;&#xB41C; &#xD6C4; &#xC2E4;&#xD589;&#xB428;.
+
+function form (tier) {
+    return new Promise (
+        function (resolve, reject) {
+            if (tier === &quot;challenger&quot;) {
+                resolve (console.log(&quot;You can join this league.&quot;))  //&#xD568;&#xC218;&#xCC98;&#xB9AC;&#xC5D0; &#xC131;&#xACF5;&#xD588;&#xB2E4;&#xBA74; resolve &#xD568;&#xC218;&#xC2E4;&#xD589;
+            } else {
+                reject (console.log(&quot;Sorry, you can&apos;t join with us.&quot;)) // &#xC2E4;&#xD328;&#xD588;&#xB2E4;&#xBA74; reject &#xD568;&#xC218;&#xC2E4;&#xD589;
+            }
+        }
+    )
+}
+
+let myTier = &quot;gold&quot;
+form(myTier)
+.then(()=&gt;console.log(&quot;Nice!&quot;)) // resolve &#xC2E4;&#xD589;&#xC2DC; then &#xC2E4;&#xD589;
+.catch(()=&gt;console.log(&quot;Fuck&quot;)) // reject &#xC2E4;&#xD589;&#xC2DC; catch &#xC2E4;&#xD589;
+
+console.log(&quot;Hmm..&quot;)
+
+let yourTier = &quot;challenger&quot;
+form(yourTier)
+Promise.all([form])
+.then(console.log(&quot;What is it?&quot;))
+
+//&#xCD9C;&#xB825;&#xACB0;&#xACFC; &#xC0B4;&#xD3B4;&#xBCF4;&#xBA74; gold reject - Hmm - challenger resolve - challenger then - gold catch
+// &#xC6B0;&#xC120; 1&#xD568;&#xC218; &#xACB0;&#xACFC;&#xCD9C;&#xB825; - &#xC77C;&#xBC18;&#xD14D;&#xC2A4;&#xD2B8;&#xCD9C;&#xB825; - 2&#xD568;&#xC218; &#xACB0;&#xACFC;&#xCD9C;&#xB825; - 2then&#xC740; all&#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xD1B5;&#xD574; &#xBCD1;&#xB82C;&#xCC98;&#xB9AC;&#xB418;&#xC5B4;&#xC11C; &#xBE60;&#xB974;&#xAC8C; &#xCD9C;&#xB825; - &#xCF5C;&#xBC31;&#xC740;&#xB9C8;&#xC9C0;&#xB9C9;&#xC5D0;&#xCD9C;&#xB825; 
+```
+</details>
+
+<details>
+<summary>&#xBC18;&#xBCF5;&#xBB38;</summary>
+
+```javascript
+//forEach
+
+let Factory = [&quot;Vulture&quot;, &quot;Seige Tank&quot;, &quot;Goliath&quot;];
+Factory.unitsAre = &quot;Mechanical Units&quot;;
+Factory.forEach((n) =&gt; console.log(n));
+// &#xC720;&#xB2DB;&#xB9CC; &#xB098;&#xC634;
+
+//for - in
+let Gateway = [&quot;Zelot&quot;, &quot;Dragoon&quot;, &quot;High Templer&quot;, &quot;Dark Templer&quot;];
+Gateway.unitsAre = &quot;Basic units of Protoss&quot;;
+for (let n in Gateway) {
+    console.log(n);
+    console.log(Gateway[n]);
+}
+// n&#xC740; &#xC778;&#xB371;&#xC2A4;&#xB97C; &#xCD9C;&#xB825;&#xD568; (unitsAre &#xD504;&#xB85C;&#xD37C;&#xD2F0; &#xC5ED;&#xC2DC; &#xCD9C;&#xB825;&#xB428;.)
+
+let Stargate = [&quot;Scout&quot;, &quot;Corsair&quot;, &quot;Carrier&quot;, &quot;Arbiter&quot;];
+Stargate.unitsAre = &quot;Air units of Protoss&quot;;
+for (let n of Stargate) {
+    console.log(n);
+}
+//&#xC720;&#xB2DB;&#xB4E4; &#xCD9C;&#xB825;
+
+//&#xC774;&#xB807;&#xAC8C; &#xBCF4;&#xBA74; forEach&#xB791; for of&#xAC00; &#xAC19;&#xC544;&#xBCF4;&#xC784; &#xADFC;&#xB370; &#xCC28;&#xC774;&#xAC00; &#xD07C;.
+// &#xC804;&#xC790;&#xB294; &#xBC30;&#xC5F4;&#xC5D0;&#xB9CC; &#xC0AC;&#xC6A9;&#xAC00;&#xB2A5;, &#xC778;&#xB371;&#xC2A4;&#xC5D0; &#xC811;&#xADFC;&#xAC00;&#xB2A5;
+// &#xD6C4;&#xC790;&#xB294; &#xC21C;&#xD658;&#xAC00;&#xB2A5;&#xD55C; &#xBAA8;&#xB4E0; &#xB370;&#xC774;&#xD130;&#xC5D0; &#xC0AC;&#xC6A9;&#xAC00;&#xB2A5;(&#xC2EC;&#xC9C0;&#xC5B4; &#xBB38;&#xC790;&#xC5F4;&#xB3C4;), &#xC778;&#xB371;&#xC2A4;&#xC5D0; &#xC811;&#xADFC;&#xBD88;&#xAC00;.
+// &#xADF8;&#xB9AC;&#xACE0; for of&#xAC00; &#xC720;&#xC77C;&#xD558;&#xAC8C; ES6&#xC5D0; &#xC0C8;&#xB85C; &#xB3C4;&#xC785;&#xB41C;&#xAC70;&#xB77C;&#xC11C; &#xCD5C;&#xC2E0;&#xC784;. 
+// &#xD2B9;&#xC9D5;&#xC73C;&#xB85C;&#xB294; async, await &#xC0AC;&#xC6A9;&#xAC00;&#xB2A5;&#xD558;&#xB2E4;&#xACE0;&#xD568;.
+// &#xADF8;&#xB7FC; &#xADF8;&#xB0E5; forEach&#xB294; &#xC601;&#xC6D0;&#xD788; &#xC548;&#xC4F0;&#xACE0; &#xB370;&#xC774;&#xD130;&#xC21C;&#xD658;&#xD560;&#xB54C; for of &#xC4F0;&#xB294;&#xAC78;&#xB85C; &#xD558;&#xC790;&#xAD6C;.
+
+```
+</details>
+
+<details>
+<summary>this</summary>
+
+```javascript
+function test (arg) {
+    this.arg = arg;
+    function testin() {
+        console.log(this.arg)
+        console.log(arg);
+    }
+}
+
+let one = test(&quot;Zz&quot;);
+console.log(one);
+
+// &#xD568;&#xC218; &#xB0B4;&#xBD80;&#xC5D0; &#xC788;&#xB294; &#xD568;&#xC218;&#xC758; this&#xB294; &#xC804;&#xC5ED;&#xAC1D;&#xCCB4;&#xC778; window&#xB97C; &#xAC00;&#xB9AC;&#xD0B4;
+// &#xBA54;&#xC18C;&#xB4DC;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; this&#xB294; &#xD574;&#xB2F9; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xAC00;&#xC9C4; object&#xB97C; &#xAC00;&#xB9AC;&#xD0B4;.
+
+let bjs = {
+    name : &quot;Junseong&quot;,
+    introduce : function(age, location) {
+        return `I&apos;m ${this.name}. I&apos;m ${age} years old and I live in ${location}`
+    }
+}
+
+let ldg = {
+    name : &quot;Dong-gun&quot;
+}
+
+let khy = {
+    name : &quot;Hye-yul&quot;
+}
+let js_int = bjs.introduce(27, &quot;Busan&quot;);
+console.log(js_int);
+
+let dg_int = bjs.introduce.call(ldg,25,&quot;Seo-dong&quot;);
+console.log(dg_int);
+
+let hy_int = bjs.introduce.apply(khy, [24,&quot;Yang-san&quot;]);
+console.log(hy_int);
+
+// bjs&#xC5D0; &#xC788;&#xB294; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xB2E4;&#xB978; &#xC560;&#xB4E4;&#xC774; &#xC4F8;&#xC218;&#xC788;&#xC74C;. call&#xC774;&#xB791; apply&#xC778;&#xB370;,
+// &#xB458;&#xB2E4; &#xCCAB; &#xC778;&#xC790;&#xB294; &#xC801;&#xC6A9;&#xD560; &#xAC1D;&#xCCB4;&#xC774;&#xB984;, &#xC774;&#xD6C4;&#xB294; call&#xC740; &#xB098;&#xC5F4;, apply&#xB294; &#xBC30;&#xC5F4;&#xB85C; &#xC815;&#xB9AC;&#xD55C;&#xB2E4;&#xB294; &#xCC28;&#xC774;.
+
+```
+</details>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../html/multimedia.html" class="navigation navigation-prev " aria-label="Previous page: 멀티미디어">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../typescript/compile.html" class="navigation navigation-next " aria-label="Next page: 컴파일">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ES6","level":"3.1","depth":1,"next":{"title":"컴파일","level":"4.1","depth":1,"path":"list/typescript/compile.md","ref":"list/typescript/compile.md","articles":[]},"previous":{"title":"멀티미디어","level":"2.3","depth":1,"path":"list/html/multimedia.md","ref":"list/html/multimedia.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/javascript/es6.md","mtime":"2019-01-24T12:57:28.059Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-24T13:00:05.557Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
