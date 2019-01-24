@@ -50,7 +50,7 @@ let arr = [1,2,3,4,5,6,7,8,9];
 // 함수 인자에 ... 쓰면 나머지 연산자로 그냥 인수를 계속 받을수있다는거임.
 // 다른곳에 ...배열명 이런식으로 쓰면 배열을 해체하여 [와 ]를 없앤 값만 나열.
 ```
-</details>
+ 
 
  
  제너레이터 
@@ -78,7 +78,7 @@ introduce.next();
 // 얘 특징은 명령설정 후 yield;로 끝점 만들어줌. 
 // 이름.next();를 하면 끝점을 기준으로 다음 작업 시작함.
 ```
-</details>
+ 
 
 
  태그드 템플릿 
@@ -102,7 +102,7 @@ console.log(ldg);
 // func (a,b,c) 대신 func`${a1}${a2}${a3}` 로 사용하는듯.
 ```
 
-</details>
+ 
 
 
  클래스와 상속  
@@ -215,7 +215,7 @@ let tax2 = new YourTax(50000000, 27);
 tax2.calculateYourTax();
 ```
 
-</details>
+ 
 
  
  프로미스 
@@ -251,7 +251,7 @@ Promise.all([form])
 //출력결과 살펴보면 gold reject - Hmm - challenger resolve - challenger then - gold catch
 // 우선 1함수 결과출력 - 일반텍스트출력 - 2함수 결과출력 - 2then은 all메소드를 통해 병렬처리되어서 빠르게 출력 - 콜백은마지막에출력 
 ```
-</details>
+ 
 
  
  반복문 
@@ -288,7 +288,7 @@ for (let n of Stargate) {
 // 그럼 그냥 forEach는 영원히 안쓰고 데이터순환할때 for of 쓰는걸로 하자구.
 
 ```
-</details>
+ 
 
  
  this 
@@ -335,4 +335,4 @@ console.log(hy_int);
 // 둘다 첫 인자는 적용할 객체이름, 이후는 call은 나열, apply는 배열로 정리한다는 차이.
 
 ```
-</details>
+ 
