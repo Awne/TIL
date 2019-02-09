@@ -3,8 +3,8 @@
 
 ##[HTML]()
 * [table, form](list/html/1.md)
-* [이미지](list/html/image.md)
-* [멀티미디어](list/html/multimedia.md)
+* [하이퍼링크](list/html/2.md)
+* [멀티미디어](list/html/3.md)
 
 
 ##[JAVASCRIPT]()
