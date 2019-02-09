@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>class와 interface · GitBook</title>
+        <title>Box&List&Table · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="optionpara.html" />
+    <link rel="next" href="4.html" />
     
     
-    <link rel="prev" href="types.html" />
+    <link rel="prev" href="2.html" />
     
 
     </head>
@@ -157,9 +157,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../css/1.html">
+        <li class="chapter " data-level="3.1" data-path="1.html">
             
-                <a href="../css/1.html">
+                <a href="1.html">
             
                     
                     Import&Font
@@ -170,9 +170,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../css/2.html">
+        <li class="chapter " data-level="3.2" data-path="2.html">
             
-                <a href="../css/2.html">
+                <a href="2.html">
             
                     
                     Selector
@@ -183,9 +183,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="../css/3.html">
+        <li class="chapter active" data-level="3.3" data-path="3.html">
             
-                <a href="../css/3.html">
+                <a href="3.html">
             
                     
                     Box&List&Table
@@ -196,9 +196,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="../css/4.html">
+        <li class="chapter " data-level="3.4" data-path="4.html">
             
-                <a href="../css/4.html">
+                <a href="4.html">
             
                     
                     Layout
@@ -209,9 +209,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="../css/5.html">
+        <li class="chapter " data-level="3.5" data-path="5.html">
             
-                <a href="../css/5.html">
+                <a href="5.html">
             
                     
                     Responsive
@@ -249,9 +249,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="compile.html">
+        <li class="chapter " data-level="5.1" data-path="../typescript/compile.html">
             
-                <a href="compile.html">
+                <a href="../typescript/compile.html">
             
                     
                     컴파일
@@ -262,9 +262,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="types.html">
+        <li class="chapter " data-level="5.2" data-path="../typescript/types.html">
             
-                <a href="types.html">
+                <a href="../typescript/types.html">
             
                     
                     타입
@@ -275,9 +275,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="5.3" data-path="classandinterface.html">
+        <li class="chapter " data-level="5.3" data-path="../typescript/classandinterface.html">
             
-                <a href="classandinterface.html">
+                <a href="../typescript/classandinterface.html">
             
                     
                     class와 interface
@@ -288,9 +288,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.4" data-path="optionpara.html">
+        <li class="chapter " data-level="5.4" data-path="../typescript/optionpara.html">
             
-                <a href="optionpara.html">
+                <a href="../typescript/optionpara.html">
             
                     
                     옵션인자
@@ -301,9 +301,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.5" data-path="interface.html">
+        <li class="chapter " data-level="5.5" data-path="../typescript/interface.html">
             
-                <a href="interface.html">
+                <a href="../typescript/interface.html">
             
                     
                     interface
@@ -384,7 +384,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >class와 interface</a>
+        <a href="../.." >Box&List&Table</a>
     </h1>
 </div>
 
@@ -399,63 +399,49 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#xD568;&#xC218; &#xC0DD;&#xC131;</p>
-<pre><code class="lang-typescript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greeter</span>(<span class="hljs-params">person : <span class="hljs-built_in">string</span></span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Hello, &quot;</span> + person;
-}
-
-<span class="hljs-keyword">let</span> user = <span class="hljs-string">&quot;Jane User&quot;</span>;
-</code></pre>
-<p>interface &#xCD94;&#xAC00;</p>
-<pre><code class="lang-typescript"><span class="hljs-built_in">document</span>.body.innerHTML = greeter(user);
-<span class="hljs-keyword">interface</span> Person {
-    firstName : <span class="hljs-built_in">string</span>;
-    lastName : <span class="hljs-built_in">string</span>;
-}
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greeter</span>(<span class="hljs-params">person : Person</span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Hello, &quot;</span> + person.firstName + <span class="hljs-string">&quot; &quot;</span>+ person.lastName;
-}
-
-<span class="hljs-keyword">let</span> user = { firstName : <span class="hljs-string">&quot;Jane&quot;</span>, lastName : <span class="hljs-string">&quot;User&quot;</span> };
-
-<span class="hljs-built_in">document</span>.body.innerHTML = greeter(user);
-</code></pre>
-<blockquote>
-<p>&#xD0C0;&#xC785; &#xC591;&#xC2DD;&#xC744; interface &#xB85C; &#xC120;&#xC5B8;&#xD558;&#xC5EC; &#xB9CC;&#xB4E4;&#xC5B4;&#xB193;&#xC744; &#xC218; &#xC788;&#xC74C; (&#xD15C;&#xD50C;&#xB9BF; &#xC5ED;&#xD560;) </p>
-</blockquote>
-<p>class &#xCD94;&#xAC00;</p>
-<pre><code class="lang-typescript"><span class="hljs-keyword">class</span> Student {
-  fullName: <span class="hljs-built_in">string</span>;
-  <span class="hljs-keyword">constructor</span>(
-    public firstName: string,
-    public middleInitial: string,
-    public lastName: string
-  ) {
-    <span class="hljs-keyword">this</span>.fullName = firstName + <span class="hljs-string">&quot; &quot;</span> + middleInitial + <span class="hljs-string">&quot; &quot;</span> + lastName;
-  }
-}
-
-<span class="hljs-keyword">interface</span> Person {
-  firstName: <span class="hljs-built_in">string</span>;
-  lastName: <span class="hljs-built_in">string</span>;
-}
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greeter</span>(<span class="hljs-params">person: Person</span>) </span>{
-  <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Hello, &quot;</span> + person.firstName + <span class="hljs-string">&quot; &quot;</span> + person.lastName;
-}
-
-<span class="hljs-keyword">let</span> user = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">&quot;Jane&quot;</span>, <span class="hljs-string">&quot;M. &quot;</span>, <span class="hljs-string">&quot;User&quot;</span>);
-
-<span class="hljs-built_in">document</span>.body.innerHTML = greeter(user);
-</code></pre>
-<blockquote>
-<p>class&#xB85C; &#xAC1D;&#xCCB4;&#xC0DD;&#xC131;, &#xADF8;&#xC544;&#xB798; constructor&#xD568;&#xC218;&#xC758; &#xC778;&#xC790;&#xB294; &#xAC1D;&#xCCB4;&#xC758; &#xC778;&#xC790;&#xB97C; &#xBC1B;&#xC74C;.
-&#xC0DD;&#xC131;&#xC790;&#xD568;&#xC218;&#xC758; &#xB0B4;&#xC6A9;&#xC740; &#xC778;&#xC790; &#xC885;&#xD569;&#xD574;&#xC11C; &#xBC18;&#xD658; &#xB0B4;&#xC6A9; class &#xC640; interface&#xB294; &#xD658;&#xC0C1;&#xC758; &#xB4C0;&#xC624;&#xC784;</p>
-</blockquote>
-<p>HTML&#xC5D0;&#xC11C; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xBD88;&#xB7EC;&#xC634;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span> = &quot;<span class="hljs-attr">greeter.js</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-</code></pre>
+                                <h2 id="&#xBC15;&#xC2A4;">&#xBC15;&#xC2A4;</h2>
+<ol>
+<li><code>padding</code> &#xCEE8;&#xD150;&#xCE20;&#xC640; &#xBC15;&#xC2A4; &#xC0AC;&#xC774;&#xC758; &#xAC70;&#xB9AC;</li>
+<li><code>border</code> &#xBC15;&#xC2A4;&#xC758; &#xD14C;&#xB450;&#xB9AC;, &#xAD75;&#xAE30;&#xB97C; &#xC870;&#xC808;&#xD558;&#xBA74; &#xCEE8;&#xD150;&#xCE20; &#xBC29;&#xD5A5;&#xC73C;&#xB85C; &#xC99D;&#xAC00;&#xD568;.</li>
+<li><code>margin</code> &#xBC15;&#xC2A4;&#xC640; &#xC678;&#xBD80; &#xC694;&#xC18C;&#xC640;&#xC758; &#xAC70;&#xB9AC;</li>
+</ol>
+<p><a href="http://bit.ly/2UOcoE8" target="_blank">&#xC2E4;&#xC2B5;</a></p>
+<h3 id="&#xBC15;&#xC2A4;&#xB97C;-&#xC228;&#xAE30;&#xACE0;-&#xC2F6;&#xC744;&#xB54C;">&#xBC15;&#xC2A4;&#xB97C; &#xC228;&#xAE30;&#xACE0; &#xC2F6;&#xC744;&#xB54C;</h3>
+<ol>
+<li><code>display : none</code> &#xD754;&#xC801;&#xB3C4; &#xB0A8;&#xAE30;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
+<li><code>visibility : hidden</code> &#xADF8; &#xC790;&#xB9AC;&#xC5D0; &#xACF5;&#xBC31;&#xC774; &#xC0DD;&#xAE34;&#xB2E4;.</li>
+</ol>
+<h2 id="&#xD14C;&#xC774;&#xBE14;">&#xD14C;&#xC774;&#xBE14;</h2>
+<h3 id="empty-cells">empty-cells</h3>
+<p>&#xBE48; &#xC140;&#xC744; &#xD45C;&#xC2DC;&#xD560;&#xC9C0; &#xC5EC;&#xBD80;&#xB97C; &#xACB0;&#xC815;&#xD568;.</p>
+<ol>
+<li><code>show</code> &#xBCF4;&#xC5EC;&#xC900;&#xB2E4;.</li>
+<li><code>hide</code> &#xC228;&#xAE34;&#xB2E4;.</li>
+<li><code>inherit</code> &#xC0C1;&#xC18D;&#xBC1B;&#xB294;&#xB2E4;.</li>
+</ol>
+<h3 id="border-spacing">border-spacing</h3>
+<p>&#xC140; &#xC0AC;&#xC774;&#xC758; &#xAC70;&#xB9AC;&#xB97C; &#xC124;&#xC815;&#xD568;.</p>
+<p><a href="http://bit.ly/2URgKtZ" target="_blank">&#xC2E4;&#xC2B5;</a></p>
+<h3 id="border-collapse">border-collapse</h3>
+<p>&#xC778;&#xC811;&#xD55C; &#xD14C;&#xB450;&#xB9AC;&#xB97C; &#xC124;&#xC815;&#xD568;.</p>
+<ol>
+<li><code>collapse</code> &#xC778;&#xC811;&#xD55C; &#xBCC0;&#xC758; &#xAD75;&#xAE30;&#xB97C; &#xAE30;&#xC874; &#xC140;&#xC758; &#xBCC0;&#xC758; &#xAD75;&#xAE30;&#xB85C; &#xC904;&#xC778;&#xB2E4;.</li>
+<li><code>separate</code> &#xC778;&#xC811;&#xD55C; &#xBCC0;&#xC758; &#xAD75;&#xAE30;&#xB97C; &#xB450; &#xC140;&#xC758; &#xBCC0;&#xC758; &#xAD75;&#xAE30;&#xC758; &#xD569;&#xC73C;&#xB85C; &#xB9CC;&#xB4E0;&#xB2E4;.</li>
+</ol>
+<p><a href="http://bit.ly/2tgjZ2G" target="_blank">&#xC2E4;&#xC2B5;</a></p>
+<h2 id="&#xBAA9;&#xB85D;">&#xBAA9;&#xB85D;</h2>
+<h3 id="list-style-type">list-style-type</h3>
+<p>&#xB9AC;&#xC2A4;&#xD2B8;&#xC758; &#xC778;&#xB371;&#xC2A4; &#xBAA8;&#xC591;&#xC744; &#xBC14;&#xAFC0; &#xC218; &#xC788;&#xC74C;.</p>
+<h3 id="list-style-image">list-style-image</h3>
+<p><code>url</code> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC778;&#xB371;&#xC2A4; &#xBAA8;&#xC591;&#xC744; &#xC774;&#xBBF8;&#xC9C0;&#xB85C; &#xBC14;&#xAFC0; &#xC218; &#xC788;&#xC74C;.</p>
+<h3 id="list-style-position">list-style-position</h3>
+<p>&#xB9AC;&#xC2A4;&#xD2B8;&#xC758; &#xB0B4;&#xC6A9;&#xC744; &#xB4E4;&#xC5EC;&#xC4F0;&#xAE30; &#xD560;&#xC9C0; &#xC124;&#xC815;&#xD560; &#xC218; &#xC788;&#xC74C;.</p>
+<ol>
+<li><code>outside</code> &#xC904;&#xBC14;&#xAFC8; &#xB0B4;&#xC6A9;&#xC774; &#xC778;&#xB371;&#xC2A4; &#xC544;&#xB798;&#xB97C; &#xC9C0;&#xB098;&#xC9C0; &#xC54A;&#xC74C;.</li>
+<li><code>inside</code> &#xC904;&#xBC14;&#xAFC8; &#xB0B4;&#xC6A9;&#xC774; &#xC778;&#xB371;&#xC2A4; &#xC544;&#xB798;&#xB97C; &#xC9C0;&#xB0A8;.</li>
+</ol>
+<h3 id="list-style">list-style</h3>
+<p>&#xC704; &#xC138; &#xC18D;&#xC131;&#xC740; <code>list-style</code>&#xB85C; &#xD569;&#xCCD0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;.</p>
 
                                 
                                 </section>
@@ -483,12 +469,12 @@
 
             
                 
-                <a href="types.html" class="navigation navigation-prev " aria-label="Previous page: 타입">
+                <a href="2.html" class="navigation navigation-prev " aria-label="Previous page: Selector">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="optionpara.html" class="navigation navigation-next " aria-label="Next page: 옵션인자">
+                <a href="4.html" class="navigation navigation-next " aria-label="Next page: Layout">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -499,7 +485,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"class와 interface","level":"5.3","depth":1,"next":{"title":"옵션인자","level":"5.4","depth":1,"path":"list/typescript/optionpara.md","ref":"list/typescript/optionpara.md","articles":[]},"previous":{"title":"타입","level":"5.2","depth":1,"path":"list/typescript/types.md","ref":"list/typescript/types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/typescript/classandinterface.md","mtime":"2019-02-09T03:53:56.196Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-09T10:21:49.695Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Box&List&Table","level":"3.3","depth":1,"next":{"title":"Layout","level":"3.4","depth":1,"path":"list/css/4.md","ref":"list/css/4.md","articles":[]},"previous":{"title":"Selector","level":"3.2","depth":1,"path":"list/css/2.md","ref":"list/css/2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/css/3.md","mtime":"2019-02-09T09:46:00.766Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-09T10:21:49.695Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
