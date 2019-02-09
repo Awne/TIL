@@ -11,7 +11,7 @@
 * [Selector](list/css/2.md)
 * [Box & List & Table](list/css/3.md)
 * [Layout Basic](list/css/4.md)
-* [Grid & Flex](liet/css/5.md)
+* [Grid & Flex](list/css/5.md)
 * [Responsive & Animation](list/css/6.md)
 
 
