@@ -16,7 +16,11 @@
 
 
 ##[JAVASCRIPT]()
-* [ES6](list/javascript/es6.md)
+* [Data Type](list/javascript/1.md)
+* [DOM](list/javascript/2.md)
+* [Event](list/javascript/3.md)
+* [OOP](list/javascript/4.md)
+* [ES6](list/javascript/5.md)
 
 
 ##[TYPESCRIPT]()
