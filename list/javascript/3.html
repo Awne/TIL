@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Event · GitBook</title>
+        <title>Variable & Function · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -273,7 +273,7 @@
                 <a href="3.html">
             
                     
-                    Event
+                    Variable & Function
             
                 </a>
             
@@ -449,7 +449,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Event</a>
+        <a href="../.." >Variable & Function</a>
     </h1>
 </div>
 
@@ -464,7 +464,104 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h2 id="scope">Scope</h2>
+<p><code>var</code>&#xB294; &#xD568;&#xC218;&#xB2E8;&#xC704;, <code>let</code>&#xC740; &#xBE14;&#xB85D;&#xB2E8;&#xC704; &#xC2A4;&#xCF54;&#xD504;&#xB97C; &#xAC00;&#xC9D0;</p>
+<p>&#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB294; 2&#xAC00; &#xCD9C;&#xB825;&#xB428;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">if</span>(<span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">2</span>;
+}
+<span class="hljs-built_in">console</span>.log(a);
+</code></pre>
+<p>&#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB294; 1&#xC774; &#xCD9C;&#xB825;&#xB428;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> b = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">if</span>(<span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">let</span> b = <span class="hljs-number">2</span>;
+}
+<span class="hljs-built_in">console</span>.log(b);
+</code></pre>
+<h2 id="context">Context</h2>
+<p>&#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xCF54;&#xB4DC;&#xAC00; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> name = <span class="hljs-string">&apos;zero&apos;</span>; <span class="hljs-comment">// (1)&#xBCC0;&#xC218; &#xC120;&#xC5B8; (6)&#xBCC0;&#xC218; &#xB300;&#xC785;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">wow</span>(<span class="hljs-params">word</span>) </span>{ <span class="hljs-comment">// (2)&#xBCC0;&#xC218; &#xC120;&#xC5B8; (3)&#xBCC0;&#xC218; &#xB300;&#xC785;</span>
+  <span class="hljs-built_in">console</span>.log(word + <span class="hljs-string">&apos; &apos;</span> + name); <span class="hljs-comment">// (11)</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">say</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-comment">// (4)&#xBCC0;&#xC218; &#xC120;&#xC5B8; (5)&#xBCC0;&#xC218; &#xB300;&#xC785;</span>
+  <span class="hljs-keyword">var</span> name = <span class="hljs-string">&apos;nero&apos;</span>; <span class="hljs-comment">// (8)</span>
+  <span class="hljs-built_in">console</span>.log(name); <span class="hljs-comment">// (9)</span>
+  wow(<span class="hljs-string">&apos;hello&apos;</span>); <span class="hljs-comment">// (10)</span>
+}
+say(); <span class="hljs-comment">// (7)</span>
+</code></pre>
+<p>&#xD638;&#xC774;&#xC2A4;&#xD305;&#xC73C;&#xB85C; &#xC778;&#xD574; &#xD568;&#xC218; &#xC120;&#xC5B8;&#xC2DD;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xB41C; <code>wow</code> <code>say</code> &#xD568;&#xC218;&#xB294; &#xB3D9;&#xC9F8;&#xB85C; &#xCD5C;&#xC0C1;&#xB2E8;&#xC73C;&#xB85C; &#xC62C;&#xB824;&#xC9D0;</p>
+<p>&#xCEE8;&#xD14D;&#xC2A4;&#xD2B8;&#xC758; &#xBAA8;&#xC2B5;&#xC740;</p>
+<pre><code>&#xC804;&#xC5ED;&#xCEE8;&#xD14D;&#xC2A4;&#xD2B8;: {
+    &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;:{
+        arguments: null, 
+        variable: [name,wow,say]
+    }, 
+    scopechain: [&#xC804;&#xC5ED; &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;], // &#xC2A4;&#xCF54;&#xD504;&#xCCB4;&#xC778;&#xC740; &#xC790;&#xAE30;&#xC790;&#xC2E0;&#xACFC; &#xC0C1;&#xC704; &#xC2A4;&#xCF54;&#xD504;&#xC758; &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;&#xC784;.
+    this: window
+}
+
+&apos;say&#xCEE8;&#xD14D;&#xC2A4;&#xD2B8;&apos; : {
+    &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;: {
+        arguments: null,
+        variable: [&apos;name&apos;],
+    },
+    scopeChain: [&apos;say&#xBCC0;&#xC218;&#xAC1D;&#xCCB4;&apos;, &apos;&#xC804;&#xC5ED; &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;&apos;],
+    this: window
+}
+
+&apos;wow&#xCEE8;&#xD14D;&#xC2A4;&#xD2B8;&apos;: {
+    &#xBCC0;&#xC218;&#xAC1D;&#xCCB4; : {
+        arguments: [{word:&apos;hello&apos;}],
+        variable: null,
+    },
+    scopechain: [&apos;wow&#xBCC0;&#xC218;&#xAC1D;&#xCCB4;&apos;, &apos;&#xC804;&#xC5ED;&#xBCC0;&#xC218;&#xAC1D;&#xCCB4;&apos;],
+    this: window
+}
+</code></pre><h2 id="closure">Closure</h2>
+<p>&#xCEE8;&#xD14D;&#xC2A4;&#xD2B8;&#xC758; &#xC6D0;&#xB9AC;&#xB97C; &#xD65C;&#xC6A9;&#xD558;&#xBA74; &#xD074;&#xB85C;&#xC838;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> makeClosure = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> name = <span class="hljs-string">&apos;zero&apos;</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{   
+      <span class="hljs-built_in">console</span>.log(name);
+    }
+  };
+  <span class="hljs-keyword">var</span> closure = makeClosure();
+
+  closure();
+</code></pre>
+<p>&#xC704; &#xCF54;&#xB4DC;&#xC758; &#xCEE8;&#xD14D;&#xC2A4;&#xD2B8;&#xB294;</p>
+<pre><code>&quot;&#xC804;&#xC5ED; &#xCEE8;&#xD14D;&#xC2A4;&#xD2B8;&quot;: {
+  &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;: {
+    arguments: null,
+    variable: [{ makeClosure: Function }, &apos;closure&apos;],
+  },
+  scopeChain: [&apos;&#xC804;&#xC5ED; &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;&apos;],
+  this: window,
+}
+
+&quot;makeClosure &#xCEE8;&#xD14D;&#xC2A4;&#xD2B8;&quot;: {
+  &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;: {
+    arguments: null,
+    variable: [{ name: &apos;zero&apos; }],
+  },
+  scopeChain: [&apos;makeClosure &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;&apos;, &apos;&#xC804;&#xC5ED; &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;&apos;],
+  this: window,
+}
+
+&quot;closure &#xCEE8;&#xD14D;&#xC2A4;&#xD2B8;&quot;:  {
+  &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;: {
+    arguments: null,
+    variable: null,
+  scopeChain: [&apos;closure &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;&apos;, &apos;makeClosure &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;&apos;, &apos;&#xC804;&#xC5ED; &#xBCC0;&#xC218;&#xAC1D;&#xCCB4;&apos;],
+  this: window,
+}
+</code></pre><p><code>makeClosure</code>&#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC740; &#xC775;&#xBA85;&#xD568;&#xC218;&#xAC00; &#xB41C;&#xB2E4;. (&#xBC18;&#xD658;&#xAC12;&#xC774; &#xBCC0;&#xC218;&#xC758; &#xAC12;&#xC774; &#xB418;&#xAE30; &#xB54C;&#xBB38;) &#xADF8;&#xB798;&#xC11C; &#xC678;&#xBD80;&#xC5D0;&#xC11C;&#xB294; &#xBB34;&#xC2A8; &#xBC29;&#xBC95;&#xC744; &#xC368;&#xB3C4; <code>name</code>&#xBCC0;&#xC218;&#xC5D0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC5C6;&#xC74C;.</p>
+<p>&#xB9CC;&#xC57D; <code>makeClosure</code>&#xBCC0;&#xC218;&#xAC00; &#xC678;&#xBD80;&#xD568;&#xC218; &#xC5C6;&#xC774; &#xBC14;&#xB85C; &#xC775;&#xBA85;&#xD568;&#xC218;&#xB97C; &#xC800;&#xC7A5;&#xD55C;&#xB2E4;&#xBA74; <code>makeClosure.name</code>&#xC73C;&#xB85C; &#xC811;&#xADFC;&#xC774; &#xAC00;&#xB2A5;&#xD568;.</p>
+
                                 
                                 </section>
                             
@@ -507,7 +604,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Event","level":"4.3","depth":1,"next":{"title":"OOP","level":"4.4","depth":1,"path":"list/javascript/4.md","ref":"list/javascript/4.md","articles":[]},"previous":{"title":"DOM","level":"4.2","depth":1,"path":"list/javascript/2.md","ref":"list/javascript/2.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/javascript/3.md","mtime":"2019-02-10T02:29:52.643Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-10T04:16:11.935Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Variable & Function","level":"4.3","depth":1,"next":{"title":"OOP","level":"4.4","depth":1,"path":"list/javascript/4.md","ref":"list/javascript/4.md","articles":[]},"previous":{"title":"DOM","level":"4.2","depth":1,"path":"list/javascript/2.md","ref":"list/javascript/2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/javascript/3.md","mtime":"2019-02-10T10:33:09.765Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-10T11:47:48.639Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

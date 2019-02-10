@@ -273,7 +273,7 @@
                 <a href="3.html">
             
                     
-                    Event
+                    Variable & Function
             
                 </a>
             
@@ -464,7 +464,86 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h2 id="this">this</h2>
+<p><code>this</code>&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xAE30; &#xC704;&#xD574; <code>call</code> <code>apply</code> <code>bind</code> &#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;.</p>
+<p><code>bind</code>&#xB294; &#xAC12;&#xC744; &#xD638;&#xCD9C;&#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xC815;&#xC758;&#xB9CC; &#xD568;.</p>
+<p>&#xD568;&#xC218;&#xC758; &#xC778;&#xC790;&#xB97C; &#xB2F4;&#xB294; <code>arguments</code>&#xB294; &#xC720;&#xC0AC;&#xBC30;&#xC5F4;&#xC774;&#xAE30;&#xC5D0; &#xBC30;&#xC5F4; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xC74C;.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">example</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">arguments</span>.join());
+} 
+
+example(<span class="hljs-number">1</span>,<span class="hljs-string">&apos;string&apos;</span>,<span class="hljs-literal">true</span>);   <span class="hljs-comment">// &#xC5D0;&#xB7EC;&#xBC1C;&#xC0DD;</span>
+</code></pre>
+<p><code>call</code> &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">example</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Array</span>.prototype.join.call(<span class="hljs-built_in">arguments</span>));
+}
+
+example(<span class="hljs-number">1</span>,<span class="hljs-string">&apos;string&apos;</span>,<span class="hljs-literal">true</span>);   <span class="hljs-comment">// &#xCD9C;&#xB825;</span>
+</code></pre>
+<h2 id="&#xAC1D;&#xCCB4;-&#xC778;&#xC2A4;&#xD134;&#xC2A4;-&#xC0DD;&#xC131;-&#xBC29;&#xBC95;">&#xAC1D;&#xCCB4; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xC0DD;&#xC131; &#xBC29;&#xBC95;</h2>
+<ol>
+<li>&#xC0DD;&#xC131;&#xC790; &#xD568;&#xC218; &#xC0AC;&#xC6A9;</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params">name, age</span>) </span>{
+    <span class="hljs-keyword">this</span>.name = name;
+    <span class="hljs-keyword">this</span>.age = age;
+}
+
+<span class="hljs-keyword">let</span> Jun = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&apos;Jun&apos;</span>,<span class="hljs-number">20</span>);
+</code></pre>
+<ol>
+<li>Object &#xC0DD;&#xC131;&#xC790; &#xC0AC;&#xC6A9;</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> Jun = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+Jun.name = <span class="hljs-string">&quot;Jun&quot;</span>;
+Jun.age = <span class="hljs-number">20</span>;
+</code></pre>
+<ol>
+<li>Object.create &#xBA54;&#xC18C;&#xB4DC; &#xC0AC;&#xC6A9;</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> Jun = <span class="hljs-built_in">Object</span>.create(Person);
+</code></pre>
+<h2 id="&#xC0C1;&#xC18D;">&#xC0C1;&#xC18D;</h2>
+<p><code>Person</code>&#xC744; &#xC0C1;&#xC18D;&#xBC1B;&#xACE0; <code>subject</code>&#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xB97C; &#xAC00;&#xC9C0;&#xBA70;, <code>greeting</code>&#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xCD94;&#xAC00;&#xD55C; <code>Teacher</code>&#xD074;&#xB798;&#xC2A4;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Teacher</span>(<span class="hljs-params">subject</span>) </span>{
+    Person.call(<span class="hljs-keyword">this</span>, name, age);
+    <span class="hljs-keyword">this</span>.subject = subject;
+}
+
+Teacher.prototype = <span class="hljs-built_in">Object</span>.create(Person.prototype)
+<span class="hljs-comment">// &#xBA54;&#xC18C;&#xB4DC; &#xC0C1;&#xC18D;</span>
+</code></pre>
+<p>&#xC704; &#xBA54;&#xC18C;&#xB4DC; &#xC0C1;&#xC18D;&#xC73C;&#xB85C; &#xC778;&#xD574; <code>Teacher.prototype.constructor</code>&#xAC00; <code>Person()</code>&#xC774; &#xB428;.</p>
+<p>&#xC774;&#xB97C; &#xB9C9;&#xAE30;&#xC704;&#xD574; &#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB97C; &#xBA85;&#xC2DC;&#xD574;&#xC90C;.</p>
+<pre><code class="lang-javascript">Teacher.prototype.constructor = Teacher;
+</code></pre>
+<p>&#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xAE30; &#xC704;&#xD574;</p>
+<pre><code class="lang-javascript">Teacher.prototype.greeting = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
+</code></pre>
+<h2 id="&#xD074;&#xB798;&#xC2A4;">&#xD074;&#xB798;&#xC2A4;</h2>
+<p>ES6, &#xAC04;&#xB2E8;&#xD55C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xC0DD;&#xC131;, &#xC0C1;&#xC18D;</p>
+<h3 id="&#xD074;&#xB798;&#xC2A4;&#xB97C;-&#xD1B5;&#xD55C;-&#xC778;&#xC2A4;&#xD134;&#xC2A4;-&#xC0DD;&#xC131;">&#xD074;&#xB798;&#xC2A4;&#xB97C; &#xD1B5;&#xD55C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xC0DD;&#xC131;</h3>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+    <span class="hljs-keyword">constructor</span>(name, age) {
+        <span class="hljs-keyword">this</span>.name = name;
+        <span class="hljs-keyword">this</span>.age = age;
+    }
+    greeting() {}
+}
+
+<span class="hljs-keyword">let</span> Jun = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;Jun&quot;</span>, <span class="hljs-number">20</span>);
+</code></pre>
+<h3 id="&#xD074;&#xB798;&#xC2A4;&#xB97C;-&#xD1B5;&#xD55C;-&#xC0C1;&#xC18D;">&#xD074;&#xB798;&#xC2A4;&#xB97C; &#xD1B5;&#xD55C; &#xC0C1;&#xC18D;</h3>
+<p><code>super</code>&#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xD1B5;&#xD574; <code>Person</code>&#xC5D0;&#xC11C; &#xC815;&#xC758;&#xD55C; &#xD504;&#xB85C;&#xD37C;&#xD2F0; &#xBC0F; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xBAA8;&#xB450; &#xBC1B;&#xC544;&#xC628;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span> </span>{
+    <span class="hljs-keyword">constructor</span>(subject) {
+        <span class="hljs-keyword">super</span>(name, age);
+        <span class="hljs-keyword">this</span>.subject = subject;
+    }
+}
+</code></pre>
+
                                 
                                 </section>
                             
@@ -491,7 +570,7 @@
 
             
                 
-                <a href="3.html" class="navigation navigation-prev " aria-label="Previous page: Event">
+                <a href="3.html" class="navigation navigation-prev " aria-label="Previous page: Variable & Function">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -507,7 +586,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"OOP","level":"4.4","depth":1,"next":{"title":"ES6","level":"4.5","depth":1,"path":"list/javascript/5.md","ref":"list/javascript/5.md","articles":[]},"previous":{"title":"Event","level":"4.3","depth":1,"path":"list/javascript/3.md","ref":"list/javascript/3.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/javascript/4.md","mtime":"2019-02-10T02:29:56.309Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-10T04:16:11.935Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"OOP","level":"4.4","depth":1,"next":{"title":"ES6","level":"4.5","depth":1,"path":"list/javascript/5.md","ref":"list/javascript/5.md","articles":[]},"previous":{"title":"Variable & Function","level":"4.3","depth":1,"path":"list/javascript/3.md","ref":"list/javascript/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/javascript/4.md","mtime":"2019-02-10T11:47:27.215Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-10T11:47:48.639Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
