@@ -20,7 +20,7 @@
 * [DOM](list/javascript/2.md)
 * [Variable & Function](list/javascript/3.md)
 * [OOP](list/javascript/4.md)
-* [ES6](list/javascript/5.md)
+
 
 
 ##[TYPESCRIPT]()

@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="5.html" />
+    <link rel="next" href="../typescript/compile.html" />
     
     
     <link rel="prev" href="3.html" />
@@ -294,19 +294,6 @@
             
         </li>
     
-        <li class="chapter " data-level="4.5" data-path="5.html">
-            
-                <a href="5.html">
-            
-                    
-                    ES6
-            
-                </a>
-            
-
-            
-        </li>
-    
 
     
         
@@ -481,6 +468,7 @@ example(<span class="hljs-number">1</span>,<span class="hljs-string">&apos;strin
 
 example(<span class="hljs-number">1</span>,<span class="hljs-string">&apos;string&apos;</span>,<span class="hljs-literal">true</span>);   <span class="hljs-comment">// &#xCD9C;&#xB825;</span>
 </code></pre>
+<p>&#xCC38;&#xACE0;&#xB85C; <code>arguments</code>&#xC758; &#xBD80;&#xBAA8;&#xB294; <code>arguments.callee</code>&#xB85C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;.</p>
 <h2 id="&#xAC1D;&#xCCB4;-&#xC778;&#xC2A4;&#xD134;&#xC2A4;-&#xC0DD;&#xC131;-&#xBC29;&#xBC95;">&#xAC1D;&#xCCB4; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xC0DD;&#xC131; &#xBC29;&#xBC95;</h2>
 <ol>
 <li>&#xC0DD;&#xC131;&#xC790; &#xD568;&#xC218; &#xC0AC;&#xC6A9;</li>
@@ -520,6 +508,12 @@ Teacher.prototype = <span class="hljs-built_in">Object</span>.create(Person.prot
 </code></pre>
 <p>&#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xAE30; &#xC704;&#xD574;</p>
 <pre><code class="lang-javascript">Teacher.prototype.greeting = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}
+</code></pre>
+<p>&#xC0DD;&#xC131;&#xC790;&#xAC04; &#xC0C1;&#xC18D;&#xB3C4; &#xAC00;&#xB2A5;&#xD568;. &#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB294; <code>Bio</code>&#xC0DD;&#xC131;&#xC790;&#xB97C; &#xC0C1;&#xC18D;&#xBC1B;&#xB294; <code>People</code>&#xC0DD;&#xC131;&#xC790;</p>
+<pre><code class="lang-javascript">People.prototype = <span class="hljs-keyword">new</span> Bio();
+<span class="hljs-keyword">let</span> marine = <span class="hljs-keyword">new</span> People();
+
+<span class="hljs-comment">// &#xBCC0;&#xC218; marine&#xC740; People, Bio&#xC758; &#xD504;&#xB85C;&#xD37C;&#xD2F0; &#xBC0F; &#xBA54;&#xC18C;&#xB4DC; &#xC0AC;&#xC6A9;&#xAC00;&#xB2A5;</span>
 </code></pre>
 <h2 id="&#xD074;&#xB798;&#xC2A4;">&#xD074;&#xB798;&#xC2A4;</h2>
 <p>ES6, &#xAC04;&#xB2E8;&#xD55C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xC0DD;&#xC131;, &#xC0C1;&#xC18D;</p>
@@ -575,7 +569,7 @@ Teacher.prototype = <span class="hljs-built_in">Object</span>.create(Person.prot
                 </a>
                 
                 
-                <a href="5.html" class="navigation navigation-next " aria-label="Next page: ES6">
+                <a href="../typescript/compile.html" class="navigation navigation-next " aria-label="Next page: 컴파일">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -586,7 +580,7 @@ Teacher.prototype = <span class="hljs-built_in">Object</span>.create(Person.prot
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"OOP","level":"4.4","depth":1,"next":{"title":"ES6","level":"4.5","depth":1,"path":"list/javascript/5.md","ref":"list/javascript/5.md","articles":[]},"previous":{"title":"Variable & Function","level":"4.3","depth":1,"path":"list/javascript/3.md","ref":"list/javascript/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/javascript/4.md","mtime":"2019-02-10T11:47:27.215Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-10T11:47:48.639Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"OOP","level":"4.4","depth":1,"next":{"title":"컴파일","level":"5.1","depth":1,"path":"list/typescript/compile.md","ref":"list/typescript/compile.md","articles":[]},"previous":{"title":"Variable & Function","level":"4.3","depth":1,"path":"list/javascript/3.md","ref":"list/javascript/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/javascript/4.md","mtime":"2019-02-10T12:30:04.621Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-10T12:30:18.796Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
