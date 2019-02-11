@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ES6 · GitBook</title>
+        <title>Exception · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../typescript/compile.html" />
+    <link rel="next" href="6.html" />
     
     
     <link rel="prev" href="4.html" />
@@ -299,6 +299,19 @@
                 <a href="5.html">
             
                     
+                    Exception
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
                     ES6
             
                 </a>
@@ -449,7 +462,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >ES6</a>
+        <a href="../.." >Exception</a>
     </h1>
 </div>
 
@@ -464,7 +477,117 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h2 id="error-instance">Error instance</h2>
+<p>&#xC778;&#xC790;&#xAC00; &#xC870;&#xAC74;&#xC5D0; &#xB9DE;&#xC9C0; &#xC54A;&#xC744; &#xACBD;&#xC6B0; &#xC5D0;&#xB7EC; &#xBC1C;&#xC0DD;&#xC2DC;&#xD0B4;</p>
+<p>&#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB294; <code>@</code>&#xAC00; &#xD3EC;&#xD568;&#xB418;&#xC9C0; &#xC54A;&#xB294; &#xACBD;&#xC6B0; &#xC5D0;&#xB7EC;&#xB97C; &#xBC1C;&#xC0DD;&#xC2DC;&#xD0B4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> err = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&quot;invalid email&quot;</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">validateEmail</span>(<span class="hljs-params">email</span>) </span>{
+    <span class="hljs-keyword">return</span> email.match(<span class="hljs-regexp">/@/</span>) ? email : err;
+}
+</code></pre>
+<p>&#xC544;&#xB798; &#xCF54;&#xB4DC;&#xC5D0;&#xC11C; <code>message</code> &#xC18D;&#xC131;&#xC740; &#xC5D0;&#xB7EC;&#xC5D0; &#xB300;&#xD55C; &#xC124;&#xBA85;&#xC744; &#xB098;&#xD0C0;&#xB0B8;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> myMail = <span class="hljs-string">&quot;bboyoung01@gmail.com&quot;</span>;
+<span class="hljs-keyword">const</span> validateMyMail = validateEmail(myMail);
+
+<span class="hljs-keyword">if</span>(validateMyMail <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Error</span>) {
+    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`Error : <span class="hljs-subst">${validateMyMail.message}</span>`</span>);
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Valid Email : <span class="hljs-subst">${validateMyMail}</span>`</span>);
+}
+</code></pre>
+<h2 id="try-catch-&#xAD6C;&#xBB38;">try-catch &#xAD6C;&#xBB38;</h2>
+<p><code>try</code>&#xBE14;&#xB85D;&#xC5D0;&#xC11C; &#xC0C1;&#xD669;&#xC744; &#xC2DC;&#xB3C4;&#xD558;&#xACE0; &#xADF8; &#xC0C1;&#xD669;&#xC5D0;&#xC11C; &#xC5D0;&#xB7EC; &#xBC1C;&#xC0DD;&#xC2DC; <code>catch</code>&#xBE14;&#xB85D;&#xC744; &#xC2E4;&#xD589;&#xD568;.</p>
+<p><code>finally</code>&#xBE14;&#xB85D;&#xC740; &#xC5D0;&#xB7EC;&#xC640; &#xC0C1;&#xAD00;&#xC5C6;&#xC774; &#xD56D;&#xC0C1; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.</p>
+<p>&#xC544;&#xB798;&#xCF54;&#xB4DC;&#xC5D0;&#xC11C; <code>validateEmail</code>&#xD568;&#xC218;&#xB294; <code>@</code>&#xAC00; &#xD3EC;&#xD568;&#xB41C; &#xBB38;&#xC790;&#xC5F4;&#xC778;&#xC9C0; &#xAC80;&#xC0AC;&#xD568;.</p>
+<p><code>try</code>&#xAD6C;&#xBB38;&#xC758; &#xCCAB; &#xC904;&#xC5D0;&#xC11C; <code>validateEmail</code>&#xD568;&#xC218;&#xB294; <code>email.match(/@/)</code>&#xB97C; &#xD310;&#xB2E8;&#xD574;&#xC57C;&#xD568;</p>
+<p>&#xD558;&#xC9C0;&#xB9CC; &#xC815;&#xADDC;&#xD45C;&#xD604;&#xC2DD;&#xC778; <code>match</code>&#xBA54;&#xC18C;&#xB4DC;&#xB294; &#xBB38;&#xC790;&#xC5F4;&#xC5D0;&#xB9CC; &#xC0AC;&#xC6A9;&#xAC00;&#xB2A5;&#xD558;&#xAE30;&#xC5D0; <code>try</code>&#xBE14;&#xB85D;&#xC740; &#xCCAB; &#xC904;&#xBD80;&#xD130; &#xC5D0;&#xB7EC;&#xB97C; &#xBC1C;&#xC0DD;&#xC2DC;&#xD0B4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> wiredMail = <span class="hljs-literal">null</span>;
+
+<span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> validateMyMail = validateEmail(wiredMail);
+    <span class="hljs-keyword">if</span>(validateMyMail <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Error</span>) {
+        <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`Error : <span class="hljs-subst">${validateMyMail.message}</span>`</span>);
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Valid email : <span class="hljs-subst">${validateMyMail}</span>`</span>);
+    }
+} <span class="hljs-keyword">catch</span> {
+    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`Error : <span class="hljs-subst">${err.message}</span>`</span>);
+} <span class="hljs-keyword">finally</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`&#xC774; &#xAC80;&#xC0AC;&#xB294; <span class="hljs-subst">${new Date()}</span>&#xC5D0; &#xC2E4;&#xD589;&#xB428;.`</span>);
+}
+</code></pre>
+<h2 id="throw">throw</h2>
+<p><code>throw</code>&#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xACE0;&#xC758;&#xC801;&#xC73C;&#xB85C; &#xC5D0;&#xB7EC;&#xB97C; &#xBC1C;&#xC0DD;&#xC2DC;&#xD0AC; &#xC218; &#xC788;&#xC74C;.</p>
+<p><code>throw</code>&#xAC00; &#xD638;&#xCD9C;&#xB418;&#xBA74; <code>return</code>&#xCC98;&#xB7FC; &#xD568;&#xC218;&#xC758; &#xC2E4;&#xD589;&#xC744; &#xBA48;&#xCD94;&#xAC8C; &#xB428;.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">billPay</span> (<span class="hljs-params">myCash, Price</span>) </span>{
+    <span class="hljs-keyword">if</span> (myCash &lt; Price) {
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span> (<span class="hljs-string">&quot;Insufficient funds&quot;</span>);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;You buy it&quot;</span>;
+}
+
+<span class="hljs-built_in">console</span>.log(billPay(<span class="hljs-number">30000</span>, <span class="hljs-number">45000</span>));
+</code></pre>
+<h2 id="&#xD638;&#xCD9C;-&#xC2A4;&#xD0DD;">&#xD638;&#xCD9C; &#xC2A4;&#xD0DD;</h2>
+<p>&#xD638;&#xCD9C; &#xC2A4;&#xD0DD;&#xC744; &#xD65C;&#xC6A9;&#xD558;&#xBA74; &#xBCF5;&#xC7A1;&#xD55C; &#xD568;&#xC218;&#xC758; &#xC5D0;&#xB7EC; &#xBC1C;&#xC0DD; &#xC704;&#xCE58;&#xB97C; &#xC54C; &#xC218; &#xC788;&#xC74C;.</p>
+<p>&#xC544;&#xB798; &#xCF54;&#xB4DC;&#xC758; &#xB3D9;&#xC791;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC74C;.</p>
+<ol>
+<li><code>a</code> &#xD568;&#xC218;&#xB294; <code>b</code> &#xD568;&#xC218;&#xB97C; &#xD638;&#xCD9C;&#xD568;.</li>
+<li><code>b</code> &#xD568;&#xC218;&#xB294; <code>c</code> &#xD568;&#xC218;&#xB97C; &#xD638;&#xCD9C;&#xD568;.</li>
+<li><code>c</code> &#xD568;&#xC218;&#xB294; &#xC5D0;&#xB7EC;&#xB97C; &#xBC1C;&#xC0DD;&#xC2DC;&#xD0B4;.</li>
+<li><code>d</code> &#xD568;&#xC218;&#xB294; <code>c</code> &#xD568;&#xC218;&#xB97C; &#xD638;&#xCD9C;&#xD568;.
+```javascript
+function a() {
+ console.log(&quot;a : calling b&quot;);
+ b();
+ console.log(&quot;a done&quot;);
+}</li>
+</ol>
+<p>function b() {
+    console.log(&quot;b : Calling c&quot;);
+    c();
+    console.log(&quot;b done&quot;);
+}</p>
+<p>function c() {
+    console.log(&quot;c : throwing error&quot;);
+    throw new Error (&quot;c error&quot;);
+    console.log(&quot;c done&quot;);
+}</p>
+<p>function d() {
+    console.log(&quot;d : calling c&quot;);
+    c();
+    console.log(&quot;d done&quot;);
+}</p>
+<pre><code>&#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB294; &#xC5D0;&#xB7EC; &#xBC1C;&#xC0DD; &#xC704;&#xCE58;&#xB97C; &#xD655;&#xC778;&#xD558;&#xAE30; &#xC704;&#xD574; &#xD638;&#xCD9C; &#xC2A4;&#xD0DD;&#xC744; &#xBCF4;&#xC5EC;&#xC90C;.
+
+`catch`&#xB294; &#xC778;&#xC790;&#xB85C; &#xC7A1;&#xAE38; &#xC6D0;&#xD558;&#xB294; &#xC5D0;&#xB7EC;&#xB97C; &#xC124;&#xC815;&#xD574;&#xC904; &#xC218; &#xC788;&#xC74C;.
+```javascript
+try {
+    a();
+} catch(err) {
+    console.log(err.stack);
+}
+</code></pre><p>&#xC5D0;&#xB7EC; &#xC2A4;&#xD0DD;&#xC758; &#xCD9C;&#xB825; &#xC21C;&#xC11C;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC74C;.</p>
+<ol>
+<li>&#xCD5C;&#xCD08;&#xB85C; &#xC5D0;&#xB7EC;&#xAC00; &#xBC1C;&#xC0DD;&#xD55C; <code>c</code></li>
+<li><code>c</code>&#xB97C; &#xD638;&#xCD9C;&#xD55C; <code>b</code></li>
+<li><code>b</code>&#xB97C; &#xD638;&#xCD9C;&#xD55C; <code>a</code></li>
+<li><code>a</code>&#xB97C; &#xD638;&#xCD9C;&#xD55C; <code>try</code>&#xBE14;&#xB85D;</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-keyword">try</span> {
+    d();
+} <span class="hljs-keyword">catch</span>(err) {
+    <span class="hljs-built_in">console</span>.log(err.stack);
+}
+</code></pre>
+<p>&#xC5D0;&#xB7EC; &#xC2A4;&#xD0DD;&#xC758; &#xCD9C;&#xB825; &#xC21C;&#xC11C;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC74C;.</p>
+<ol>
+<li>&#xCD5C;&#xCD08;&#xB85C; &#xC5D0;&#xB7EC;&#xAC00; &#xBC1C;&#xC0DD;&#xD55C; <code>c</code></li>
+<li><code>c</code>&#xB97C; &#xD638;&#xCD9C;&#xD55C; <code>d</code></li>
+<li><code>d</code>&#xB97C; &#xD638;&#xCD9C;&#xD55C; <code>try</code>&#xBE14;&#xB85D;</li>
+</ol>
+
                                 
                                 </section>
                             
@@ -496,7 +619,7 @@
                 </a>
                 
                 
-                <a href="../typescript/compile.html" class="navigation navigation-next " aria-label="Next page: 컴파일">
+                <a href="6.html" class="navigation navigation-next " aria-label="Next page: ES6">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -507,7 +630,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ES6","level":"4.5","depth":1,"next":{"title":"컴파일","level":"5.1","depth":1,"path":"list/typescript/compile.md","ref":"list/typescript/compile.md","articles":[]},"previous":{"title":"OOP","level":"4.4","depth":1,"path":"list/javascript/4.md","ref":"list/javascript/4.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/javascript/5.md","mtime":"2019-02-10T04:17:28.471Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-10T11:47:48.639Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Exception","level":"4.5","depth":1,"next":{"title":"ES6","level":"4.6","depth":1,"path":"list/javascript/6.md","ref":"list/javascript/6.md","articles":[]},"previous":{"title":"OOP","level":"4.4","depth":1,"path":"list/javascript/4.md","ref":"list/javascript/4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/javascript/5.md","mtime":"2019-02-11T03:11:22.637Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-11T03:24:01.601Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
