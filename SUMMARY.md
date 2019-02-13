@@ -21,7 +21,7 @@
 * [Variable & Function](list/javascript/3.md)
 * [OOP](list/javascript/4.md)
 * [Exception](list/javascript/5.md)
-* [ES6](list/javascript/6.md)
+* [ES6 - let, method, operator](list/javascript/6.md)
 
 
 
