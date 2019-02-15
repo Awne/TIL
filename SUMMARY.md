@@ -25,6 +25,7 @@
 ##[ES6]
 * [let, method, operator](list/javascript/6.md)
 * [Destructing, Set & Map, Template](list/javascript/7.md)
+* [Function](list/javascript/8.md)
 
 
 
@@ -45,4 +46,5 @@
 
 ##[Node.js]()
 * [NodeJS & Express 기본](list/node/1.md)
+* [Request & Response 기본](list/node/2.md)
 
