@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Request & Response 기본 · GitBook</title>
+        <title>Class & Object · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../typescript/compile.html" />
     
-    <link rel="prev" href="1.html" />
+    
+    <link rel="prev" href="9.html" />
     
 
     </head>
@@ -240,9 +242,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../javascript/1.html">
+        <li class="chapter " data-level="4.1" data-path="1.html">
             
-                <a href="../javascript/1.html">
+                <a href="1.html">
             
                     
                     Data Type
@@ -253,9 +255,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="../javascript/2.html">
+        <li class="chapter " data-level="4.2" data-path="2.html">
             
-                <a href="../javascript/2.html">
+                <a href="2.html">
             
                     
                     DOM
@@ -266,9 +268,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="../javascript/3.html">
+        <li class="chapter " data-level="4.3" data-path="3.html">
             
-                <a href="../javascript/3.html">
+                <a href="3.html">
             
                     
                     Variable & Function
@@ -279,9 +281,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="../javascript/4.html">
+        <li class="chapter " data-level="4.4" data-path="4.html">
             
-                <a href="../javascript/4.html">
+                <a href="4.html">
             
                     
                     OOP
@@ -292,9 +294,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.5" data-path="../javascript/5.html">
+        <li class="chapter " data-level="4.5" data-path="5.html">
             
-                <a href="../javascript/5.html">
+                <a href="5.html">
             
                     
                     Exception
@@ -312,9 +314,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="../javascript/6.html">
+        <li class="chapter " data-level="5.1" data-path="6.html">
             
-                <a href="../javascript/6.html">
+                <a href="6.html">
             
                     
                     let, method, operator
@@ -325,9 +327,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="../javascript/7.html">
+        <li class="chapter " data-level="5.2" data-path="7.html">
             
-                <a href="../javascript/7.html">
+                <a href="7.html">
             
                     
                     Destructing, Set & Map, Template
@@ -338,12 +340,38 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="../javascript/8.html">
+        <li class="chapter " data-level="5.3" data-path="8.html">
             
-                <a href="../javascript/8.html">
+                <a href="8.html">
             
                     
                     Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="9.html">
+            
+                <a href="9.html">
+            
+                    
+                    Modules & Proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.5" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    Class & Object
             
                 </a>
             
@@ -465,39 +493,6 @@
     
 
     
-        
-        <li class="header">Node.js</li>
-        
-        
-    
-        <li class="chapter " data-level="9.1" data-path="1.html">
-            
-                <a href="1.html">
-            
-                    
-                    NodeJS & Express 기본
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="9.2" data-path="2.html">
-            
-                <a href="2.html">
-            
-                    
-                    Request & Response 기본
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
 
     <li class="divider"></li>
 
@@ -526,7 +521,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Request & Response 기본</a>
+        <a href="../.." >Class & Object</a>
     </h1>
 </div>
 
@@ -541,53 +536,66 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="post-&#xC694;&#xCCAD;-&#xCC98;&#xB9AC;">POST &#xC694;&#xCCAD; &#xCC98;&#xB9AC;</h2>
-<ol>
-<li><code>public</code>&#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; <code>html</code> &#xD30C;&#xC77C;&#xC744; &#xD558;&#xB098; &#xB9CC;&#xB4E4;&#xC5B4; <code>form</code> &#xC591;&#xC2DD;&#xC744; &#xB9CC;&#xB4E4;&#xACE0; <code>input text</code>&#xC758; <code>name</code>&#xC744; <code>mail</code>&#xB85C; &#xB9CC;&#xB4E4;&#xACE0; <code>submit</code>&#xC744; &#xB9CC;&#xB4E0;&#xB2E4;.</li>
-<li>&#xC774;&#xB54C; <code>action=/email_post method=POST</code> &#xB85C; &#xC124;&#xC815;&#xD55C;&#xB2E4;.</li>
-</ol>
-<pre><code>GET &#xBC29;&#xC2DD;&#xC740; url&#xC5D0; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xBBC0;&#xB85C; &#xAE38;&#xC774;&#xC81C;&#xD55C;&#xC774; &#xC788;&#xACE0;, &#xBCF4;&#xC548;&#xC0C1;&#xC5D0;&#xB3C4; &#xC6B0;&#xB824;&#xAC00; &#xC788;&#xC74C;.
-&#xADF8;&#xB798;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xAC8C; POST &#xBC29;&#xC2DD;
-</code></pre><ol>
-<li><code>npm install body-parser --save</code>&#xB85C; <code>body-parser</code>&#xB97C; &#xC124;&#xCE58;&#xD574;&#xC57C; <code>POST</code>&#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC804;&#xC1A1;&#xD560; &#xC218; &#xC788;&#xC74C;.</li>
-<li><code>body-parser</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB4E4;&#xC744; &#xCD94;&#xAC00;&#xD574;&#xC900;&#xB2E4;.</li>
-</ol>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;body-parser&apos;</span>)
+                                <h2 id="class">Class</h2>
+<p>&#xC0DD;&#xC131;&#xC790; &#xD568;&#xC218;&#xB97C; <code>class</code> &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xAC00;&#xB3C5;&#xC131;&#xC744; &#xB192;&#xC77C; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB294; <code>name</code>&#xC778;&#xC790;&#xB97C; &#xBC1B;&#xB294; &#xC0DD;&#xC131;&#xC790; &#xD568;&#xC218;&#xC784;.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Health</span>(<span class="hljs-params">name</span>) </span>{
+    <span class="hljs-keyword">this</span>.name = name;
+}
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended : <span class="hljs-literal">true</span>}));
+Health.prototype.showHealth = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name + <span class="hljs-string">&quot;&#xB2D8; &#xC548;&#xB155;&#xD558;&#xC138;&#xC694;&quot;</span>);
+}
 
-app.post(<span class="hljs-string">&apos;/email_post&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(req.body.mail);
-    res.send(req.body.mail);
+<span class="hljs-keyword">const</span> h = <span class="hljs-keyword">new</span> Health(<span class="hljs-string">&quot;Jun&quot;</span>);
+h.showHealth();
+</code></pre>
+<p>&#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB294; <code>class</code>&#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xBAA8;&#xB4E0; &#xC694;&#xC18C;&#xB97C; &#xD55C;&#xACF3;&#xC5D0; &#xB123;&#xC74C;.</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Health</span> </span>{
+    <span class="hljs-keyword">constructor</span>(name) {
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+
+    showHealth() {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name + <span class="hljs-string">&quot;&#xB2D8; &#xC548;&#xB155;&#xD558;&#xC138;&#xC694;.&quot;</span>);
+    }
+}
+
+<span class="hljs-keyword">const</span> h = <span class="hljs-keyword">new</span> Health(<span class="hljs-string">&quot;Jun&quot;</span>);
+h.showHealth();
+</code></pre>
+<h2 id="object">Object</h2>
+<h3 id="objectassign">Object.assign</h3>
+<p>&#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xAC00;&#xC9C0;&#xACE0;&#xC788;&#xB294; &#xAC1D;&#xCCB4;&#xAC00; &#xC874;&#xC7AC;&#xD568;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> healthObj = {
+    showHealth : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#xC6B4;&#xB3D9;&#xC2DC;&#xAC04; : &quot;</span> + <span class="hljs-keyword">this</span>.healthTime)
+    }
+}
+</code></pre>
+<p>&#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB294; <code>Object.create</code>&#xB97C; &#xD1B5;&#xD574; &#xBD80;&#xBAA8;&#xB97C; &#xBAA8;&#xC154;&#xC628; &#xC0C8; &#xAC1D;&#xCCB4;&#xB97C; &#xB9CC;&#xB4E0; &#xB4A4; &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xB97C; &#xCD94;&#xAC00;&#xD568;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> myHealth = <span class="hljs-built_in">Object</span>.create(healthObj);
+
+myHealth.healthTime = <span class="hljs-string">&quot;11:00&quot;</span>;
+myHealth.name = <span class="hljs-string">&quot;crong&quot;</span>;
+</code></pre>
+<p>&#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB294; &#xC704; &#xCF54;&#xB4DC;&#xC640; &#xACB0;&#xACFC;&#xB294; &#xAC19;&#xC9C0;&#xB9CC; <code>Object.assign</code>&#xC744; &#xD1B5;&#xD574; &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xB97C; &#xD55C;&#xBC88;&#xC5D0; &#xCD94;&#xAC00;&#xD560; &#xC218; &#xC788;&#xC74C;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> myHealth = <span class="hljs-built_in">Object</span>.assign(<span class="hljs-built_in">Object</span>.create(healthObj), {
+    name : <span class="hljs-string">&quot;crong&quot;</span>,
+    healthTime : <span class="hljs-string">&quot;11:22&quot;</span>
 })
 </code></pre>
-<p>&#xC704; &#xCF54;&#xB4DC;&#xB97C; &#xC904;&#xBCC4;&#xB85C; &#xD574;&#xC11D;&#xD558;&#xBA74; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
 <ol>
-<li><code>body-parser</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xAE30; &#xC704;&#xD574; &#xD544;&#xC694; &#xD30C;&#xC77C;&#xB4E4;&#xC744; &#xC694;&#xCCAD;&#xD55C;&#xB2E4;.</li>
-<li><code>JSON</code>&#xD30C;&#xC77C;&#xB4E4;&#xC744; &#xBC1B;&#xAE30; &#xC704;&#xD574; &#xC120;&#xC5B8;</li>
-<li>&#xB2E4;&#xB978; &#xD30C;&#xC77C;&#xB4E4;&#xC744; &#xBC1B;&#xAE30;&#xC704;&#xD574; &#xC120;&#xC5B8;. (<code>JSON</code>&#xC678; &#xD30C;&#xC77C;&#xB4E4;&#xC740; &#xC778;&#xCF54;&#xB529; &#xD544;&#xC694;)</li>
-<li><code>/email_post</code> URL&#xB85C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC804;&#xC1A1;&#xD55C;&#xB2E4;.</li>
-<li>&#xCF58;&#xC194;&#xC5D0; <code>mail</code>&#xC774;&#xB77C;&#xB294; &#xC774;&#xB984;&#xC744; &#xAC00;&#xC9C4; &#xC694;&#xC18C;&#xB97C; &#xCD9C;&#xB825;</li>
-<li>&#xBDF0;&#xD3EC;&#xD2B8;&#xC5D0; <code>mail</code>&#xC774;&#xB77C;&#xB294; &#xC774;&#xB984;&#xC744; &#xAC00;&#xC9C4; &#xC694;&#xC18C; &#xCD9C;&#xB825;</li>
+<li>&#xCCAB; &#xC778;&#xC790;&#xB294; &#xC5B4;&#xB514;&#xC5D0; &#xD569;&#xCE60;&#xC9C0; &#xC124;&#xC815;</li>
+<li>&#xC544;&#xBB34;&#xAC83;&#xB3C4; &#xC0C1;&#xC18D;&#xBC1B;&#xC9C0; &#xC54A;&#xB294; &#xAC1D;&#xCCB4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB824;&#xBA74; &#xCCAB; &#xC778;&#xC790;&#xB97C; <code>{}</code>&#xB85C; &#xC124;&#xC815;.</li>
+<li>&#xB450;&#xBC88;&#xC9F8; &#xC778;&#xC790;&#xBD80;&#xD130;&#xB294; &#xD569;&#xCE60; &#xAC1D;&#xCCB4;&#xB4E4;&#xC744; &#xC124;&#xC815;</li>
+<li>&#xD569;&#xCE60; &#xAC1D;&#xCCB4;&#xB4E4; &#xC0AC;&#xC774;&#xC5D0; &#xC911;&#xBCF5;&#xB41C; &#xD0A4;&#xAC00; &#xC788;&#xB2E4;&#xBA74; &#xB36E;&#xC5B4;&#xC4F0;&#xAE30;&#xB97C; &#xD1B5;&#xD574; &#xC6B0;&#xCE21; &#xC694;&#xC18C;&#xAC00; &#xC801;&#xC6A9;.</li>
 </ol>
-<h2 id="view-engine&#xC744;-&#xD65C;&#xC6A9;&#xD55C;-&#xC751;&#xB2F5;&#xCC98;&#xB9AC;">View Engine&#xC744; &#xD65C;&#xC6A9;&#xD55C; &#xC751;&#xB2F5;&#xCC98;&#xB9AC;</h2>
-<ol>
-<li><code>npm install ejs --save</code>&#xB85C; <code>ejs</code> &#xBDF0; &#xC5D4;&#xC9C4;&#xC744; &#xC124;&#xCE58;&#xD574;&#xC900;&#xB2E4;.</li>
-<li><p>&#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB97C; &#xC785;&#xB825;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xD560; &#xBDF0;&#xC5D4;&#xC9C4;&#xC774; <code>ejs</code>&#xB77C;&#xACE0; &#xC54C;&#xB824;&#xC90C;.</p>
-<pre><code class="lang-javascript">app.set(&apos;view engine&apos;, &apos;ejs)
+<h3 id="objectsetprototypeof">Object.setPrototypeOf</h3>
+<p><code>Object.create</code>&#xCC98;&#xB7FC; &#xD504;&#xB85C;&#xD1A0;&#xD0C0;&#xC785;&#xC744; &#xC815;&#xD574;&#xC904; &#xC218; &#xC788;&#xB2E4;. &#xBC18;&#xD658;&#xAC12;&#xC740; &#xC0C8;&#xB85C;&#xC6B4; &#xAC1D;&#xCCB4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Object</span>.setPrototypeOf(Bird, Animal)
 </code></pre>
-</li>
-<li><p><code>views</code>&#xB77C;&#xB294; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xB97C; &#xB9CC;&#xB4E4;&#xACE0;, &#xD574;&#xB2F9; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xB0B4;&#xC5D0; <code>email.ejs</code>&#xD30C;&#xC77C;&#xC744; &#xC0DD;&#xC131;&#xD55C;&#xB2E4;.</p>
-</li>
-<li>&#xD574;&#xB2F9; &#xD30C;&#xC77C;&#xC740; <code>HTML</code>&#xBB38;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA70; <code>name</code>&#xC774; <code>mail</code>&#xC778; &#xC694;&#xC18C;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xAE30; &#xC704;&#xD574; <code>&lt;%=mail&gt;</code>&#xB97C; &#xD65C;&#xC6A9;&#xD55C; &#xBB38;&#xC11C;&#xB97C; &#xC791;&#xC131;&#xD55C;&#xB2E4;.</li>
-<li><p>&#xB2E4;&#xC2DC; <code>app.js</code>&#xB85C; &#xB3CC;&#xC544;&#xC640; <code>app.post</code>&#xBE14;&#xB85D;&#xC5D0; &#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB97C; &#xCD94;&#xAC00;&#xD574;&#xC900;&#xB2E4;.</p>
-<pre><code class="lang-javascript">res.render(<span class="hljs-string">&apos;email.ejs&apos;</span>, {<span class="hljs-string">&apos;mail&apos;</span> : req.body.mail})
-</code></pre>
-</li>
-<li><p>&#xC704; &#xCF54;&#xB4DC;&#xB294; <code>email.ejs</code>&#xC5D0;&#xC11C;&#xB294; <code>mail</code>&#xC744; <code>req.body.mail</code>&#xB85C; &#xB300;&#xCCB4;&#xD55C;&#xB2E4;&#xB294; &#xC758;&#xBBF8;. </p>
-</li>
-</ol>
+<p><code>Bird</code>&#xC758; &#xD504;&#xB85C;&#xD1A0;&#xD0C0;&#xC785;&#xC744; <code>Animal</code>&#xB85C; &#xC124;&#xC815;&#xD568;.</p>
 
                                 
                                 </section>
@@ -615,10 +623,14 @@ app.post(<span class="hljs-string">&apos;/email_post&apos;</span>, <span class="
 
             
                 
-                <a href="1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: NodeJS & Express 기본">
+                <a href="9.html" class="navigation navigation-prev " aria-label="Previous page: Modules & Proxy">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../typescript/compile.html" class="navigation navigation-next " aria-label="Next page: 컴파일">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -627,7 +639,7 @@ app.post(<span class="hljs-string">&apos;/email_post&apos;</span>, <span class="
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Request & Response 기본","level":"9.2","depth":1,"previous":{"title":"NodeJS & Express 기본","level":"9.1","depth":1,"path":"list/node/1.md","ref":"list/node/1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/node/2.md","mtime":"2019-02-15T07:15:00.611Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-15T07:15:36.802Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Class & Object","level":"5.5","depth":1,"next":{"title":"컴파일","level":"6.1","depth":1,"path":"list/typescript/compile.md","ref":"list/typescript/compile.md","articles":[]},"previous":{"title":"Modules & Proxy","level":"5.4","depth":1,"path":"list/javascript/9.md","ref":"list/javascript/9.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/javascript/10.md","mtime":"2019-02-23T04:04:17.542Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-23T04:06:28.935Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
