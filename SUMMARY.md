@@ -22,7 +22,7 @@
 * [OOP](list/javascript/4.md)
 * [Exception](list/javascript/5.md)
 
-##[ES6]
+##[ES6]()
 * [let, method, operator](list/javascript/6.md)
 * [Destructing, Set & Map, Template](list/javascript/7.md)
 * [Function](list/javascript/8.md)
