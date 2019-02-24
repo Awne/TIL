@@ -37,11 +37,3 @@
 * [class와 interface](list/typescript/classandinterface.md)
 * [옵션인자](list/typescript/optionpara.md)
 * [interface](list/typescript/interface.md)
-
-
-##[REACT]()
-* [구조](list/react/structure.md)
-
-
-##[VUE]()
-* [구조](list/vue/structure.md)
