@@ -40,7 +40,7 @@
 * [상속, 오버라이드, 익명클래스](list/java/inherit.md)
 * [Static변수](list/java/static.md)
 * [추상클래스](list/java/abstract.md)
-* [StringBuffer/Builder, Collection](list/java/string)
+* [StringBuffer/Builder, Collection](list/java/string.md)
 
 ##[PYTHON]()
 * [자료형](list/python/datastructure.md)
