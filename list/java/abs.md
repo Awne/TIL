@@ -12,7 +12,9 @@ public abstract class addonClass {
 2. **추상 메서드**를 던져주면 **자식 클래스에서 정의**하는 형식임.
 
 3. 참고로 **super(a,b)**처럼 **super**키워드를 사용하면 자식 클래스에서 입력받고 부모 클래스로 값을 전송할 수 있음.
+
 ```java
+
 package abs; 
 
 public class originClass extends addonClass { 
@@ -21,6 +23,7 @@ public class originClass extends addonClass {
     } 
 }
 ```
+
 부모 클래스에서 받은 추상 메서드를 **자식 클래스에서 반드시 구현**해야한다.
 
 ```java

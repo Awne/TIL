@@ -639,28 +639,29 @@
 </li>
 <li><p><strong>&#xCD94;&#xC0C1; &#xBA54;&#xC11C;&#xB4DC;</strong>&#xB97C; &#xB358;&#xC838;&#xC8FC;&#xBA74; <strong>&#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xC815;&#xC758;</strong>&#xD558;&#xB294; &#xD615;&#xC2DD;&#xC784;.</p>
 </li>
-<li><p>&#xCC38;&#xACE0;&#xB85C; <strong>super(a,b)</strong>&#xCC98;&#xB7FC; <strong>super</strong>&#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xC785;&#xB825;&#xBC1B;&#xACE0; &#xBD80;&#xBAA8; &#xD074;&#xB798;&#xC2A4;&#xB85C; &#xAC12;&#xC744; &#xC804;&#xC1A1;&#xD560; &#xC218; &#xC788;&#xC74C;.
-```java
-package abs; </p>
+<li><p>&#xCC38;&#xACE0;&#xB85C; <strong>super(a,b)</strong>&#xCC98;&#xB7FC; <strong>super</strong>&#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xC785;&#xB825;&#xBC1B;&#xACE0; &#xBD80;&#xBAA8; &#xD074;&#xB798;&#xC2A4;&#xB85C; &#xAC12;&#xC744; &#xC804;&#xC1A1;&#xD560; &#xC218; &#xC788;&#xC74C;.</p>
 </li>
 </ol>
-<p>public class originClass extends addonClass { 
-    public void funcABS() { 
-        System.out.println(&quot;Hello&quot;); 
+<pre><code class="lang-java">
+<span class="hljs-keyword">package</span> abs; 
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">originClass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">addonClass</span> </span>{ 
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">funcABS</span><span class="hljs-params">()</span> </span>{ 
+        System.out.println(<span class="hljs-string">&quot;Hello&quot;</span>); 
     } 
-}</p>
-<pre><code>&#xBD80;&#xBAA8; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xBC1B;&#xC740; &#xCD94;&#xC0C1; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; **&#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xBC18;&#xB4DC;&#xC2DC; &#xAD6C;&#xD604;**&#xD574;&#xC57C;&#xD55C;&#xB2E4;.
+}
+</code></pre>
+<p>&#xBD80;&#xBAA8; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xBC1B;&#xC740; &#xCD94;&#xC0C1; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; <strong>&#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xBC18;&#xB4DC;&#xC2DC; &#xAD6C;&#xD604;</strong>&#xD574;&#xC57C;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> abs; 
 
-```java
-package abs; 
-
-public class main { 
-    public static void main(String[] args) { 
-        addonClass test = new originClass(); 
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">main</span> </span>{ 
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{ 
+        addonClass test = <span class="hljs-keyword">new</span> originClass(); 
         test.funcABS(); 
     } 
 }
-</code></pre><ol>
+</code></pre>
+<ol>
 <li><p>&#xCD94;&#xC0C1;&#xD074;&#xB798;&#xC2A4;&#xB294; &#xB300;&#xBD84;&#xB958;&#xC5D0; &#xC18D;&#xD558;&#xC9C0;&#xB9CC;, <strong>&#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC758; &#xD615;&#xD0DC;&#xAC00; &#xAC00;&#xC9C0;&#xAC01;&#xC0C9;&#xC77C;&#xB54C; &#xC0AC;&#xC6A9;&#xD574;&#xC57C;&#xD55C;&#xB2E4;.</strong></p>
 </li>
 <li><p>Animal &#xD074;&#xB798;&#xC2A4;&#xC758; &#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xC778; Dog, Bird, Shark &#xB4F1;&#xC740; &#xC18D;&#xC131;&#xACFC; &#xBA54;&#xC18C;&#xB4DC;&#xAC00; &#xC6CC;&#xB099; &#xB2E4;&#xC591;&#xD558;&#xBBC0;&#xB85C; <strong>Animal &#xD074;&#xB798;&#xC2A4;&#xB294; &#xCD94;&#xC0C1; &#xD074;&#xB798;&#xC2A4;</strong>&#xB85C; &#xC815;&#xC758;&#xB418;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</p>
@@ -711,7 +712,7 @@ public class main {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"추상클래스","level":"7.5","depth":1,"next":{"title":"StringBuffer/Builder, Collection","level":"7.6","depth":1,"path":"list/java/string.md","ref":"list/java/string.md","articles":[]},"previous":{"title":"Static변수","level":"7.4","depth":1,"path":"list/java/static.md","ref":"list/java/static.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/java/abs.md","mtime":"2019-04-11T11:16:35.405Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-11T11:17:31.477Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"추상클래스","level":"7.5","depth":1,"next":{"title":"StringBuffer/Builder, Collection","level":"7.6","depth":1,"path":"list/java/string.md","ref":"list/java/string.md","articles":[]},"previous":{"title":"Static변수","level":"7.4","depth":1,"path":"list/java/static.md","ref":"list/java/static.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/java/abs.md","mtime":"2019-04-11T11:20:44.530Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-11T11:20:59.712Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
