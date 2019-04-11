@@ -1,6 +1,5 @@
 ##[소개](README.md)
 
-
 ##[HTML]()
 * [Table & Form](list/html/1.md)
 * [Hyperlink](list/html/2.md)
@@ -13,7 +12,6 @@
 * [Layout Basic](list/css/4.md)
 * [Grid & Flex](list/css/5.md)
 * [Responsive & Animation](list/css/6.md)
-
 
 ##[JAVASCRIPT]()
 * [Data Type](list/javascript/1.md)
@@ -29,11 +27,22 @@
 * [Modules & Proxy](list/javascript/9.md)
 * [Class & Object](list/javascript/10.md)
 
-
-
 ##[TYPESCRIPT]()
 * [컴파일](list/typescript/compile.md)
 * [타입](list/typescript/types.md)
 * [class와 interface](list/typescript/classandinterface.md)
 * [옵션인자](list/typescript/optionpara.md)
 * [interface](list/typescript/interface.md)
+
+##[JAVA]()
+* [Class, Get/Set](list/java/class.md)
+* [interface, Lambda](list/java/interface.md)
+* [상속, 오버라이드, 익명클래스](list/java/inherit.md)
+* [Static변수](list/java/static.md)
+* [추상클래스](list/java/abstract.md)
+* [StringBuffer/Builder, Collection](list/java/string)
+
+##[PYTHON]()
+* [자료형](list/python/datastructure.md)
+* [반복문, 조건문, 연산자](list/python/loop.md)
+* [함수와 모듈](list/python/function.md)
