@@ -39,7 +39,7 @@
 * [interface, Lambda](list/java/interface.md)
 * [상속, 오버라이드, 익명클래스](list/java/inherit.md)
 * [Static변수](list/java/static.md)
-* [추상클래스](list/java/abstract.md)
+* [추상클래스](list/java/abs.md)
 * [StringBuffer/Builder, Collection](list/java/string.md)
 
 ##[PYTHON]()
