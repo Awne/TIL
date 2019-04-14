@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>AJAX · GitBook</title>
+        <title>Node · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="node.html" />
+    <link rel="next" href="6.html" />
     
     
-    <link rel="prev" href="5.html" />
+    <link rel="prev" href="ajax.html" />
     
 
     </head>
@@ -307,7 +307,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.6" data-path="ajax.html">
+        <li class="chapter " data-level="4.6" data-path="ajax.html">
             
                 <a href="ajax.html">
             
@@ -320,7 +320,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.7" data-path="node.html">
+        <li class="chapter active" data-level="4.7" data-path="node.html">
             
                 <a href="node.html">
             
@@ -638,7 +638,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >AJAX</a>
+        <a href="../.." >Node</a>
     </h1>
 </div>
 
@@ -653,19 +653,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="fetch---then">fetch - then</h2>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;fetch&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;
- fetch(&apos;css&apos;).then(function(response){
-    response.text().then(function(text){
-        alert(text); 
-        }) 
-    }) 
-&quot;</span>&gt;</span>
+                                <pre><code class="lang-javascript">response.writeHead(<span class="hljs-number">200</span>);
+response.end(<span class="hljs-string">&quot;Finished&quot;</span>);
 </code></pre>
 <ol>
-<li>fetch(&apos;css&apos;) : &apos;css&apos;&#xB77C;&#xB294; &#xC774;&#xB984; &#xAC00;&#xC9C4; &#xD30C;&#xC77C; &#xB0B4;&#xB194;</li>
-<li>then(&#xCF5C;&#xBC31;&#xD568;&#xC218;) : 1&#xC5D0; &#xB300;&#xD55C; &#xC751;&#xB2F5;&#xD558;&#xBA74; &#xCF5C;&#xBC31;&#xD568;&#xC218; &#xC2E4;&#xD589;&#xC2DC;&#xCF1C;</li>
-<li>&#xACB0;&#xB860; : css&#xD30C;&#xC77C; &#xBC1B;&#xC73C;&#xBA74; &#xADF8; &#xD30C;&#xC77C; &#xB0B4;&#xC6A9;&#xC774; &#xACBD;&#xACE0;&#xCC3D;&#xC5D0; &#xB72C;&#xB2E4;.</li>
+<li>200&#xC740; &#xC815;&#xC0C1;&#xC801;&#xC778; &#xC644;&#xB8CC;&#xB97C; &#xC758;&#xBBF8;&#xD568; &#xC774;&#xC678;&#xC5D0;&#xB3C4;, &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xC158;(302), &#xC2E4;&#xD328;(404) &#xB4F1;&#xC774; &#xC788;&#xC74C;.</li>
+<li>&#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xC644;&#xB8CC;&#xB418;&#xBA74; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0; Finished &#xB97C; &#xCD9C;&#xB825;&#xD568;.</li>
 </ol>
 
                                 
@@ -694,12 +687,12 @@
 
             
                 
-                <a href="5.html" class="navigation navigation-prev " aria-label="Previous page: Exception">
+                <a href="ajax.html" class="navigation navigation-prev " aria-label="Previous page: AJAX">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="node.html" class="navigation navigation-next " aria-label="Next page: Node">
+                <a href="6.html" class="navigation navigation-next " aria-label="Next page: let, method, operator">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -710,7 +703,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AJAX","level":"4.6","depth":1,"next":{"title":"Node","level":"4.7","depth":1,"path":"list/javascript/node.md","ref":"list/javascript/node.md","articles":[]},"previous":{"title":"Exception","level":"4.5","depth":1,"path":"list/javascript/5.md","ref":"list/javascript/5.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/javascript/ajax.md","mtime":"2019-04-14T10:40:43.854Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-14T10:44:21.658Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Node","level":"4.7","depth":1,"next":{"title":"let, method, operator","level":"5.1","depth":1,"path":"list/javascript/6.md","ref":"list/javascript/6.md","articles":[]},"previous":{"title":"AJAX","level":"4.6","depth":1,"path":"list/javascript/ajax.md","ref":"list/javascript/ajax.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/javascript/node.md","mtime":"2019-04-14T10:43:45.708Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-14T10:44:21.658Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
