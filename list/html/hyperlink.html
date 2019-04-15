@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Class, Get/Set · GitBook</title>
+        <title>Hyperlink · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="interface.html" />
+    <link rel="next" href="multimedia.html" />
     
     
-    <link rel="prev" href="../typescript/interface.html" />
+    <link rel="prev" href="tableandform.html" />
     
 
     </head>
@@ -111,9 +111,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../html/tableandform.html">
+        <li class="chapter " data-level="2.1" data-path="tableandform.html">
             
-                <a href="../html/tableandform.html">
+                <a href="tableandform.html">
             
                     
                     Table & Form
@@ -124,9 +124,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="../html/hyperlink.html">
+        <li class="chapter active" data-level="2.2" data-path="hyperlink.html">
             
-                <a href="../html/hyperlink.html">
+                <a href="hyperlink.html">
             
                     
                     Hyperlink
@@ -137,9 +137,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="../html/multimedia.html">
+        <li class="chapter " data-level="2.3" data-path="multimedia.html">
             
-                <a href="../html/multimedia.html">
+                <a href="multimedia.html">
             
                     
                     Multimedia
@@ -484,9 +484,9 @@
         
         
     
-        <li class="chapter active" data-level="7.1" data-path="class.html">
+        <li class="chapter " data-level="7.1" data-path="../java/class.html">
             
-                <a href="class.html">
+                <a href="../java/class.html">
             
                     
                     Class, Get/Set
@@ -497,9 +497,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.2" data-path="interface.html">
+        <li class="chapter " data-level="7.2" data-path="../java/interface.html">
             
-                <a href="interface.html">
+                <a href="../java/interface.html">
             
                     
                     interface, Lambda
@@ -510,9 +510,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.3" data-path="inherit.html">
+        <li class="chapter " data-level="7.3" data-path="../java/inherit.html">
             
-                <a href="inherit.html">
+                <a href="../java/inherit.html">
             
                     
                     상속, 오버라이드, 익명클래스
@@ -523,9 +523,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.4" data-path="static.html">
+        <li class="chapter " data-level="7.4" data-path="../java/static.html">
             
-                <a href="static.html">
+                <a href="../java/static.html">
             
                     
                     Static변수
@@ -536,9 +536,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.5" data-path="abs.html">
+        <li class="chapter " data-level="7.5" data-path="../java/abs.html">
             
-                <a href="abs.html">
+                <a href="../java/abs.html">
             
                     
                     추상클래스
@@ -549,9 +549,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.6" data-path="string.html">
+        <li class="chapter " data-level="7.6" data-path="../java/string.html">
             
-                <a href="string.html">
+                <a href="../java/string.html">
             
                     
                     StringBuffer/Builder, Collection
@@ -638,7 +638,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Class, Get/Set</a>
+        <a href="../.." >Hyperlink</a>
     </h1>
 </div>
 
@@ -653,74 +653,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#xD074;&#xB798;&#xC2A4;-setter-getter">&#xD074;&#xB798;&#xC2A4;, setter, getter</h2>
-<pre><code class="lang-java"><span class="hljs-keyword">package</span> Score;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> </span>{
-    <span class="hljs-keyword">private</span> String name;
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> score;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Student</span><span class="hljs-params">(String name, <span class="hljs-keyword">int</span> score)</span></span>{ 
-        <span class="hljs-keyword">this</span>.name = name; 
-        <span class="hljs-keyword">this</span>.score = score; 
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">getinfo</span><span class="hljs-params">()</span> </span>{ 
-        System.out.printf(<span class="hljs-string">&quot;%s &#xD559;&#xC0DD;&#xC758; &#xC810;&#xC218;&#xB294; %d&#xC810; &#xC785;&#xB2C8;&#xB2E4;.\n&quot;</span>, name, score); 
-    } 
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{ 
-        <span class="hljs-keyword">return</span> name; 
-    } 
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>{ 
-        <span class="hljs-keyword">this</span>.name = name; 
-    }    
-}
+                                <h2 id="&#xB9C1;&#xD06C;-&#xD074;&#xB9AD;&#xC2DC;-&#xD30C;&#xC77C;-&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#xD568;">&#xB9C1;&#xD06C; &#xD074;&#xB9AD;&#xC2DC; &#xD30C;&#xC77C; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#xD568;.</h2>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;1.jpg&quot;</span> <span class="hljs-attr">download</span>&gt;</span> click <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 </code></pre>
-<p>&#xC704; &#xCF54;&#xB4DC;&#xB294; Student &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC815;&#xC758;&#xD55C; &#xCF54;&#xB4DC;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<ol>
-<li><p>&#xC678;&#xBD80;&#xC5D0;&#xC11C; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC5C6;&#xB294; String &#xBCC0;&#xC218;&#xC778; <strong>name&#xACFC;</strong> &#xC5B4;&#xB514;&#xC11C;&#xB4E0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC788;&#xB294; int &#xBCC0;&#xC218;&#xC778; <strong>score&#xB97C;</strong> &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p>&#xC0DD;&#xC131;&#xC790;&#xB97C; &#xD1B5;&#xD574; &#xC774; &#xD074;&#xB798;&#xC2A4;&#xB294; name&#xACFC; score&#xB97C; &#xC778;&#xC790;&#xB85C; &#xBC1B;&#xC544; &#xD074;&#xB798;&#xC2A4; &#xB0B4;&#xBD80;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p><strong>getinfo</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xD559;&#xC0DD;&#xC758; &#xC774;&#xB984;&#xACFC; &#xC810;&#xC218;&#xAC00; &#xCD9C;&#xB825;&#xB429;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p>name &#xBCC0;&#xC218;&#xB294; &#xC678;&#xBD80;&#xC5D0;&#xC11C; &#xC9C1;&#xC811; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC5C6;&#xC9C0;&#xB9CC;, <strong>setName&#xACFC;</strong> <strong>getName</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD1B5;&#xD574; &#xAC12;&#xC744; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xACE0; &#xBC18;&#xD658;&#xBC1B;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
-</ol>
-<pre><code class="lang-java"><span class="hljs-keyword">package</span> Score; 
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{ 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{ 
-        Student st1 = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">&quot;Jun&quot;</span>, <span class="hljs-number">90</span>); 
-        Student st2 = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">&quot;Yul&quot;</span>, <span class="hljs-number">100</span>); 
-
-        st1.getinfo(); 
-        st2.getinfo(); 
-
-        st1.name = <span class="hljs-string">&quot;JJ&quot;</span>; <span class="hljs-comment">//&#xC5EC;&#xAE34; private&#xB77C; &#xBCC0;&#xACBD;&#xBD88;&#xAC00; </span>
-        st1.score = <span class="hljs-number">100</span>; 
-
-        st1.setName(<span class="hljs-string">&quot;JJJ&quot;</span>); 
-
-        System.out.println(st1.getName()); 
-    } 
-}
-</code></pre>
-<p>&#xBA54;&#xC778;&#xD568;&#xC218;&#xB97C; &#xC0B4;&#xD3B4;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<ol>
-<li><p>Student &#xD074;&#xB798;&#xC2A4;&#xC758; st1 &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB294; &quot;Jun&quot; &#xC774;&#xB77C;&#xB294; &#xC774;&#xB984;&#xACFC; 90&#xC774;&#xB77C;&#xB294; &#xC810;&#xC218;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p>st2 &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB294; &quot;Yul&quot; &#xC774;&#xB77C;&#xB294; &#xC774;&#xB984;&#xACFC; 100&#xC774;&#xB77C;&#xB294; &#xC810;&#xC218;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p>&#xC774;&#xD6C4; <strong>getinfo</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xC5EC; &#xC815;&#xBCF4;&#xB97C; &#xC5BB;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p>name &#xBCC0;&#xC218;&#xB294; <strong>private</strong>&#xBCC0;&#xC218;&#xC774;&#xAE30;&#xB54C;&#xBB38;&#xC5D0; st1.name &#xCC98;&#xB7FC; &#xC9C1;&#xC811; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p>&#xC774;&#xB54C; <strong>setName</strong>, <strong>getName</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD1B5;&#xD574; &#xAC12;&#xC744; &#xC124;&#xC815;&#xD558;&#xACE0; &#xCD9C;&#xB825;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
-</ol>
+<p><code>download</code> &#xC18D;&#xC131;&#xC740; &#xAC12;&#xC744; &#xAC00;&#xC9C8;&#xC218;&#xB3C4; &#xC788;&#xC73C;&#xBA70; &#xC774; &#xAC12;&#xC740; &#xD30C;&#xC77C;&#xC758; &#xC0C8;&#xB85C;&#xC6B4; &#xC774;&#xB984;&#xC774;&#xB2E4;.</p>
+<p>(&#xB9CC;&#xC77C; &quot;abcd&quot;&#xB77C;&#xBA74; abcd&#xB77C;&#xB294; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xD30C;&#xC77C;&#xC774; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;&#xB428;.)</p>
+<h2 id="&#xB9C1;&#xD06C;-&#xD074;&#xB9AD;&#xC2DC;-&#xBA54;&#xC77C;&#xBCF4;&#xB0C4;">&#xB9C1;&#xD06C; &#xD074;&#xB9AD;&#xC2DC; &#xBA54;&#xC77C;&#xBCF4;&#xB0C4;.</h2>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;mailto : abcd@gggg.com&gt; click &lt;/a&gt;
+</span></span></code></pre>
+<p><a href="http://bit.ly/2URiHXE" target="_blank">&#xC2E4;&#xC2B5;</a></p>
 
                                 
                                 </section>
@@ -748,12 +689,12 @@
 
             
                 
-                <a href="../typescript/interface.html" class="navigation navigation-prev " aria-label="Previous page: interface">
+                <a href="tableandform.html" class="navigation navigation-prev " aria-label="Previous page: Table & Form">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="interface.html" class="navigation navigation-next " aria-label="Next page: interface, Lambda">
+                <a href="multimedia.html" class="navigation navigation-next " aria-label="Next page: Multimedia">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -764,7 +705,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Class, Get/Set","level":"7.1","depth":1,"next":{"title":"interface, Lambda","level":"7.2","depth":1,"path":"list/java/interface.md","ref":"list/java/interface.md","articles":[]},"previous":{"title":"interface","level":"6.5","depth":1,"path":"list/typescript/interface.md","ref":"list/typescript/interface.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/java/class.md","mtime":"2019-04-14T10:44:54.651Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-15T06:06:28.719Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Hyperlink","level":"2.2","depth":1,"next":{"title":"Multimedia","level":"2.3","depth":1,"path":"list/html/multimedia.md","ref":"list/html/multimedia.md","articles":[]},"previous":{"title":"Table & Form","level":"2.1","depth":1,"path":"list/html/tableandform.md","ref":"list/html/tableandform.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/html/hyperlink.md","mtime":"2019-04-15T05:59:39.882Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-15T06:06:28.719Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Class, Get/Set · GitBook</title>
+        <title>Multimedia · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="interface.html" />
+    <link rel="next" href="../css/1.md" />
     
     
-    <link rel="prev" href="../typescript/interface.html" />
+    <link rel="prev" href="hyperlink.html" />
     
 
     </head>
@@ -111,9 +111,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../html/tableandform.html">
+        <li class="chapter " data-level="2.1" data-path="tableandform.html">
             
-                <a href="../html/tableandform.html">
+                <a href="tableandform.html">
             
                     
                     Table & Form
@@ -124,9 +124,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="../html/hyperlink.html">
+        <li class="chapter " data-level="2.2" data-path="hyperlink.html">
             
-                <a href="../html/hyperlink.html">
+                <a href="hyperlink.html">
             
                     
                     Hyperlink
@@ -137,9 +137,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="../html/multimedia.html">
+        <li class="chapter active" data-level="2.3" data-path="multimedia.html">
             
-                <a href="../html/multimedia.html">
+                <a href="multimedia.html">
             
                     
                     Multimedia
@@ -484,9 +484,9 @@
         
         
     
-        <li class="chapter active" data-level="7.1" data-path="class.html">
+        <li class="chapter " data-level="7.1" data-path="../java/class.html">
             
-                <a href="class.html">
+                <a href="../java/class.html">
             
                     
                     Class, Get/Set
@@ -497,9 +497,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.2" data-path="interface.html">
+        <li class="chapter " data-level="7.2" data-path="../java/interface.html">
             
-                <a href="interface.html">
+                <a href="../java/interface.html">
             
                     
                     interface, Lambda
@@ -510,9 +510,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.3" data-path="inherit.html">
+        <li class="chapter " data-level="7.3" data-path="../java/inherit.html">
             
-                <a href="inherit.html">
+                <a href="../java/inherit.html">
             
                     
                     상속, 오버라이드, 익명클래스
@@ -523,9 +523,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.4" data-path="static.html">
+        <li class="chapter " data-level="7.4" data-path="../java/static.html">
             
-                <a href="static.html">
+                <a href="../java/static.html">
             
                     
                     Static변수
@@ -536,9 +536,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.5" data-path="abs.html">
+        <li class="chapter " data-level="7.5" data-path="../java/abs.html">
             
-                <a href="abs.html">
+                <a href="../java/abs.html">
             
                     
                     추상클래스
@@ -549,9 +549,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.6" data-path="string.html">
+        <li class="chapter " data-level="7.6" data-path="../java/string.html">
             
-                <a href="string.html">
+                <a href="../java/string.html">
             
                     
                     StringBuffer/Builder, Collection
@@ -638,7 +638,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Class, Get/Set</a>
+        <a href="../.." >Multimedia</a>
     </h1>
 </div>
 
@@ -653,73 +653,73 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#xD074;&#xB798;&#xC2A4;-setter-getter">&#xD074;&#xB798;&#xC2A4;, setter, getter</h2>
-<pre><code class="lang-java"><span class="hljs-keyword">package</span> Score;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> </span>{
-    <span class="hljs-keyword">private</span> String name;
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> score;
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Student</span><span class="hljs-params">(String name, <span class="hljs-keyword">int</span> score)</span></span>{ 
-        <span class="hljs-keyword">this</span>.name = name; 
-        <span class="hljs-keyword">this</span>.score = score; 
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">getinfo</span><span class="hljs-params">()</span> </span>{ 
-        System.out.printf(<span class="hljs-string">&quot;%s &#xD559;&#xC0DD;&#xC758; &#xC810;&#xC218;&#xB294; %d&#xC810; &#xC785;&#xB2C8;&#xB2E4;.\n&quot;</span>, name, score); 
-    } 
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{ 
-        <span class="hljs-keyword">return</span> name; 
-    } 
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>{ 
-        <span class="hljs-keyword">this</span>.name = name; 
-    }    
-}
+                                <h2 id="&#xC774;&#xBBF8;&#xC9C0;">&#xC774;&#xBBF8;&#xC9C0;</h2>
+<h3 id="&#xC774;&#xBBF8;&#xC9C0;-&#xB0B4;&#xC5D0;-&#xB9C1;&#xD06C;-&#xAC78;&#xAE30;">&#xC774;&#xBBF8;&#xC9C0; &#xB0B4;&#xC5D0; &#xB9C1;&#xD06C; &#xAC78;&#xAE30;</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span> = &quot;<span class="hljs-attr">1.jpg</span>&quot; <span class="hljs-attr">usemap</span> = &quot;#<span class="hljs-attr">workmap</span>&quot;&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">map</span> <span class="hljs-attr">name</span> = &quot;<span class="hljs-attr">workmap</span>&quot;&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">area</span> <span class="hljs-attr">shape</span> = &quot;<span class="hljs-attr">rect</span>&quot; <span class="hljs-attr">coords</span> = &quot;<span class="hljs-attr">1</span>,<span class="hljs-attr">2</span>,<span class="hljs-attr">3</span>,<span class="hljs-attr">4</span>&quot; <span class="hljs-attr">href</span> = &quot;<span class="hljs-attr">url</span>&quot;&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">map</span>&gt;</span>
 </code></pre>
-<p>&#xC704; &#xCF54;&#xB4DC;&#xB294; Student &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC815;&#xC758;&#xD55C; &#xCF54;&#xB4DC;&#xC785;&#xB2C8;&#xB2E4;.</p>
 <ol>
-<li><p>&#xC678;&#xBD80;&#xC5D0;&#xC11C; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC5C6;&#xB294; String &#xBCC0;&#xC218;&#xC778; <strong>name&#xACFC;</strong> &#xC5B4;&#xB514;&#xC11C;&#xB4E0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC788;&#xB294; int &#xBCC0;&#xC218;&#xC778; <strong>score&#xB97C;</strong> &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p>&#xC0DD;&#xC131;&#xC790;&#xB97C; &#xD1B5;&#xD574; &#xC774; &#xD074;&#xB798;&#xC2A4;&#xB294; name&#xACFC; score&#xB97C; &#xC778;&#xC790;&#xB85C; &#xBC1B;&#xC544; &#xD074;&#xB798;&#xC2A4; &#xB0B4;&#xBD80;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p><strong>getinfo</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xD559;&#xC0DD;&#xC758; &#xC774;&#xB984;&#xACFC; &#xC810;&#xC218;&#xAC00; &#xCD9C;&#xB825;&#xB429;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p>name &#xBCC0;&#xC218;&#xB294; &#xC678;&#xBD80;&#xC5D0;&#xC11C; &#xC9C1;&#xC811; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC5C6;&#xC9C0;&#xB9CC;, <strong>setName&#xACFC;</strong> <strong>getName</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD1B5;&#xD574; &#xAC12;&#xC744; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xACE0; &#xBC18;&#xD658;&#xBC1B;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
+<li><code>&lt;img&gt;</code> &#xD0DC;&#xADF8;&#xC640; <code>&lt;map&gt;</code> &#xD0DC;&#xADF8;&#xB97C; &#xBCC4;&#xAC1C;&#xB85C; &#xC0DD;&#xC131;&#xD574;&#xC900;&#xB2E4;.</li>
+<li><code>&lt;img&gt;</code> &#xD0DC;&#xADF8;&#xC5D0; <code>usemap</code> &#xC18D;&#xC131;&#xC744; &#xCD94;&#xAC00;&#xD558;&#xACE0; &#xADF8; &#xAC12;&#xC740; <code>&lt;map&gt;</code> &#xD0DC;&#xADF8;&#xC758; <code>name</code> &#xC73C;&#xB85C; &#xC124;&#xC815;&#xD55C;&#xB2E4;.</li>
+<li><code>&lt;map&gt;</code> &#xD0DC;&#xADF8;&#xC758; &#xC790;&#xC2DD;&#xD0DC;&#xADF8;&#xC778; <code>&lt;area&gt;</code> &#xD0DC;&#xADF8;&#xB97C; &#xC0DD;&#xC131;&#xD55C;&#xB2E4;.</li>
+<li><code>&lt;area&gt;</code>&#xD0DC;&#xADF8;&#xC5D0; <code>shape</code>, <code>coords</code>, <code>href</code> &#xC18D;&#xC131;&#xC744; &#xCD94;&#xAC00;&#xD574;&#xC900;&#xB2E4;.</li>
 </ol>
-<pre><code class="lang-java"><span class="hljs-keyword">package</span> Score; 
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{ 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{ 
-        Student st1 = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">&quot;Jun&quot;</span>, <span class="hljs-number">90</span>); 
-        Student st2 = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">&quot;Yul&quot;</span>, <span class="hljs-number">100</span>); 
-
-        st1.getinfo(); 
-        st2.getinfo(); 
-
-        st1.name = <span class="hljs-string">&quot;JJ&quot;</span>; <span class="hljs-comment">//&#xC5EC;&#xAE34; private&#xB77C; &#xBCC0;&#xACBD;&#xBD88;&#xAC00; </span>
-        st1.score = <span class="hljs-number">100</span>; 
-
-        st1.setName(<span class="hljs-string">&quot;JJJ&quot;</span>); 
-
-        System.out.println(st1.getName()); 
-    } 
-}
+<h4 id="&#xC774;&#xBBF8;&#xC9C0;&#xC640;-&#xB9F5;&#xC744;-&#xB530;&#xB85C;-&#xB9CC;&#xB4E4;&#xACE0;-&#xB9F5;&#xC758;-&#xC790;&#xC2DD;&#xD0DC;&#xADF8;&#xC5D0;&#xC11C;-&#xBAA8;&#xB4E0;-&#xC124;&#xC815;&#xC744;-&#xD574;&#xC900;&#xB2E4;">&#xC774;&#xBBF8;&#xC9C0;&#xC640; &#xB9F5;&#xC744; &#xB530;&#xB85C; &#xB9CC;&#xB4E4;&#xACE0;, &#xB9F5;&#xC758; &#xC790;&#xC2DD;&#xD0DC;&#xADF8;&#xC5D0;&#xC11C; &#xBAA8;&#xB4E0; &#xC124;&#xC815;&#xC744; &#xD574;&#xC900;&#xB2E4;.</h4>
+<h3 id="&#xD654;&#xBA74;-&#xD06C;&#xAE30;&#xC5D0;-&#xB530;&#xB77C;-&#xB2EC;&#xB77C;&#xC9C0;&#xB294;-&#xC774;&#xBBF8;&#xC9C0;-&#xB85C;&#xB529;">&#xD654;&#xBA74; &#xD06C;&#xAE30;&#xC5D0; &#xB530;&#xB77C; &#xB2EC;&#xB77C;&#xC9C0;&#xB294; &#xC774;&#xBBF8;&#xC9C0; &#xB85C;&#xB529;</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">media</span> = &quot;(<span class="hljs-attr">min-width:</span> <span class="hljs-attr">650px</span>)&quot; <span class="hljs-attr">srcset</span> = &quot;<span class="hljs-attr">1.jpg</span>&quot;&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">media</span> = &quot;(<span class="hljs-attr">min-width:</span> <span class="hljs-attr">465px</span>)&quot; <span class="hljs-attr">srcset</span> = &quot;<span class="hljs-attr">2.jpg</span>&quot;&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span> = &quot;<span class="hljs-attr">3.jpg</span>&quot;&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
 </code></pre>
-<p>&#xBA54;&#xC778;&#xD568;&#xC218;&#xB97C; &#xC0B4;&#xD3B4;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <ol>
-<li><p>Student &#xD074;&#xB798;&#xC2A4;&#xC758; st1 &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB294; &quot;Jun&quot; &#xC774;&#xB77C;&#xB294; &#xC774;&#xB984;&#xACFC; 90&#xC774;&#xB77C;&#xB294; &#xC810;&#xC218;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p>st2 &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB294; &quot;Yul&quot; &#xC774;&#xB77C;&#xB294; &#xC774;&#xB984;&#xACFC; 100&#xC774;&#xB77C;&#xB294; &#xC810;&#xC218;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p>&#xC774;&#xD6C4; <strong>getinfo</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xC5EC; &#xC815;&#xBCF4;&#xB97C; &#xC5BB;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p>name &#xBCC0;&#xC218;&#xB294; <strong>private</strong>&#xBCC0;&#xC218;&#xC774;&#xAE30;&#xB54C;&#xBB38;&#xC5D0; st1.name &#xCC98;&#xB7FC; &#xC9C1;&#xC811; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
-<li><p>&#xC774;&#xB54C; <strong>setName</strong>, <strong>getName</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD1B5;&#xD574; &#xAC12;&#xC744; &#xC124;&#xC815;&#xD558;&#xACE0; &#xCD9C;&#xB825;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-</li>
+<li><code>&lt;picture&gt;</code> &#xD0DC;&#xADF8;&#xB85C; &#xC774;&#xBBF8;&#xC9C0;&#xB4E4;&#xC744; &#xD55C; &#xADF8;&#xB8F9;&#xC73C;&#xB85C; &#xBB36;&#xC5B4;&#xC900;&#xB2E4;.</li>
+<li>&#xBC18;&#xC751;&#xD615; &#xC774;&#xBBF8;&#xC9C0;&#xB4E4;&#xC740; <code>&lt;source media = &quot;&#xD06C;&#xAE30;&quot; srcset = &quot;url&quot;&gt;</code> &#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</li>
+<li>&#xB9C8;&#xC9C0;&#xB9C9; &#xC774;&#xBBF8;&#xC9C0;&#xB294; &#xB85C;&#xB529; &#xC2E4;&#xD328;&#xC2DC; &#xBD88;&#xB7EC;&#xC62C; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC815;&#xD574;&#xC900;&#xB2E4;.</li>
+</ol>
+<h2 id="&#xC544;&#xC774;&#xD504;&#xB808;&#xC784;">&#xC544;&#xC774;&#xD504;&#xB808;&#xC784;</h2>
+<pre><code class="lang-html">&lt;iframe srcdoc = &quot;&lt;p&gt;Hello&lt;/p&gt;&quot; src=&quot;1.html&quot; width=&quot;100px&quot; height=&quot;100px&quot; seamless sandbox&gt;
+</code></pre>
+<p><code>&lt;srcdoc&gt;</code> &#xD0DC;&#xADF8;&#xB294; &#xC778;&#xB77C;&#xC778;&#xC73C;&#xB85C; &#xCF54;&#xB4DC;&#xB97C; &#xC791;&#xC131;&#xD558;&#xBA70; &#xC9C0;&#xC6D0;&#xD558;&#xC9C0; &#xC54A;&#xC744; &#xACBD;&#xC6B0; <code>&lt;src&gt;</code> &#xD0DC;&#xADF8;&#xC758; &#xBB38;&#xC11C;&#xAC00; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;.</p>
+<p><code>seamless</code> &#xC18D;&#xC131;&#xC744; &#xC124;&#xC815;&#xD558;&#xBA74; &#xC544;&#xC774;&#xD504;&#xB808;&#xC784;&#xC774; &#xBCC4;&#xAC1C;&#xC758; &#xCC3D;&#xC774; &#xC544;&#xB2CC; &#xBD80;&#xBAA8; &#xC694;&#xC18C;&#xC758; &#xC77C;&#xBD80;&#xAC00; &#xB418;&#xC5B4; JS&#xB098; CSS&#xB4F1; &#xB2E4;&#xC591;&#xD55C; &#xC694;&#xC18C;&#xB97C; &#xC0C1;&#xC18D;&#xBC1B;&#xB294;&#xB2E4;.</p>
+<p><code>sandbox</code> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC544;&#xC774;&#xD504;&#xB808;&#xC784;&#xC5D0; &#xB0B4;&#xC7A5;&#xB41C; JS&#xB098; form &#xB4F1; &#xB2E4;&#xC591;&#xD55C; &#xC694;&#xC18C;&#xB4E4;&#xC774; &#xC791;&#xB3D9;&#xD558;&#xC9C0; &#xC54A;&#xAC8C;&#xB41C;&#xB2E4;. (iframe&#xC744; &#xD1B5;&#xD55C; &#xD574;&#xD0B9; &#xBC29;&#xC9C0;)</p>
+<p><code>sandbox</code> &#xC18D;&#xC131;&#xC5D0; &#xAC12;&#xC744; &#xC8FC;&#xBA74; &#xD574;&#xB2F9; &#xAC12;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xC694;&#xC18C;&#xB9CC; &#xC791;&#xB3D9;&#xC2DC;&#xD0AC; &#xC218; &#xC788;&#xC74C;. &#xD574;&#xB2F9; &#xAC12;&#xB4E4;&#xC740; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
+<ol>
+<li><code>allow-same-origin</code> iframe&#xACFC; &#xBD80;&#xBAA8;&#xBB38;&#xC11C;&#xB97C; &#xAC19;&#xC740; &#xB3C4;&#xBA54;&#xC778;&#xC73C;&#xB85C; &#xCDE8;&#xAE09;&#xD558;&#xC5EC; &#xBD80;&#xBAA8; &#xBB38;&#xC11C;&#xB85C; &#xC811;&#xADFC;&#xC744; &#xAC00;&#xB2A5;&#xD558;&#xAC8C; &#xD55C;&#xB2E4;. (&#xD074;&#xB85C;&#xC800; &#xB290;&#xB08C;)</li>
+<li><code>allow-top-navigation</code> &#xD398;&#xC774;&#xC9C0; &#xC804;&#xD658;&#xC2DC; iframe&#xC5D0;&#xC11C;&#xC758; &#xD398;&#xC774;&#xC9C0; &#xC774;&#xB3D9;&#xC774; &#xC544;&#xB2CC; &#xBD80;&#xBAA8; &#xBB38;&#xC11C;&#xC5D0;&#xC11C; &#xD398;&#xC774;&#xC9C0;&#xAC00; &#xC804;&#xD658;&#xB428;. (&#xBC84;&#xBE14;&#xB9C1; &#xB290;&#xB08C;)</li>
+<li><code>allow-form</code> iframe&#xC5D0;&#xC11C; &#xC791;&#xC131;&#xB41C; form&#xC744; &#xB2E4;&#xB978;&#xACF3;&#xC73C;&#xB85C; &#xC81C;&#xCD9C;&#xAC00;&#xB2A5;</li>
+<li><code>allow-scripts</code> iframe&#xC5D0; &#xB0B4;&#xC7A5;&#xB41C; script &#xC2E4;&#xD589;&#xAC00;&#xB2A5;</li>
+</ol>
+<h3 id="&#xB9C1;&#xD06C;-&#xD074;&#xB9AD;&#xC2DC;-iframe&#xC5D0;-&#xC6D0;&#xD558;&#xB294;-&#xBB38;&#xC11C;-&#xCD9C;&#xB825;">&#xB9C1;&#xD06C; &#xD074;&#xB9AD;&#xC2DC; iframe&#xC5D0; &#xC6D0;&#xD558;&#xB294; &#xBB38;&#xC11C; &#xCD9C;&#xB825;</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span> = &quot;<span class="hljs-attr">index.html</span>&quot; <span class="hljs-attr">target</span> = &quot;<span class="hljs-attr">first_frame</span>&quot;&gt;</span> Click Here! <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">name</span> = &quot;<span class="hljs-attr">first_name</span>&quot;&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+</code></pre>
+<ol>
+<li><code>&lt;a&gt;</code>&#xC758; <code>href</code>&#xC18D;&#xC131;&#xC5D0;&#xB294; iframe&#xC5D0; &#xCD9C;&#xB825;&#xD560; &#xBB38;&#xC11C;&#xC758; URL&#xC744; &#xC785;&#xB825;&#xD574;&#xC900;&#xB2E4;.</li>
+<li><code>target</code>&#xC18D;&#xC131;&#xC5D0;&#xB294; &#xCD9C;&#xB825;&#xC744; &#xC6D0;&#xD558;&#xB294; iframe&#xC758; <code>name</code>&#xC744; &#xC785;&#xB825;&#xD574;&#xC900;&#xB2E4;.</li>
+<li><code>&lt;iframe&gt;</code>&#xC758; <code>name</code>&#xC744; &#xBC18;&#xB4DC;&#xC2DC; &#xC815;&#xD574;&#xC900;&#xB2E4;.</li>
+</ol>
+<p><a href="http://bit.ly/2tbw09z" target="_blank">&#xC2E4;&#xC2B5;</a></p>
+<h2 id="&#xC624;&#xB514;&#xC624;--&#xBE44;&#xB514;&#xC624;">&#xC624;&#xB514;&#xC624; &amp; &#xBE44;&#xB514;&#xC624;</h2>
+<p>&#xB354;&#xC774;&#xC0C1; &#xD50C;&#xB798;&#xC2DC; &#xD30C;&#xC77C;&#xB4E4;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA70; HTML&#xC758; <audio>, <video>&#xB85C; &#xB300;&#xCCB4;.</video></audio></p>
+<p>&#xBA40;&#xD2F0;&#xBBF8;&#xB514;&#xC5B4; &#xC7AC;&#xC0DD;&#xBC29;&#xBC95;&#xC740; 3&#xAC00;&#xC9C0; &#xC874;&#xC7AC;</p>
+<ol>
+<li>SWFObject &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xD30C;&#xC77C; &#xC5C5;&#xB85C;&#xB4DC; (&#xC774;&#xC81C; &#xC548;&#xC500;)</li>
+<li>&#xC720;&#xD29C;&#xBE0C;, &#xC0AC;&#xC6B4;&#xB4DC;&#xD074;&#xB77C;&#xC6B0;&#xB4DC; &#xB4F1;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xC5C5;&#xB85C;&#xB4DC;</li>
+<li>HTML5&#xC758; <code>&lt;video&gt;</code> <code>&lt;audio&gt;</code> &#xD0DC;&#xADF8; &#xC0AC;&#xC6A9;</li>
+</ol>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;300px&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;300px&quot;</span> <span class="hljs-attr">controls</span> <span class="hljs-attr">preload</span>=<span class="hljs-string">&quot;none&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;1.mp4&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;video/mp4&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;2.ogv&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;video/ogg&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+</code></pre>
+<p><code>preload</code> &#xC18D;&#xC131;&#xC758; &#xAC12;&#xC5D0; &#xB300;&#xD574;</p>
+<ol>
+<li><code>none</code> &#xBBF8;&#xB9AC; &#xBC1B;&#xB294;&#xAC83; &#xC544;&#xBB34;&#xAC83;&#xB3C4; &#xC5C6;&#xC74C;.</li>
+<li><code>matadata</code> &#xAE30;&#xBCF8; &#xB370;&#xC774;&#xD130;&#xB9CC; &#xBBF8;&#xB9AC; &#xBC1B;&#xC74C;.</li>
+<li><code>auto</code> &#xBE48;&#xCE78;&#xC73C;&#xB85C; &#xB300;&#xCCB4;&#xAC00;&#xB2A5;&#xD558;&#xBA70; &#xD30C;&#xC77C;&#xC744; &#xBBF8;&#xB9AC;&#xBC1B;&#xC74C;.</li>
 </ol>
 
                                 
@@ -748,12 +748,12 @@
 
             
                 
-                <a href="../typescript/interface.html" class="navigation navigation-prev " aria-label="Previous page: interface">
+                <a href="hyperlink.html" class="navigation navigation-prev " aria-label="Previous page: Hyperlink">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="interface.html" class="navigation navigation-next " aria-label="Next page: interface, Lambda">
+                <a href="../css/1.md" class="navigation navigation-next " aria-label="Next page: Import & Font">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -764,7 +764,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Class, Get/Set","level":"7.1","depth":1,"next":{"title":"interface, Lambda","level":"7.2","depth":1,"path":"list/java/interface.md","ref":"list/java/interface.md","articles":[]},"previous":{"title":"interface","level":"6.5","depth":1,"path":"list/typescript/interface.md","ref":"list/typescript/interface.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/java/class.md","mtime":"2019-04-14T10:44:54.651Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-15T06:06:28.719Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Multimedia","level":"2.3","depth":1,"next":{"title":"Import & Font","level":"3.1","depth":1,"path":"list/css/1.md","ref":"list/css/1.md","articles":[]},"previous":{"title":"Hyperlink","level":"2.2","depth":1,"path":"list/html/hyperlink.md","ref":"list/html/hyperlink.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/html/multimedia.md","mtime":"2019-04-15T05:59:47.888Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-15T06:06:28.719Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
