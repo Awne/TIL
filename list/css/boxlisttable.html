@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>상속, 오버라이드, 익명클래스 · GitBook</title>
+        <title>Box & List & Table · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="static.html" />
+    <link rel="next" href="layout.html" />
     
     
-    <link rel="prev" href="interface.html" />
+    <link rel="prev" href="selector.html" />
     
 
     </head>
@@ -157,9 +157,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../css/importandfont.html">
+        <li class="chapter " data-level="3.1" data-path="importandfont.html">
             
-                <a href="../css/importandfont.html">
+                <a href="importandfont.html">
             
                     
                     Import & Font
@@ -170,9 +170,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../css/selector.html">
+        <li class="chapter " data-level="3.2" data-path="selector.html">
             
-                <a href="../css/selector.html">
+                <a href="selector.html">
             
                     
                     Selector
@@ -183,9 +183,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="../css/boxlisttable.html">
+        <li class="chapter active" data-level="3.3" data-path="boxlisttable.html">
             
-                <a href="../css/boxlisttable.html">
+                <a href="boxlisttable.html">
             
                     
                     Box & List & Table
@@ -196,9 +196,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="../css/layout.html">
+        <li class="chapter " data-level="3.4" data-path="layout.html">
             
-                <a href="../css/layout.html">
+                <a href="layout.html">
             
                     
                     Layout Basic
@@ -209,9 +209,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="../css/gridandflex.html">
+        <li class="chapter " data-level="3.5" data-path="gridandflex.html">
             
-                <a href="../css/gridandflex.html">
+                <a href="gridandflex.html">
             
                     
                     Grid & Flex
@@ -222,9 +222,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.6" data-path="../css/responsiveandanimation.html">
+        <li class="chapter " data-level="3.6" data-path="responsiveandanimation.html">
             
-                <a href="../css/responsiveandanimation.html">
+                <a href="responsiveandanimation.html">
             
                     
                     Responsive & Animation
@@ -484,9 +484,9 @@
         
         
     
-        <li class="chapter " data-level="7.1" data-path="class.html">
+        <li class="chapter " data-level="7.1" data-path="../java/class.html">
             
-                <a href="class.html">
+                <a href="../java/class.html">
             
                     
                     Class, Get/Set
@@ -497,9 +497,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.2" data-path="interface.html">
+        <li class="chapter " data-level="7.2" data-path="../java/interface.html">
             
-                <a href="interface.html">
+                <a href="../java/interface.html">
             
                     
                     interface, Lambda
@@ -510,9 +510,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="7.3" data-path="inherit.html">
+        <li class="chapter " data-level="7.3" data-path="../java/inherit.html">
             
-                <a href="inherit.html">
+                <a href="../java/inherit.html">
             
                     
                     상속, 오버라이드, 익명클래스
@@ -523,9 +523,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.4" data-path="static.html">
+        <li class="chapter " data-level="7.4" data-path="../java/static.html">
             
-                <a href="static.html">
+                <a href="../java/static.html">
             
                     
                     Static변수
@@ -536,9 +536,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.5" data-path="abs.html">
+        <li class="chapter " data-level="7.5" data-path="../java/abs.html">
             
-                <a href="abs.html">
+                <a href="../java/abs.html">
             
                     
                     추상클래스
@@ -549,9 +549,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.6" data-path="string.html">
+        <li class="chapter " data-level="7.6" data-path="../java/string.html">
             
-                <a href="string.html">
+                <a href="../java/string.html">
             
                     
                     StringBuffer/Builder, Collection
@@ -638,7 +638,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >상속, 오버라이드, 익명클래스</a>
+        <a href="../.." >Box & List & Table</a>
     </h1>
 </div>
 
@@ -653,95 +653,49 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#xC0C1;&#xC18D;">&#xC0C1;&#xC18D;</h2>
-<pre><code class="lang-java"><span class="hljs-keyword">package</span> inherit; 
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">parent</span> </span>{ 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">parent</span><span class="hljs-params">()</span> </span>{ 
-        System.out.println(<span class="hljs-string">&quot;constructor of parent&quot;</span>); 
-    } 
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sayOh</span><span class="hljs-params">()</span> </span>{
-         System.out.println(<span class="hljs-string">&quot;Oh&quot;</span>); 
-    } 
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sayNo</span><span class="hljs-params">()</span> </span>{ 
-        System.out.println(<span class="hljs-string">&quot;No&quot;</span>); 
-    }
-}
-</code></pre>
+                                <h2 id="&#xBC15;&#xC2A4;">&#xBC15;&#xC2A4;</h2>
 <ol>
-<li><p>&#xBD80;&#xBAA8; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xBA3C;&#xC800; &#xC815;&#xC758;&#xD568;. parent &#xD074;&#xB798;&#xC2A4;&#xC758; &#xC0DD;&#xC131;&#xC790;&#xB97C; &#xCD94;&#xAC00;&#xD588;&#xC73C;&#xBA70; 2&#xAC1C;&#xC758; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xCD94;&#xAC00;&#xD568;.</p>
-</li>
-<li><p>&#xCC38;&#xACE0;&#xB85C;, <strong>sayNo</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB294; <strong>private</strong>&#xB85C; &#xC120;&#xC5B8;&#xB418;&#xC5B4;&#xC788;&#xAE30;&#xC5D0; &#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC0C1;&#xC18D;&#xBC1B;&#xC544; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xC74C;.</p>
-</li>
+<li><code>padding</code> &#xCEE8;&#xD150;&#xCE20;&#xC640; &#xBC15;&#xC2A4; &#xC0AC;&#xC774;&#xC758; &#xAC70;&#xB9AC;</li>
+<li><code>border</code> &#xBC15;&#xC2A4;&#xC758; &#xD14C;&#xB450;&#xB9AC;, &#xAD75;&#xAE30;&#xB97C; &#xC870;&#xC808;&#xD558;&#xBA74; &#xCEE8;&#xD150;&#xCE20; &#xBC29;&#xD5A5;&#xC73C;&#xB85C; &#xC99D;&#xAC00;&#xD568;.</li>
+<li><code>margin</code> &#xBC15;&#xC2A4;&#xC640; &#xC678;&#xBD80; &#xC694;&#xC18C;&#xC640;&#xC758; &#xAC70;&#xB9AC;</li>
 </ol>
-<h2 id="&#xC624;&#xBC84;&#xB77C;&#xC774;&#xB4DC;">&#xC624;&#xBC84;&#xB77C;&#xC774;&#xB4DC;</h2>
-<pre><code class="lang-java"><span class="hljs-keyword">package</span> inherit; 
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">child</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">parent</span></span>{ 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">child</span><span class="hljs-params">()</span> </span>{ 
-        System.out.println(<span class="hljs-string">&quot;constructor of child&quot;</span>); 
-    } 
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sayOh</span><span class="hljs-params">()</span> </span>{ 
-        System.out.println(<span class="hljs-string">&quot;OHHHHHHHHHHHHHHH&quot;</span>);
-    } 
-}
-</code></pre>
+<p><a href="http://bit.ly/2UOcoE8" target="_blank">&#xC2E4;&#xC2B5;</a></p>
+<h3 id="&#xBC15;&#xC2A4;&#xB97C;-&#xC228;&#xAE30;&#xACE0;-&#xC2F6;&#xC744;&#xB54C;">&#xBC15;&#xC2A4;&#xB97C; &#xC228;&#xAE30;&#xACE0; &#xC2F6;&#xC744;&#xB54C;</h3>
 <ol>
-<li><p>&#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xB294; <strong>extends</strong> &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xD1B5;&#xD574; parent &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC0C1;&#xC18D;&#xBC1B;&#xC558;&#xC74C;.</p>
-</li>
-<li><p>&#xAE30;&#xC874;&#xC5D0; parent &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xC788;&#xB358; <strong>sayOh</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xB2E4;&#xC2DC; &#xC815;&#xC758;&#xD588;&#xC73C;&#xBA70; &#xC774;&#xB97C; <strong>&#xC624;&#xBC84;&#xB77C;&#xC774;&#xB529;</strong>&#xC774;&#xB77C;&#xACE0; &#xD568;.</p>
-</li>
-<li><p>&#xC774;&#xB54C; child &#xD074;&#xB798;&#xC2A4;&#xB294; &#xC624;&#xBC84;&#xB77C;&#xC774;&#xB529;&#xD55C; <strong>sayOh</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xAC8C; &#xB41C;&#xB2E4;.</p>
-</li>
+<li><code>display : none</code> &#xD754;&#xC801;&#xB3C4; &#xB0A8;&#xAE30;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
+<li><code>visibility : hidden</code> &#xADF8; &#xC790;&#xB9AC;&#xC5D0; &#xACF5;&#xBC31;&#xC774; &#xC0DD;&#xAE34;&#xB2E4;.</li>
 </ol>
-<pre><code class="lang-java"><span class="hljs-keyword">package</span> inherit; 
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{ 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        parent first = <span class="hljs-keyword">new</span> child(); 
-        parent second = <span class="hljs-keyword">new</span> secondchild(); 
-
-        parent[] arr = <span class="hljs-keyword">new</span> parent[<span class="hljs-number">2</span>]; 
-        arr[<span class="hljs-number">0</span>] = first; 
-        arr[<span class="hljs-number">1</span>] = second; 
-    } 
-}
-</code></pre>
+<h2 id="&#xD14C;&#xC774;&#xBE14;">&#xD14C;&#xC774;&#xBE14;</h2>
+<h3 id="empty-cells">empty-cells</h3>
+<p>&#xBE48; &#xC140;&#xC744; &#xD45C;&#xC2DC;&#xD560;&#xC9C0; &#xC5EC;&#xBD80;&#xB97C; &#xACB0;&#xC815;&#xD568;.</p>
 <ol>
-<li><p><strong>first</strong>&#xC640; <strong>second</strong>&#xB294; &#xBAA8;&#xB450; <strong>parent</strong> <strong>&#xC790;&#xB8CC;&#xD615;</strong>&#xC774;&#xAE30;&#xC5D0; &#xBC30;&#xC5F4;&#xB85C; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xB2E4;. </p>
-</li>
-<li><p>&#xC704; &#xCF54;&#xB4DC;&#xC758; &#xC758;&#xBBF8;&#xB294; <strong>parent &#xC790;&#xB8CC;&#xD615;</strong>&#xC778; <strong>first &#xC778;&#xC2A4;&#xD134;&#xC2A4;</strong>&#xB97C; &#xB9CC;&#xB4E4;&#xBA70; &#xC774;&#xB294; <strong>child &#xC0DD;&#xC131;&#xC790;</strong>&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</p>
-</li>
-<li><p>&#xB450; &#xBC88;&#xC9F8; &#xCF54;&#xB4DC;&#xB294; &#xBAA8;&#xB450; &#xAC19;&#xC9C0;&#xB9CC; <strong>secondchild &#xC0DD;&#xC131;&#xC790;</strong>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</p>
-</li>
+<li><code>show</code> &#xBCF4;&#xC5EC;&#xC900;&#xB2E4;.</li>
+<li><code>hide</code> &#xC228;&#xAE34;&#xB2E4;.</li>
+<li><code>inherit</code> &#xC0C1;&#xC18D;&#xBC1B;&#xB294;&#xB2E4;.</li>
 </ol>
-<h2 id="object-&#xD074;&#xB798;&#xC2A4;-this-super">Object &#xD074;&#xB798;&#xC2A4;, this, super</h2>
+<h3 id="border-spacing">border-spacing</h3>
+<p>&#xC140; &#xC0AC;&#xC774;&#xC758; &#xAC70;&#xB9AC;&#xB97C; &#xC124;&#xC815;&#xD568;.</p>
+<p><a href="http://bit.ly/2URgKtZ" target="_blank">&#xC2E4;&#xC2B5;</a></p>
+<h3 id="border-collapse">border-collapse</h3>
+<p>&#xC778;&#xC811;&#xD55C; &#xD14C;&#xB450;&#xB9AC;&#xB97C; &#xC124;&#xC815;&#xD568;.</p>
 <ol>
-<li>&#xBAA8;&#xB4E0; &#xD074;&#xB798;&#xC2A4;&#xC758; &#xC870;&#xC0C1; &#xD074;&#xB798;&#xC2A4;&#xB294; <strong>Object</strong> &#xD074;&#xB798;&#xC2A4;&#xC774;&#xBBC0;&#xB85C; &#xBAA8;&#xB4E0; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC774; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC0C1;&#xC18D;&#xD55C;&#xB2E4;.</li>
-<li><strong>this</strong>&#xB294; <strong>&#xC9C0;&#xAE08; &#xC18D;&#xD55C; &#xD074;&#xB798;&#xC2A4;</strong>&#xB97C;, <strong>super</strong>&#xB294; <strong>&#xC9C0;&#xAE08; &#xC18D;&#xD55C; &#xD074;&#xB798;&#xC2A4;&#xC758; &#xBD80;&#xBAA8; &#xD074;&#xB798;&#xC2A4;</strong>&#xB97C; &#xAC00;&#xB9AC;&#xD0A8;&#xB2E4;.</li>
+<li><code>collapse</code> &#xC778;&#xC811;&#xD55C; &#xBCC0;&#xC758; &#xAD75;&#xAE30;&#xB97C; &#xAE30;&#xC874; &#xC140;&#xC758; &#xBCC0;&#xC758; &#xAD75;&#xAE30;&#xB85C; &#xC904;&#xC778;&#xB2E4;.</li>
+<li><code>separate</code> &#xC778;&#xC811;&#xD55C; &#xBCC0;&#xC758; &#xAD75;&#xAE30;&#xB97C; &#xB450; &#xC140;&#xC758; &#xBCC0;&#xC758; &#xAD75;&#xAE30;&#xC758; &#xD569;&#xC73C;&#xB85C; &#xB9CC;&#xB4E0;&#xB2E4;.</li>
 </ol>
-<h2 id="&#xB0B4;&#xBD80;&#xD074;&#xB798;&#xC2A4;">&#xB0B4;&#xBD80;&#xD074;&#xB798;&#xC2A4;</h2>
-<pre><code class="lang-java">OuterClass.InnerClass ic = <span class="hljs-keyword">new</span> OuterClass.InnerClass();
-</code></pre>
-<p>&#xB0B4;&#xBD80; &#xD074;&#xB798;&#xC2A4;&#xB294; &#xD074;&#xB798;&#xC2A4; &#xC548;&#xC5D0; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC788;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</p>
-<h2 id="&#xC775;&#xBA85;-&#xD074;&#xB798;&#xC2A4;">&#xC775;&#xBA85; &#xD074;&#xB798;&#xC2A4;</h2>
-<pre><code class="lang-java">AnonymousClass sampleClass = <span class="hljs-keyword">new</span> AnonymousClass(); 
-<span class="hljs-keyword">new</span> AnonymousClass();
-</code></pre>
+<p><a href="http://bit.ly/2tgjZ2G" target="_blank">&#xC2E4;&#xC2B5;</a></p>
+<h2 id="&#xBAA9;&#xB85D;">&#xBAA9;&#xB85D;</h2>
+<h3 id="list-style-type">list-style-type</h3>
+<p>&#xB9AC;&#xC2A4;&#xD2B8;&#xC758; &#xC778;&#xB371;&#xC2A4; &#xBAA8;&#xC591;&#xC744; &#xBC14;&#xAFC0; &#xC218; &#xC788;&#xC74C;.</p>
+<h3 id="list-style-image">list-style-image</h3>
+<p><code>url</code> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC778;&#xB371;&#xC2A4; &#xBAA8;&#xC591;&#xC744; &#xC774;&#xBBF8;&#xC9C0;&#xB85C; &#xBC14;&#xAFC0; &#xC218; &#xC788;&#xC74C;.</p>
+<h3 id="list-style-position">list-style-position</h3>
+<p>&#xB9AC;&#xC2A4;&#xD2B8;&#xC758; &#xB0B4;&#xC6A9;&#xC744; &#xB4E4;&#xC5EC;&#xC4F0;&#xAE30; &#xD560;&#xC9C0; &#xC124;&#xC815;&#xD560; &#xC218; &#xC788;&#xC74C;.</p>
 <ol>
-<li><p>&#xBCF4;&#xD1B5; &#xCCAB;&#xBC88;&#xC9F8; &#xC904;&#xCC98;&#xB7FC; &#xD074;&#xB798;&#xC2A4;&#xC758; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC0DD;&#xC131;&#xD55C;&#xB2E4;. &#xB450; &#xBC88;&#xC9F8; &#xC904;&#xC740; <strong>&#xC775;&#xBA85; &#xD074;&#xB798;&#xC2A4;</strong> &#xC120;&#xC5B8;&#xBC29;&#xBC95;&#xC774;&#xB2E4;.</p>
-</li>
-<li><p>&#xC790;&#xB8CC;&#xD615;&#xACFC; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC758; &#xC774;&#xB984;&#xC774; &#xC5C6;&#xC74C;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;. &#xBCF4;&#xD1B5; &#xBA54;&#xC11C;&#xB4DC; &#xC624;&#xBC84;&#xB77C;&#xC774;&#xB529; &#xD6C4; &#xBC14;&#xB85C; &#xC811;&#xADFC;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xD560;&#xB54C; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;. (&#xC544;&#xB798; &#xCF54;&#xB4DC; &#xCC38;&#xACE0;)</p>
-</li>
+<li><code>outside</code> &#xC904;&#xBC14;&#xAFC8; &#xB0B4;&#xC6A9;&#xC774; &#xC778;&#xB371;&#xC2A4; &#xC544;&#xB798;&#xB97C; &#xC9C0;&#xB098;&#xC9C0; &#xC54A;&#xC74C;.</li>
+<li><code>inside</code> &#xC904;&#xBC14;&#xAFC8; &#xB0B4;&#xC6A9;&#xC774; &#xC778;&#xB371;&#xC2A4; &#xC544;&#xB798;&#xB97C; &#xC9C0;&#xB0A8;.</li>
 </ol>
-<pre><code class="lang-java"><span class="hljs-keyword">new</span> parent(){ 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sayHo</span><span class="hljs-params">()</span> </span>{ 
-        System.out.println(<span class="hljs-string">&quot;Override&quot;</span>); 
-    }.sayHo();
-</code></pre>
-<p>&#xC775;&#xBA85; &#xD074;&#xB798;&#xC2A4;&#xB294; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC640; &#xCD94;&#xC0C1; &#xD074;&#xB798;&#xC2A4;&#xC640; &#xC790;&#xC8FC; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</p>
+<h3 id="list-style">list-style</h3>
+<p>&#xC704; &#xC138; &#xC18D;&#xC131;&#xC740; <code>list-style</code>&#xB85C; &#xD569;&#xCCD0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;.</p>
 
                                 
                                 </section>
@@ -769,12 +723,12 @@
 
             
                 
-                <a href="interface.html" class="navigation navigation-prev " aria-label="Previous page: interface, Lambda">
+                <a href="selector.html" class="navigation navigation-prev " aria-label="Previous page: Selector">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="static.html" class="navigation navigation-next " aria-label="Next page: Static변수">
+                <a href="layout.html" class="navigation navigation-next " aria-label="Next page: Layout Basic">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -785,7 +739,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"상속, 오버라이드, 익명클래스","level":"7.3","depth":1,"next":{"title":"Static변수","level":"7.4","depth":1,"path":"list/java/static.md","ref":"list/java/static.md","articles":[]},"previous":{"title":"interface, Lambda","level":"7.2","depth":1,"path":"list/java/interface.md","ref":"list/java/interface.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/java/inherit.md","mtime":"2019-04-15T06:22:47.690Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-17T02:30:41.737Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Box & List & Table","level":"3.3","depth":1,"next":{"title":"Layout Basic","level":"3.4","depth":1,"path":"list/css/layout.md","ref":"list/css/layout.md","articles":[]},"previous":{"title":"Selector","level":"3.2","depth":1,"path":"list/css/selector.md","ref":"list/css/selector.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/css/boxlisttable.md","mtime":"2019-04-15T06:22:47.659Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-17T02:30:41.737Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

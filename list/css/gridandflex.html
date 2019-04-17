@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>상속, 오버라이드, 익명클래스 · GitBook</title>
+        <title>Grid & Flex · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="static.html" />
+    <link rel="next" href="responsiveandanimation.html" />
     
     
-    <link rel="prev" href="interface.html" />
+    <link rel="prev" href="layout.html" />
     
 
     </head>
@@ -157,9 +157,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../css/importandfont.html">
+        <li class="chapter " data-level="3.1" data-path="importandfont.html">
             
-                <a href="../css/importandfont.html">
+                <a href="importandfont.html">
             
                     
                     Import & Font
@@ -170,9 +170,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../css/selector.html">
+        <li class="chapter " data-level="3.2" data-path="selector.html">
             
-                <a href="../css/selector.html">
+                <a href="selector.html">
             
                     
                     Selector
@@ -183,9 +183,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="../css/boxlisttable.html">
+        <li class="chapter " data-level="3.3" data-path="boxlisttable.html">
             
-                <a href="../css/boxlisttable.html">
+                <a href="boxlisttable.html">
             
                     
                     Box & List & Table
@@ -196,9 +196,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="../css/layout.html">
+        <li class="chapter " data-level="3.4" data-path="layout.html">
             
-                <a href="../css/layout.html">
+                <a href="layout.html">
             
                     
                     Layout Basic
@@ -209,9 +209,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="../css/gridandflex.html">
+        <li class="chapter active" data-level="3.5" data-path="gridandflex.html">
             
-                <a href="../css/gridandflex.html">
+                <a href="gridandflex.html">
             
                     
                     Grid & Flex
@@ -222,9 +222,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.6" data-path="../css/responsiveandanimation.html">
+        <li class="chapter " data-level="3.6" data-path="responsiveandanimation.html">
             
-                <a href="../css/responsiveandanimation.html">
+                <a href="responsiveandanimation.html">
             
                     
                     Responsive & Animation
@@ -484,9 +484,9 @@
         
         
     
-        <li class="chapter " data-level="7.1" data-path="class.html">
+        <li class="chapter " data-level="7.1" data-path="../java/class.html">
             
-                <a href="class.html">
+                <a href="../java/class.html">
             
                     
                     Class, Get/Set
@@ -497,9 +497,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.2" data-path="interface.html">
+        <li class="chapter " data-level="7.2" data-path="../java/interface.html">
             
-                <a href="interface.html">
+                <a href="../java/interface.html">
             
                     
                     interface, Lambda
@@ -510,9 +510,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="7.3" data-path="inherit.html">
+        <li class="chapter " data-level="7.3" data-path="../java/inherit.html">
             
-                <a href="inherit.html">
+                <a href="../java/inherit.html">
             
                     
                     상속, 오버라이드, 익명클래스
@@ -523,9 +523,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.4" data-path="static.html">
+        <li class="chapter " data-level="7.4" data-path="../java/static.html">
             
-                <a href="static.html">
+                <a href="../java/static.html">
             
                     
                     Static변수
@@ -536,9 +536,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.5" data-path="abs.html">
+        <li class="chapter " data-level="7.5" data-path="../java/abs.html">
             
-                <a href="abs.html">
+                <a href="../java/abs.html">
             
                     
                     추상클래스
@@ -549,9 +549,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.6" data-path="string.html">
+        <li class="chapter " data-level="7.6" data-path="../java/string.html">
             
-                <a href="string.html">
+                <a href="../java/string.html">
             
                     
                     StringBuffer/Builder, Collection
@@ -638,7 +638,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >상속, 오버라이드, 익명클래스</a>
+        <a href="../.." >Grid & Flex</a>
     </h1>
 </div>
 
@@ -653,95 +653,66 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#xC0C1;&#xC18D;">&#xC0C1;&#xC18D;</h2>
-<pre><code class="lang-java"><span class="hljs-keyword">package</span> inherit; 
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">parent</span> </span>{ 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">parent</span><span class="hljs-params">()</span> </span>{ 
-        System.out.println(<span class="hljs-string">&quot;constructor of parent&quot;</span>); 
-    } 
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sayOh</span><span class="hljs-params">()</span> </span>{
-         System.out.println(<span class="hljs-string">&quot;Oh&quot;</span>); 
-    } 
-    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sayNo</span><span class="hljs-params">()</span> </span>{ 
-        System.out.println(<span class="hljs-string">&quot;No&quot;</span>); 
-    }
-}
-</code></pre>
+                                <h2 id="flex-box">flex-box</h2>
+<p>&#xB098;&#xC5F4;&#xB41C; &#xBC15;&#xC2A4;&#xB4E4;&#xC744; &#xBB36;&#xB294; &#xCEE8;&#xD14C;&#xC774;&#xB108;&#xC5D0; <code>display : flex</code>&#xC120;&#xC5B8;</p>
+<p>&#xBCF4;&#xD1B5; <code>box</code>&#xC694;&#xC18C;&#xB4E4;&#xC740; &#xC138;&#xB85C;&#xB85C; &#xBC30;&#xCE58;&#xB418;&#xC9C0;&#xB9CC;, <code>flex-box</code>&#xC694;&#xC18C;&#xB294; &#xAC00;&#xB85C;&#xB85C; &#xBC30;&#xCE58;&#xB41C;&#xB2E4;.</p>
+<h3 id="flex-direction">flex-direction</h3>
+<p>&#xC9C4;&#xD589; &#xBC29;&#xD5A5;&#xC744; &#xC124;&#xC815;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<h3 id="flex-wrap">flex-wrap</h3>
 <ol>
-<li><p>&#xBD80;&#xBAA8; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xBA3C;&#xC800; &#xC815;&#xC758;&#xD568;. parent &#xD074;&#xB798;&#xC2A4;&#xC758; &#xC0DD;&#xC131;&#xC790;&#xB97C; &#xCD94;&#xAC00;&#xD588;&#xC73C;&#xBA70; 2&#xAC1C;&#xC758; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xCD94;&#xAC00;&#xD568;.</p>
-</li>
-<li><p>&#xCC38;&#xACE0;&#xB85C;, <strong>sayNo</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB294; <strong>private</strong>&#xB85C; &#xC120;&#xC5B8;&#xB418;&#xC5B4;&#xC788;&#xAE30;&#xC5D0; &#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC0C1;&#xC18D;&#xBC1B;&#xC544; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xC74C;.</p>
-</li>
+<li><code>nowrap</code> &#xB9D0;&#xADF8;&#xB300;&#xB85C; wrap&#xC774; &#xC5C6;&#xB2E4;. &#xC81C;&#xD55C;&#xB108;&#xBE44;&#xB97C; &#xB6AB;&#xACE0;&#xAC04;&#xB2E4;.</li>
+<li><code>wrap</code> &#xB108;&#xBE44;&#xC81C;&#xD55C;&#xC5D0; &#xAC78;&#xB9AC;&#xBA74; &#xB2E4;&#xC74C;&#xC904;&#xC5D0; &#xC313;&#xC778;&#xB2E4;.</li>
+<li><code>flex-direction</code>+<code>flex-wrap</code>=<code>flex-flow</code></li>
 </ol>
-<h2 id="&#xC624;&#xBC84;&#xB77C;&#xC774;&#xB4DC;">&#xC624;&#xBC84;&#xB77C;&#xC774;&#xB4DC;</h2>
-<pre><code class="lang-java"><span class="hljs-keyword">package</span> inherit; 
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">child</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">parent</span></span>{ 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">child</span><span class="hljs-params">()</span> </span>{ 
-        System.out.println(<span class="hljs-string">&quot;constructor of child&quot;</span>); 
-    } 
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sayOh</span><span class="hljs-params">()</span> </span>{ 
-        System.out.println(<span class="hljs-string">&quot;OHHHHHHHHHHHHHHH&quot;</span>);
-    } 
-}
-</code></pre>
+<h3 id="flex-basis">flex-basis</h3>
+<p>&#xAE30;&#xBCF8; &#xD06C;&#xAE30;&#xC124;&#xC815;. <code>width</code>&#xACFC; &#xB2E4;&#xB978;&#xC810;&#xC774;&#xB77C;&#xBA74; <code>column</code>&#xD615;&#xD0DC;&#xC5D0;&#xB3C4; &#xC0AC;&#xC6A9;&#xAC00;&#xB2A5;&#xD558;&#xB2E4;&#xB294;&#xAC83;.</p>
+<h3 id="flex-grow-flex-shrink">flex-grow, flex-shrink</h3>
 <ol>
-<li><p>&#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xB294; <strong>extends</strong> &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xD1B5;&#xD574; parent &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC0C1;&#xC18D;&#xBC1B;&#xC558;&#xC74C;.</p>
-</li>
-<li><p>&#xAE30;&#xC874;&#xC5D0; parent &#xD074;&#xB798;&#xC2A4;&#xC5D0; &#xC788;&#xB358; <strong>sayOh</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xB2E4;&#xC2DC; &#xC815;&#xC758;&#xD588;&#xC73C;&#xBA70; &#xC774;&#xB97C; <strong>&#xC624;&#xBC84;&#xB77C;&#xC774;&#xB529;</strong>&#xC774;&#xB77C;&#xACE0; &#xD568;.</p>
-</li>
-<li><p>&#xC774;&#xB54C; child &#xD074;&#xB798;&#xC2A4;&#xB294; &#xC624;&#xBC84;&#xB77C;&#xC774;&#xB529;&#xD55C; <strong>sayOh</strong> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xAC8C; &#xB41C;&#xB2E4;.</p>
-</li>
+<li><code>flex-grow</code> &#xCEE8;&#xD14C;&#xC774;&#xB108;&#xAC00; &#xB0A8;&#xB294; &#xACBD;&#xC6B0; &#xB0B4;&#xBD80; &#xBC15;&#xC2A4;&#xB4E4;&#xC5D0; &#xD560;&#xB2F9;&#xB41C; &#xAC12;&#xB300;&#xB85C; &#xD06C;&#xAE30;&#xB97C; &#xD655;&#xC7A5;</li>
+<li><code>flex-shrink</code> &#xCEE8;&#xD14C;&#xC774;&#xB108;&#xAC00; &#xBD80;&#xC871;&#xD55C; &#xACBD;&#xC6B0; &#xB0B4;&#xBD80; &#xBC15;&#xC2A4;&#xB4E4;&#xC5D0; &#xD560;&#xB2F9;&#xB41C; &#xAC12;&#xB300;&#xB85C; &#xD06C;&#xAE30;&#xB97C; &#xCD95;&#xC18C;</li>
 </ol>
-<pre><code class="lang-java"><span class="hljs-keyword">package</span> inherit; 
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{ 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        parent first = <span class="hljs-keyword">new</span> child(); 
-        parent second = <span class="hljs-keyword">new</span> secondchild(); 
-
-        parent[] arr = <span class="hljs-keyword">new</span> parent[<span class="hljs-number">2</span>]; 
-        arr[<span class="hljs-number">0</span>] = first; 
-        arr[<span class="hljs-number">1</span>] = second; 
-    } 
-}
-</code></pre>
+<p><a href="http://bit.ly/2thTn0V" target="_blank">&#xC2E4;&#xC2B5;</a></p>
+<h3 id="align-items">align-items</h3>
+<p>&#xCEE8;&#xD14C;&#xC774;&#xB108; &#xB0B4;&#xC5D0;&#xC11C; &#xBC15;&#xC2A4;&#xB4E4;&#xC758; &#xC218;&#xC9C1; &#xC704;&#xCE58;&#xB97C; &#xC124;&#xC815;</p>
 <ol>
-<li><p><strong>first</strong>&#xC640; <strong>second</strong>&#xB294; &#xBAA8;&#xB450; <strong>parent</strong> <strong>&#xC790;&#xB8CC;&#xD615;</strong>&#xC774;&#xAE30;&#xC5D0; &#xBC30;&#xC5F4;&#xB85C; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xB2E4;. </p>
-</li>
-<li><p>&#xC704; &#xCF54;&#xB4DC;&#xC758; &#xC758;&#xBBF8;&#xB294; <strong>parent &#xC790;&#xB8CC;&#xD615;</strong>&#xC778; <strong>first &#xC778;&#xC2A4;&#xD134;&#xC2A4;</strong>&#xB97C; &#xB9CC;&#xB4E4;&#xBA70; &#xC774;&#xB294; <strong>child &#xC0DD;&#xC131;&#xC790;</strong>&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</p>
-</li>
-<li><p>&#xB450; &#xBC88;&#xC9F8; &#xCF54;&#xB4DC;&#xB294; &#xBAA8;&#xB450; &#xAC19;&#xC9C0;&#xB9CC; <strong>secondchild &#xC0DD;&#xC131;&#xC790;</strong>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</p>
-</li>
+<li><code>stretch</code> &#xCEE8;&#xD14C;&#xC774;&#xB108; &#xAC00;&#xB4DD; &#xCC44;&#xC6C0;.</li>
+<li><code>center</code> &#xCEE8;&#xD14C;&#xC774;&#xB108; &#xD55C;&#xAC00;&#xC6B4;&#xB370; &#xBC30;&#xCE58;</li>
+<li><code>start</code> <code>end</code> &#xAC01;&#xAC01; &#xCEE8;&#xD14C;&#xC774;&#xB108; &#xC704;, &#xC544;&#xB798;&#xC5D0; &#xBC30;&#xCE58;</li>
 </ol>
-<h2 id="object-&#xD074;&#xB798;&#xC2A4;-this-super">Object &#xD074;&#xB798;&#xC2A4;, this, super</h2>
+<h3 id="justify-content">justify-content</h3>
+<p>&#xCEE8;&#xD14C;&#xC774;&#xB108; &#xB0B4;&#xC5D0;&#xC11C; &#xBC15;&#xC2A4;&#xB4E4;&#xC758; &#xC218;&#xD3C9; &#xC704;&#xCE58;&#xB97C; &#xC124;&#xC815;</p>
 <ol>
-<li>&#xBAA8;&#xB4E0; &#xD074;&#xB798;&#xC2A4;&#xC758; &#xC870;&#xC0C1; &#xD074;&#xB798;&#xC2A4;&#xB294; <strong>Object</strong> &#xD074;&#xB798;&#xC2A4;&#xC774;&#xBBC0;&#xB85C; &#xBAA8;&#xB4E0; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC774; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC0C1;&#xC18D;&#xD55C;&#xB2E4;.</li>
-<li><strong>this</strong>&#xB294; <strong>&#xC9C0;&#xAE08; &#xC18D;&#xD55C; &#xD074;&#xB798;&#xC2A4;</strong>&#xB97C;, <strong>super</strong>&#xB294; <strong>&#xC9C0;&#xAE08; &#xC18D;&#xD55C; &#xD074;&#xB798;&#xC2A4;&#xC758; &#xBD80;&#xBAA8; &#xD074;&#xB798;&#xC2A4;</strong>&#xB97C; &#xAC00;&#xB9AC;&#xD0A8;&#xB2E4;.</li>
+<li><code>space-around</code> &#xBAA8;&#xB4E0; &#xBC15;&#xC2A4;&#xB4E4;&#xC774; &#xB3D9;&#xC77C;&#xD55C; <code>margin</code>&#xC744; &#xAC00;&#xC9C0;&#xAC8C; &#xB418;&#xC5B4; &#xC77C;&#xC815; &#xAC70;&#xB9AC;&#xB97C; &#xC720;&#xC9C0;.</li>
+<li><code>space-evenly</code> &#xBAA8;&#xB4E0; &#xBC15;&#xC2A4;&#xB4E4;&#xC774; &#xB3D9;&#xC77C;&#xD55C; <code>margin</code>&#xC744; &#xAC00;&#xC9C0;&#xC9C0;&#xB9CC; <code>margin</code>&#xB07C;&#xB9AC; &#xACB9;&#xCE58;&#xB294; &#xAD6C;&#xAC04;&#xC5D0;&#xB294; collapse&#xAC00; &#xC77C;&#xC5B4;&#xB098; &#xD06C;&#xAE30;&#xAC00; &#xC808;&#xBC18;&#xC774; &#xB428;.</li>
+<li><code>space-between</code> &#xCC98;&#xC74C;&#xACFC; &#xB9C8;&#xC9C0;&#xB9C9; &#xBC15;&#xC2A4;&#xB294; &#xC591;&#xB05D;&#xC73C;&#xB85C; &#xBD99;&#xACE0; &#xB098;&#xBA38;&#xC9C0; &#xBC15;&#xC2A4;&#xB4E4;&#xC740; &#xC77C;&#xC815; &#xAC04;&#xACA9;&#xC744; &#xC720;&#xC9C0;.</li>
+<li><code>flex-start</code> <code>flex-start</code> &#xAC01;&#xAC01; &#xC88C;&#xC5D0;&#xC11C; &#xC6B0;, &#xC6B0;&#xC5D0;&#xC11C; &#xC88C;&#xB85C; &#xBC15;&#xC2A4;&#xB97C; &#xBC30;&#xCE58;.</li>
 </ol>
-<h2 id="&#xB0B4;&#xBD80;&#xD074;&#xB798;&#xC2A4;">&#xB0B4;&#xBD80;&#xD074;&#xB798;&#xC2A4;</h2>
-<pre><code class="lang-java">OuterClass.InnerClass ic = <span class="hljs-keyword">new</span> OuterClass.InnerClass();
-</code></pre>
-<p>&#xB0B4;&#xBD80; &#xD074;&#xB798;&#xC2A4;&#xB294; &#xD074;&#xB798;&#xC2A4; &#xC548;&#xC5D0; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC788;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</p>
-<h2 id="&#xC775;&#xBA85;-&#xD074;&#xB798;&#xC2A4;">&#xC775;&#xBA85; &#xD074;&#xB798;&#xC2A4;</h2>
-<pre><code class="lang-java">AnonymousClass sampleClass = <span class="hljs-keyword">new</span> AnonymousClass(); 
-<span class="hljs-keyword">new</span> AnonymousClass();
-</code></pre>
+<h2 id="grid">Grid</h2>
+<p>&#xBC15;&#xC2A4;&#xB4E4;&#xC744; &#xBB36;&#xB294; &#xCEE8;&#xD14C;&#xC774;&#xB108;&#xC5D0; <code>display : grid</code> &#xC120;&#xC5B8;</p>
+<h3 id="grid-template-columns">grid-template-columns</h3>
+<p>&#xAC00;&#xB85C;&#xB85C; &#xBC30;&#xCE58;&#xB418;&#xB294; &#xADF8;&#xB9AC;&#xB4DC;&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;.</p>
+<h3 id="grid-auto-rows">grid-auto-rows</h3>
+<p>&#xAC00;&#xB85C;&#xB85C; &#xBC30;&#xCE58;&#xB418;&#xB294; &#xADF8;&#xB9AC;&#xB4DC;&#xC758; &#xB192;&#xC774;&#xB97C; &#xC124;&#xC815;&#xD568;.</p>
+<h3 id="grid-template-rows">grid-template-rows</h3>
+<p>&#xC138;&#xB85C;&#xB85C; &#xBC30;&#xCE58;&#xB418;&#xB294; &#xADF8;&#xB9AC;&#xB4DC;&#xB97C; &#xB9CC;&#xB4E0;&#xB2E4;.</p>
+<h3 id="grid-auto-columns">grid-auto-columns</h3>
+<p>&#xC138;&#xB85C;&#xB85C; &#xBC30;&#xCE58;&#xB418;&#xB294; &#xADF8;&#xB9AC;&#xB4DC;&#xC758; &#xB108;&#xBE44;&#xB97C; &#xC124;&#xC815;&#xD568;.</p>
+<p>&#xB9CC;&#xC57D; &#xAC12;&#xC744; <code>fr</code>&#xB2E8;&#xC704;&#xB85C; &#xC900;&#xB2E4;&#xBA74; &#xCEE8;&#xD14C;&#xC774;&#xB108;&#xC758; &#xB0A8;&#xB294; &#xBD80;&#xBD84;&#xC744; &#xD574;&#xB2F9; &#xBE44;&#xC728;&#xB9CC;&#xD07C; &#xCC28;&#xC9C0;&#xD560; &#xC218; &#xC788;&#xC74C;.</p>
+<h3 id="&#xADF8;&#xB9AC;&#xB4DC;-&#xB77C;&#xC778;">&#xADF8;&#xB9AC;&#xB4DC; &#xB77C;&#xC778;</h3>
 <ol>
-<li><p>&#xBCF4;&#xD1B5; &#xCCAB;&#xBC88;&#xC9F8; &#xC904;&#xCC98;&#xB7FC; &#xD074;&#xB798;&#xC2A4;&#xC758; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC0DD;&#xC131;&#xD55C;&#xB2E4;. &#xB450; &#xBC88;&#xC9F8; &#xC904;&#xC740; <strong>&#xC775;&#xBA85; &#xD074;&#xB798;&#xC2A4;</strong> &#xC120;&#xC5B8;&#xBC29;&#xBC95;&#xC774;&#xB2E4;.</p>
+<li>&#xC138;&#xB85C; &#xC904;&#xC740; &#xC88C;&#xCE21;&#xBD80;&#xD130; <code>column</code> 1,2,3 ... </li>
+<li>&#xAC00;&#xB85C; &#xC904;&#xC740; &#xC704;&#xCABD;&#xBD80;&#xD130; <code>row</code> 1,2,3 ...</li>
+<li><p>&#xC774; &#xB77C;&#xC778;&#xB4E4;&#xC744; &#xC774;&#xC6A9;&#xD574; &#xAD6C;&#xC5ED;&#xC744; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xC74C;.</p>
 </li>
-<li><p>&#xC790;&#xB8CC;&#xD615;&#xACFC; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC758; &#xC774;&#xB984;&#xC774; &#xC5C6;&#xC74C;&#xC744; &#xC54C; &#xC218; &#xC788;&#xB2E4;. &#xBCF4;&#xD1B5; &#xBA54;&#xC11C;&#xB4DC; &#xC624;&#xBC84;&#xB77C;&#xC774;&#xB529; &#xD6C4; &#xBC14;&#xB85C; &#xC811;&#xADFC;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xD560;&#xB54C; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;. (&#xC544;&#xB798; &#xCF54;&#xB4DC; &#xCC38;&#xACE0;)</p>
+<li><p><code>grid-column-start</code> <code>grid-column-end</code> &#xC138;&#xB85C;&#xC904; &#xC120;&#xD0DD;</p>
 </li>
+<li><code>grid-row-start</code> <code>grid-row-end</code> &#xAC00;&#xB85C;&#xC904; &#xC120;&#xD0DD;</li>
 </ol>
-<pre><code class="lang-java"><span class="hljs-keyword">new</span> parent(){ 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sayHo</span><span class="hljs-params">()</span> </span>{ 
-        System.out.println(<span class="hljs-string">&quot;Override&quot;</span>); 
-    }.sayHo();
-</code></pre>
-<p>&#xC775;&#xBA85; &#xD074;&#xB798;&#xC2A4;&#xB294; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC640; &#xCD94;&#xC0C1; &#xD074;&#xB798;&#xC2A4;&#xC640; &#xC790;&#xC8FC; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</p>
+<h3 id="grid-template-areas">grid-template-areas</h3>
+<p>&#xD14D;&#xC2A4;&#xD2B8;&#xB85C; &#xAD6C;&#xC5ED;&#xC744; &#xC815;&#xD574;&#xC900;&#xB2E4;.</p>
+<h3 id="grid-area">grid-area</h3>
+<p>&#xAC01; &#xBC15;&#xC2A4;&#xB4E4;&#xC5D0;&#xC11C; &#xC120;&#xC5B8;&#xD558;&#xBA70; &#xAD6C;&#xC5ED;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xD14D;&#xC2A4;&#xD2B8;&#xB97C; &#xAC12;&#xC73C;&#xB85C; &#xAC00;&#xC9C4;&#xB2E4;.</p>
+<p><a href="http://bit.ly/2tdpRcN" target="_blank">&#xC2E4;&#xC2B5;</a></p>
 
                                 
                                 </section>
@@ -769,12 +740,12 @@
 
             
                 
-                <a href="interface.html" class="navigation navigation-prev " aria-label="Previous page: interface, Lambda">
+                <a href="layout.html" class="navigation navigation-prev " aria-label="Previous page: Layout Basic">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="static.html" class="navigation navigation-next " aria-label="Next page: Static변수">
+                <a href="responsiveandanimation.html" class="navigation navigation-next " aria-label="Next page: Responsive & Animation">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -785,7 +756,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"상속, 오버라이드, 익명클래스","level":"7.3","depth":1,"next":{"title":"Static변수","level":"7.4","depth":1,"path":"list/java/static.md","ref":"list/java/static.md","articles":[]},"previous":{"title":"interface, Lambda","level":"7.2","depth":1,"path":"list/java/interface.md","ref":"list/java/interface.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/java/inherit.md","mtime":"2019-04-15T06:22:47.690Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-17T02:30:41.737Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Grid & Flex","level":"3.5","depth":1,"next":{"title":"Responsive & Animation","level":"3.6","depth":1,"path":"list/css/responsiveandanimation.md","ref":"list/css/responsiveandanimation.md","articles":[]},"previous":{"title":"Layout Basic","level":"3.4","depth":1,"path":"list/css/layout.md","ref":"list/css/layout.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"list/css/gridandflex.md","mtime":"2019-04-15T06:22:47.659Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-17T02:30:41.737Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
