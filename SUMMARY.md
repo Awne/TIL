@@ -25,7 +25,7 @@
 ##[REACT]()
 
 ##[VUE]()
-* [VUE Basics](list/vue/basics.md)
+* [Basics](list/vue/basics.md)
 
 ##[ES6]()
 * [let, method, operator](list/javascript/letmethodoperator.md)
