@@ -31,37 +31,6 @@
 3. 마지막 이미지는 로딩 실패시 불러올 이미지를 정해준다.
 
 
-## 아이프레임
-
-```html
-<iframe srcdoc = "<p>Hello</p>" src="1.html" width="100px" height="100px" seamless sandbox>
-```
-
-`<srcdoc>` 태그는 인라인으로 코드를 작성하며 지원하지 않을 경우 `<src>` 태그의 문서가 출력된다.
-
-`seamless` 속성을 설정하면 아이프레임이 별개의 창이 아닌 부모 요소의 일부가 되어 JS나 CSS등 다양한 요소를 상속받는다.
-
-`sandbox` 속성을 사용하면 아이프레임에 내장된 JS나 form 등 다양한 요소들이 작동하지 않게된다. (iframe을 통한 해킹 방지)
-
-`sandbox` 속성에 값을 주면 해당 값에 해당하는 요소만 작동시킬 수 있음. 해당 값들은 아래와 같다.
-
-1. `allow-same-origin` iframe과 부모문서를 같은 도메인으로 취급하여 부모 문서로 접근을 가능하게 한다. (클로저 느낌)
-2. `allow-top-navigation` 페이지 전환시 iframe에서의 페이지 이동이 아닌 부모 문서에서 페이지가 전환됨. (버블링 느낌)
-3. `allow-form` iframe에서 작성된 form을 다른곳으로 제출가능
-4. `allow-scripts` iframe에 내장된 script 실행가능
-
-### 링크 클릭시 iframe에 원하는 문서 출력
-
-```html
-<a href = "index.html" target = "first_frame"> Click Here! </a>
-<iframe name = "first_name"></iframe>
-```
-
-1. `<a>`의 `href`속성에는 iframe에 출력할 문서의 URL을 입력해준다.
-2. `target`속성에는 출력을 원하는 iframe의 `name`을 입력해준다.
-3. `<iframe>`의 `name`을 반드시 정해준다.
-
-[실습](http://bit.ly/2tbw09z)
 
 
 ## 오디오 & 비디오

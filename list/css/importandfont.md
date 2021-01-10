@@ -1,33 +1,8 @@
 ## 불러오기
-
- - HTML에서 불러오기
-  
-  1. `link`태그 사용
-  2. `href = index.css`
-  3. `type = "text/css"`
-  4. `rel = "stylesheet"`
-
  - CSS에서 불러오기
 
   1. `@import url("index.css")`태그 사용
 
-
-## 기본 폰트
-
-1. `serif` 
-2. `sans-serif` 
-3. `monospace` 
-4. `cursive` 
-5. `fantasy` 
-
-[실습](http://bit.ly/2USTr3h)
-
-폰트 선언 시에는 불러오지 못할 경우 사용할 기본 폰트도 함께 선언한다.
-```css
-p {
-    font-family : 외부 폰트, 기본 폰트
-}
-```
 
 ## line-height
 
