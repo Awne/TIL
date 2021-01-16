@@ -1,3 +1,16 @@
+## 박스 설정
+1. `max-width` : 반응형 웹에서 증가할 수 있는 너비의 최대치
+2. `min-width` : 반응형 웹에서 감소할 수 있는 너비의 최소치
+3. `border-radius` : 박스 모서리에 삽입할 원의 반지름
+4. `box-sizing` : 박스 설정의 대상을 설정합니다.
+   1. `content-box` : 박스 설정의 대상을 컨텐츠 영역으로 설정합니다.
+   2. `border-box` : 박스 설정의 대상을 컨텐츠 영역과 패딩으로 설정합니다.
+> 만약 `width: 100px` `height: 100px`인 경우
+> 
+> `box-sizing: content-box`라면 위 설정은 컨텐츠 영역에 적용됩니다.
+> 
+> `box-sizing: border-box`라면 위 설정은 컨텐츠 영역과 패딩의 합에 적용됩니다.
+
 ## 박스를 숨기고 싶을때
 1. `display: none` : 아예 사라져버림.
 2. `visibility: hidden` : 해당 자리는 차지하지만 요소는 보이지 않음.
