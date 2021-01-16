@@ -31,8 +31,6 @@
 1. 이 속성은 움직일 행동 선택자에 설정해줌.
 2. 큰 따옴표를 사용하지 않는 함수를 값으로 가짐.
 
-[실습](http://bit.ly/2tczRTw)
-
 ### transform-origin
 
 기준점을 설정해줌.
@@ -55,7 +53,6 @@
 3. `alternate` 홀수번째 시작은 `normal` 짝수번째 시작은 `reverse`
 4. `alternate-reverse` 홀수번째 시작은 `reverse` 짝수번째 시작은 `normal`
 
-[실습](http://bit.ly/2UM6F1y)
 
 ## @keyframes
 

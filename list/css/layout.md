@@ -23,5 +23,3 @@
 1. `float`의 값을 설정하면 좌/우로 배치
 2. `display : block`와 `text-align : center` 설정
 3. `display : block`와 `margin : 0 auto` 설정
-   
-

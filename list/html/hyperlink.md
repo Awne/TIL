@@ -12,5 +12,3 @@
 ```html
 <a href="mailto : abcd@gggg.com> click </a>
 ```
-
-[실습](http://bit.ly/2URiHXE)

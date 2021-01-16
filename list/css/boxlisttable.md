@@ -17,16 +17,12 @@
 
 셀 사이의 거리를 설정함.
 
-[실습](http://bit.ly/2URgKtZ)
-
 ### border-collapse
 
 인접한 테두리를 설정함.
 
 1. `collapse` 인접한 변의 굵기를 기존 셀의 변의 굵기로 줄인다.
 2. `separate` 인접한 변의 굵기를 두 셀의 변의 굵기의 합으로 만든다.
-
-[실습](http://bit.ly/2tgjZ2G)
 
 ## 목록
 
