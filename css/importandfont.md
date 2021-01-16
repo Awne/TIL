@@ -3,7 +3,9 @@
 
   1. `@import url("index.css")`태그 사용
 
+## important
 
+CSS의 키-값 쌍 뒤에 `!important`를 추가하면 항상 이 옵션이 적용된다.
 ## line-height
 
 font-size + 리딩

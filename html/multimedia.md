@@ -16,6 +16,8 @@
    
 #### 이미지와 맵을 따로 만들고, 맵의 자식태그에서 모든 설정을 해준다.
 
+[이미지맵 예시](https://codepen.io/Junseongpark/pen/XWjPgyp?editors=1100)
+
 ### 화면 크기에 따라 달라지는 이미지 로딩
 
 ```html

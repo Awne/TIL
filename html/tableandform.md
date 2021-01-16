@@ -11,7 +11,7 @@
   
 ## `<th>`    
 
-테이블 헤드라인 추가  
+테이블 헤드라인 추가 (역할은 `td`태그와 같지만 따로 강조의 효과를 줄 수 있음.)
 
 `scope` 속성을 가지며 `row`와 `col`을 값으로 가질 수 있다.  
 
@@ -37,7 +37,7 @@
 
 데이터를 보낼 url을 입력받는 `action`
 
-보내는 방법을 정의하는 `method`
+보내는 방법을 정의하는 `method` (기본값은 `GET`이고 이는 주소창에 값들이 나타남.)
 
 여러 폼 컨트롤과 연결할 수 있는 `id` 속성을 가진다.
 
@@ -88,11 +88,19 @@
 아래 코드에서 텍스트인 `MAN`을 클릭해도 라디오버튼이 체크된다.
 
 ```html
-<input type="radio" name="gender" value="man" id="first">
-    <label for = "first>
+<label for = "first">
+    <input type="radio" name="gender" value="man" id="first">
         MAN
-    </label>
+</label>
 ```
+
+## 폼 영역 설정하기
+
+폼 영역은 `<fieldset>` 태그로 설정하고 제목은 `<legend>` 태그로 설정함.
+
+## 폼 총 정리 링크
+
+[링크](https://codepen.io/Junseongpark/pen/PoGdpgN?editors=1100)
 
 
 
