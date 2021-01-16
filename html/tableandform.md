@@ -1,112 +1,62 @@
 # 테이블 
-
 ## `<table>`  
-
 테이블 생성  
-  
 ## `<thead>`,`<tbody>`,`<tfoot>`  
-
-시멘틱 태그  
-  
-  
+`<table>`태그 내 요소들을 시멘틱하게 구분하는 용도.
+## `<tr>`
+`<table>`태그 내에서 한 행을 추가하기 위해 사용함.
 ## `<th>`    
-
-테이블 헤드라인 추가 (역할은 `td`태그와 같지만 따로 강조의 효과를 줄 수 있음.)
-
-`scope` 속성을 가지며 `row`와 `col`을 값으로 가질 수 있다.  
-
-`scope = "row"`라면 행의 헤드라인, 후자는 열의 헤드라인  
-  
-## `<tr>` 
-
-테이블 행 추가
-
+`<tr>`태그 내에서 헤드라인을 추가함.
+>`<th>`태그의 특징은 헤드라인을 의미하기에 `scope`속성을 이용해 데이터 흐름을 정할 수 있음.
 ## `<td>` 
+`<tr>` 태그 내에서 하나의 셀을 나타내기 위해 사용함.
 
-테이블 셀 추가
-
-`<td>`,`<th>`는 `colspan`, `rowspan` 속성을 가질 수 있다.
-
-얘들은 입력된 값에 해당하는 개수의 셀을 병합한다.
+>`<td>`태그와 `<th>`태그는 `colspan`, `rowspan` 속성을 이용하여 셀을 병합할 수 있음.
 
 [테이블 예시](https://codepen.io/Junseongpark/pen/vYXzZmp)
 
-## 폼
-
+# 폼
 ## `<form>`
 폼 생성
+> `<form>`태그의 역할은 다양한 형식의 데이터를 입력받고 원하는 URL로 데이터를 제출하는 것이므로 이를 위한 다양한 기능들이 존재함.
 
-
-데이터를 보낼 url을 입력받는 `action`
-
-보내는 방법을 정의하는 `method` (기본값은 `GET`이고 이는 주소창에 값들이 나타남.)
-
-여러 폼 컨트롤과 연결할 수 있는 `id` 속성을 가진다.
-
-
+1. `<form>`태그는 `action`속성을 가지며, 데이터 제출을 원하는 URL을 값으로 가짐.
+2. `<form>`태그는 `method`속성을 가지며 데이터를 어떤 방식을 값으로 가짐.
+   1. `GET`방식은 데이터의 정보를 주소 뒤 문자열 형태로 보냄.
+   2. `POST`방식은 데이터를 요청한 서버로 직접 데이터의 형식으로 보냄.
 ## 폼 컨트롤
 
-### 종류
-
+> 모든 폼 컨트롤 요소들은 키-값 쌍으로 전달됩니다.
+> 
+> 키는 `name`속성을 의미하고, 값은 `value`속성을 의미합니다.
 #### 텍스트
-
-`text` `textarea`
+`<text>` , `<textarea>`
 
 #### 선택
-
-`checkbox` `radio`
+`<checkbox>` , `<radio>`
 
 #### 비밀번호
-
-`password`
+`<password>`
 
 #### 드랍다운
+`<select>`
+> `<select>`는 자식 요소로 `<option>`태그 여러개를 가짐.
+> 
+> 각 `<option>`태그들은 `value`속성을 가짐.
 
-`select`
+### Label
+1. 다양한 `<input>`태그들을 `<label>`태그로 감싸주면 해당 요소의 영역을 확장할 수 있습니다.
+2. `<label>`태그는 `for`속성을 가지며 이 속성의 값으로 `<input>`태그의 `id`를 가집니다.
 
-자식 요소로 `option`을 가지며 이는 `value`값을 가져야한다.
-
-#### 버튼
-
-`submit` `image` `upload`
-
-이미지 버튼은 버튼에 이미지를 입힌다.
-
-
-##### 공통
-
-폼 컨트롤은 `name` 속성을 반드시 준다. 
-
-이는 전송 데이터의 키값으로 사용됨.
-
-아래 코드는 `gender : man` 을 전송한다.
+예를 들어, 아래 코드로 생성된 문자열 `MALE`을 클릭하면 라디오버튼이 선택됩니다.
 ```html
-<input type="radio" name="gender" value="man" id="first">MAN
-```
-
-
-`label for 폼컨트롤의 id` 를 통해 영역을 공유할수있음. 
-
-아래 코드에서 텍스트인 `MAN`을 클릭해도 라디오버튼이 체크된다.
-
-```html
-<label for = "first">
-    <input type="radio" name="gender" value="man" id="first">
-        MAN
+<label for = "yourGender">
+    <input type="radio" name="Gender" value="male" id="yourGender">
+        MALE
 </label>
 ```
-
 ## 폼 영역 설정하기
 
 폼 영역은 `<fieldset>` 태그로 설정하고 제목은 `<legend>` 태그로 설정함.
 
-## 폼 총 정리 링크
-
-[링크](https://codepen.io/Junseongpark/pen/PoGdpgN?editors=1100)
-
-
-
-
-
-
-
+[폼 예시](https://codepen.io/Junseongpark/pen/PoGdpgN?editors=1100)
