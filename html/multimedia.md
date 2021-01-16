@@ -32,7 +32,7 @@
 2. 반응형 이미지들은 `<source media = "크기" srcset = "url">` 을 사용한다.
 3. 마지막 이미지는 로딩 실패시 불러올 이미지를 정해준다.
 
-
+[반응형 이미지 예시](https://codepen.io/Junseongpark/pen/dypqRLe)
 
 
 ## 오디오 & 비디오

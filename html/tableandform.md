@@ -29,6 +29,8 @@
 
 얘들은 입력된 값에 해당하는 개수의 셀을 병합한다.
 
+[테이블 예시](https://codepen.io/Junseongpark/pen/vYXzZmp)
+
 ## 폼
 
 ## `<form>`
