@@ -26,3 +26,16 @@ CSS의 키-값 쌍 뒤에 `!important`를 추가하면 항상 이 옵션이 적�
 3. `text-top` `text-bottom` 부모 텍스트의 맨위/맨아래
 4. `middle` 부모요소의 가운데
 5. `top` `bottom` 부모요소의 위/아래
+
+## text-decoration
+줄긋기를 설정합니다.
+
+## text-overflow
+> `overflow: visible`이외 값이 설정되었을때, 넘치는 문자에 대한 설정을 합니다.
+1. `clip` : 넘치는 문자들을 생략합니다.
+2. `ellipsis` : 넘치는 문자들을 말줄임표로 대체합니다.
+
+## 개행 설정
+> 문자열이 다음줄로 이동할때 단어 단위로 개행할지, 문자 단위로 개행할지 설정합니다.
+1. `word-wrap: break-word` :  단어 단위로 개행합니다.
+2. `word-break: break-all` : 문자 단위로 개행합니다.
