@@ -1,15 +1,6 @@
 딕셔너리에서 사용할때 for문의 인자로 변수 2개가 올 수 있으며 각각 **키**와 **값**을 의미한다.
 
-## 컴프리헨션
-```python
-numbers = range(1,31)
-odd_numbers = [number for number in numbers if number%2 == 1] 
-print(odd_numbers)
-```
-반복문이나 조건문을 사용하여 간단하게 리스트를 제작할 수 있는데 이를 컴프리헨션이라고 한다.
 
-직해해보면 아래와 같음.
-number로 채울것/number는 numbers의 요소들/홀수 조건을 만족하는
 
 ## 연산자
 ```python
