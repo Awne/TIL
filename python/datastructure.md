@@ -7,27 +7,6 @@ d
 """
 ```
 
-## 문자열 슬라이싱
-```python
-chunk = "Your Face" print(chunk[0:3]) print(chunk.split()) 
-another_chunk = "Divided-by-line" print(another_chunk.split("-")) 
-```
-
-## end
-```python
-print('Your Eyes, Nose', end=" and Mouth\n")
-```
-
-## 다양한 Collection
-```python
-my_list = [1,2,3,4,5]
-my_tuple = (1,2,3,4,5)
-my_dic = {"one" : 1, "two" : 2, "three" : 3, "four" : 4, "five" : 5}
-```
-1. **리스트** : 일반적인 배열과 같다.
-2. **튜플** : 배열과 비슷하지만 내용을 변경할 수 없다.
-3. **딕셔너리** : 키-값 쌍을 가진 자료형이다.
-
 ### 리스트 메서드
 ```python
 test_list = [10,412,5125,3213,312]
@@ -87,12 +66,6 @@ del test_dic["Rookie"]
 
 4. **del** 키워드로 원하는 값을 지울 수도 있다.
 
-## 형 변환
-```python
-alpha = str(1234) 
-print(type(alpha))
-```
-자료형과 같은 이름을 가진 클래스를 통해 형변환 가능
 
 ## 포맷팅
 ```python

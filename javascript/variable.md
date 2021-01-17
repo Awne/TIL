@@ -1,3 +1,25 @@
+## Scope
+
+`var`는 함수단위, `let`은 블록단위 스코프를 가짐
+
+아래 코드는 2가 출력됨.
+```javascript
+var a = 1;
+if(true) {
+    var a = 2;
+}
+console.log(a);
+```
+
+아래 코드는 1이 출력됨.
+```javascript
+let b = 1;
+if(true) {
+    let b = 2;
+}
+console.log(b);
+```
+
 ## let
 
 블록단위 변수선언법인 `let` 키워드가 등장함
@@ -90,90 +112,42 @@ let a = 0;
 a = 100;
 ```
 
-## String의 새로운 메소드
 
-`startsWith` `endsWith` `includes` 메소드가 추가되었다.
 
-아래 코드는 3개의 `true`를 출력한다.
+비구조화 할당
 ```javascript
-let str = "Hello World ! ^^ ~~";
-let matchstr = "Hello";
+// 객체 깰땐 변수에 { }쓰고 배열 깰땐 [ ] 써준다.
 
-console.log(str.startsWith(matchstr));
-console.log(str.endsWith("~~"));
-console.log(str.includes("d ! ^"));
-```
 
-## Array의 새로운 메소드
-
-`Array.from` 메소드를 통해 `iterable object`를 배열로 변환할 수 있게 되었다.
-
-아래 코드는 함수의 인자값에 느낌표를 추가해주는 함수이다.
-```javascript
-function addMark() {
-    let result = [];
-    for(let i=0; i<arguments.length; i++) {
-        result.push((arguments[i] + "!"));
-    }
-    console.log(result);
+function ldg () {
+    return {
+        name : "Dong-gun Lee",
+        age : 27,
+        location : "Busan"
+    };
 }
-```
-아래 코드는 위 함수와 동일한 동작을 하지만 유사배열인 `arguments`를 배열로 변환시켜 배열의 `map`메소드를 사용하였다.
-```javascript
-function addMark() {
-    let beArray = Array.from(arguments);
-    let result = beArray.map((item) => {
-        return item + "!";
-    });
-    console.log(result);
-}
-```
-## for of
+// 갓디지의 정보를 객체로 묶어 반환하는 함수
 
-`for of`가 추가되었다. `forEach` `for in` `for of`를 비교하면 아래와 같다.
+let { name, age, location } = ldg();
+// 전역변수 name, age, location 에 함수 반환값을 차례로 담는모습
 
-아래와 같은 배열이 있을 때
-```javascript
-let arr = ["A", "B", "C", "D"];
-```
+console.log (name, age, location);
+//출력
 
-`forEach`는 `key(index)`와 `value(item)`에 모두 접근이 가능하며 `callback function`을 인자로 받는다.
 
-배열 메소드이기때문에 배열 타입에만 사용할 수 있다.
-```javascript
-arr.forEach(function(value, i) {
-    console.log(value, i);
-})
-```
+console.log(`LDG says : "My name is ${name}, ${age}years old and I live in ${location}`);
+// 백틱에 리터럴 템플릿까지 사용
 
-`for-in`은 `key(index)`에 접근할 수 있으며 상속받은 `key`값을 모두 출력한다.
+//만약 location 대신 city를 사용하고 싶다면
+let { name_, age_, location : city} = ldg();
+console.log(name, age, city);
+// 왼쪽 변수는 그냥 임의로 선언하는게 아니라 객체를 부셔서 안의 내용들을 구해주는것임.
+// 그래서 객체 안 내용들과 이름이 같아야함. 그래서 city로 바로 사용하면 undefined 소환.
+// location : city를 통해 location 을 city로 사용한다고 알려야함.
 
-모든 객체에서 사용할 수 있다.
-```javascript
-for(idx in arr) {
-    console.log(idx);
-}
-```
 
-`for-of`는 `value`에 접근할 수 있다.
-
-모든 `iterable object`에서 사용할 수 있다.
-```javascript
-for(item of arr) {
-    console.log(item);
-}
-```
-
-## 전개연산자
-
-묶인 배열을 다시 풀 수 있다.
-
-아래 코드는 배열의 요소를 그대로 옮긴 것이다.
-```javascript
-let arr = ["A", "B", "C", "D"];
-let spread = [...arr];
-```
-아래와 같이 배열의 요소로 사용할 수 있다.
-```javascript
-let newData = ["S", ...arr, "Z"];
+//벙커 구성원 살펴보기
+let bunker = ["marine", "firebat", "ghost", "medic"];
+let [first, second, third, fourth] = bunker;
+console.log(first, second, third, fourth);
 ```

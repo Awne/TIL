@@ -1,25 +1,4 @@
-## 반복문
-```python
-for item in [1,2,3,4,5,6]:
-    print(item) 
-
-for item in range(7, 11):
-    print(item)
-
-for a in range(2,10) :
-    print("\n") 
-    for b in range(1,10) :
-        print("{} X {} = {}".format(a,b,a*b), end="\n")
-```
-파이썬에서는 집합 자료형과 함께 for-in 문을 자주 사용한다.
-
-2중 반복문 역시 사용이 가능하며 **format** 메서드를 함께 사용할 수 있다.
-
-```python
-for pl, ch in test_dic.items():
-    print("{} plays {}".format(pl, ch))
-```
-특히, 딕셔너리에서 사용할때 for문의 인자로 변수 2개가 올 수 있으며 각각 **키**와 **값**을 의미한다.
+딕셔너리에서 사용할때 for문의 인자로 변수 2개가 올 수 있으며 각각 **키**와 **값**을 의미한다.
 
 ## 컴프리헨션
 ```python
@@ -31,19 +10,6 @@ print(odd_numbers)
 
 직해해보면 아래와 같음.
 number로 채울것/number는 numbers의 요소들/홀수 조건을 만족하는
-
-## if 조건문
-```python
-Members = ["Jun", "Yul", "Lee"]
-
-if "Min" in Members:
-    print("Yes, she is.")
-elif "Jun" in Members:
-    print("Jun is here")
-else: 
-    print("What is it?")
-```
-조건문에서 특이한 점으로는 else if 대신 **elif**를 사용한다 정도.
 
 ## 연산자
 ```python
