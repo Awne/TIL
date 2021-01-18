@@ -278,3 +278,5 @@ var makeClosure = function() {
 `makeClosure`변수의 값은 익명함수가 된다. (반환값이 변수의 값이 되기 때문) 그래서 외부에서는 무슨 방법을 써도 `name`변수에 접근할 수 없음.
 
 만약 `makeClosure`변수가 외부함수 없이 바로 익명함수를 저장한다면 `makeClosure.name`으로 접근이 가능함.
+
+함수인자에 ...이 붙으면 인자의 수에 제한이 없다는 이야기이고 함수 내에서 arguments로 접근가능

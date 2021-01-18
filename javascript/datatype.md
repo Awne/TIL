@@ -1,135 +1,106 @@
-## String
+# String
+## 문자열 자르기 메서드
+1. `substr` : `(시작인덱스, 길이)`
+2. `substring` : `(시작인덱스, 끝인덱스)` , `시작인덱스`가 더 큰 경우 두 인자를 바꿈 , 음수 인덱스를 `0`으로 처리
+3. `slice` : `(시작인덱스, 끝인덱스)` , `시작인덱스`가 더 크다면 빈 문자를 반환 , 음수 인덱스 사용가능
 
-1. `split` 인자를 기준으로 나누어 배열로 반환
-2. `substr` 첫 인자는 시작인덱스, 두번째 인자는 길이
-3. `substring` 첫 인자는 시작인덱스, 두번째 인자는 종료인덱스 (양수만 사용가능)
-4. `slice` 첫 인자는 시작인덱스, 두번째 인자는 종료인덱스 (음수사용 가능)
-
-## String의 새로운 메소드
-
+## 문자열 포함 확인 메서드
+1. `startsWith` : 문자열이 인자에 해당하는 문자열로 시작하면 `true` 반환.
+2. `endsWith` : 문자열이 인자에 해당하는 문자열로 끝나면 `true` 반환.
+3. `includes` : 문자열이 인자에 해당하는 문자열을 포함하면 `true` 반환.
 `startsWith` `endsWith` `includes` 메소드가 추가되었다.
 
-아래 코드는 3개의 `true`를 출력한다.
-```javascript
-let str = "Hello World ! ^^ ~~";
-let matchstr = "Hello";
+# Number
+1. `toFixed` : 인자에 해당하는 소수점 이하 자리수만큼만 남기는 반올림, 문자열로 반환
+2. `toPrecision` : 인자에 해당하는 수의 길이만큼 (진수 + 가수) 반올림, 문자열로 반환
+3. `parseInt` : `(문자열, 진법)` , 문자열 타입의 숫자를 원하는 진법의 숫자로 변환하여 반환합니다.
+4. `parseFloat` : 문자열을 실수로 반환.
 
-console.log(str.startsWith(matchstr));
-console.log(str.endsWith("~~"));
-console.log(str.includes("d ! ^"));
+# Set
+## Set의 메서드
+>`Set`은 중복을 허용하지 않는 배열이라고 생각하면 좋다.
+1. `add` : 요소를 추가한다.
+2. `delete` : 요소를 제거한다.
+3. `has` : 인자에 해당하는 요소가 존재한다면 `true`를 반환한다.
+
+## Set의 ITERABLE OBJECT
+1. `values` : 세트의 요소들을 가진 이터레이터를 반환
+> `Set`자료형은 `key`가 없이 `value`만 존재하기에 `keys` 역시 같은 결과를 반환한다.
+2. `entries` : `next` 메서드로 순환할 수 있는 `[value, value]` 형태의 이터레이터를 반환
+
+## 다양한 집합연산
+1. 합집합
+```javascript
+const union = new Set([...s1, ...s2])
+```
+2. 교집합
+```javascript
+const intersection = new Set([...s1].filter(function (x) {
+	return s2.has(x)
+}))
+```
+3. 차집합
+```javascript
+const difference = new Set([...s1].filter(function (x) {
+	return !s2.has(x)
+}))
 ```
 
-## Number
+# WeakSet
+>`Set`과 거의 같지만, 객체 요소만 저장할 수 있다.
+## WeakSet의 특징
+1. `Set`와 달리 `객체` 형태의 데이터만 저장할 수 있습니다.
+2. 저장된 객체가 아무데서도 참조되지 않는다면 해당 객체는 `가비지 컬렉션`의 대상이 됩니다.
+3. 순회, 열거가 불가능하며 오로지 객체를 참조하는 용도로만 사용할 수 있습니다.
+4. `length`의 값은 항상 0입니다.
+5. 오로지 `add`, `delete`, `has` 메서드만 사용할 수 있습니다.
 
-1. `toFixed` 소수점 이하 해당자리수 반올림
-2. `toPrecision` 유효숫자 해당개수 반올림
-3. `parseInt` 첫 인자는 문자열, 두번째 인자는 진법
-4. `parseFloat` 문자열을 소수로 반환
+# Map
+> 객체처럼 `key - value` 쌍을 저장합니다.
+## Map과 Object의 차이
+1. `Object`의 `key`는 `String`과 `Symbol`만 가능
+2. `Map`의 `key`는 모든 자료형 가능
+3. `size` 프로퍼티를 이용하여 크기를 얻을 수 있음.
 
-## Array
+## Map의 메서드
+1. `set` : `(key, value)` , 키-값 쌍을 저장합니다.
+2. `get` : `key`를 입력받아 해당 키가 가진 값을 반환합니다.
+3. `has` : `key`를 입력받고, 해당 키가 존재한다면 `true`를 반환합니다.
+4. `delete` : `key`를 입력받고 해당 키-값쌍을 제거합니다. 제거된 `value`를 반환합니다.
 
-1. `join` 배열의 내용을 구분자로 이어줌
-2. `concat` 여러 값 추가
-3. `splice` 첫 인자는 시작 인덱스, 두번째 인자는 삭제할 요소 개수, 이후 인자는 추가할 요소
-4. `forEach` 콜백 함수를 인자로 받고 동작은 `map`과 같지만 값을 리턴하지 않음.
-5. `reduceRight` 오른쪽부터 계산하는 `reduce`
-6. `every` 모든 항목이 조건을 만족한다면 `true` 반환
-7. `some` 하나 이상의 항목이 조건을 만족한다면 `true`반환
-8. `copyWithin` 첫 번째 인자는 붙여넣기 할 인덱스, 두번째 요소는 복사를 시작할 인덱스, 세번째 요소는 복사종료 인덱스
-9. `fill` 첫 번째 인자는 채울 값, 두번째 인자는 시작할 인덱스, 세 번째 인자는 종료할 인덱스
-10. `flat` 모든 환경에서 지원하지는 않지만 유용해서 추가함. 내부 배열을 해제함. 숫자 인자를 추가하면 depth가 2인 배열까지 해제.
-11. `findIndex` 조건에 맞는 인덱스 반환, 콜백함수의 두 번째 인자로 인덱스 사용가능
-12. `find` 조건에 맞는 요소 반환, 콜백함수의 두 번째 인자로 인덱스 사용가능
+## Map의 ITERABLE OBJECT
+1. `keys` : 가지고 있는 키들로 구성된 객체를 반환합니다.
+2. `values` : 가지고 있는 값들로 구성된 객체를 반환합니다.
+3. `entries` : `next`로 순환할 수 있는 `[key, value]`로 구성된 객체를 반환합니다.
 
-## Array의 새로운 메소드
+# WeakMap
+## WeakMap의 특징
+1. `key`는 항상 `Object` 형식임.
+2. `key`를 아무데서도 참조하지 않는다면 가비지 컬렉션의 대상이 되어 해당 `key`는 `WeakMap`에서 제거됩니다.
+3. `length`의 값은 항상 0입니다.
+4. 열거가 불가능하며 오직 `set` , `get` , `has` , `delete` 메서드만 사용할 수 있습니다.
 
-`Array.from` 메소드를 통해 `iterable object`를 배열로 변환할 수 있게 되었다.
-
-아래 코드는 함수의 인자값에 느낌표를 추가해주는 함수이다.
+# Symbol
+> `Symbol`은 어떤 데이터와도 중복될 수 없는 객체의 키를 정의할때 사용한다.
+1. 두 개의 동일한 형태의 `Symbol`도 `s1 == s2` 의 결과는 `false`.
 ```javascript
-function addMark() {
-    let result = [];
-    for(let i=0; i<arguments.length; i++) {
-        result.push((arguments[i] + "!"));
-    }
-    console.log(result);
+const s1 = Symbol('name')
+const s2 = Symbol('name')
+```
+> `Symbol.for`을 이용해 생성한 경우 같은 형태의 `Symbol`은 같은 `Symbol`을 의미한다.
+2. `Symbol`로 객체의 프로퍼티를 생성했다면, 외부에서 접근할 수 없음.
+> `Symbol`로 프로퍼티를 생성한 경우 `keys`메서드는 
+```javascript
+const name = Symbol('It is name')
+const age = Symbol('It is age')
+
+const obj = {
+	[name]: 'Jun',
+	[age]: 27
 }
 ```
-아래 코드는 위 함수와 동일한 동작을 하지만 유사배열인 `arguments`를 배열로 변환시켜 배열의 `map`메소드를 사용하였다.
-```javascript
-function addMark() {
-    let beArray = Array.from(arguments);
-    let result = beArray.map((item) => {
-        return item + "!";
-    });
-    console.log(result);
-}
-```
 
-## Math
-
-1. `random` 0~1 사이 무작위 유리수 반환
-2. `floor` 버림하여 정수로 반환
-3. `ceil` 올림하여 정수로 반환
-4. `round` 반올림해 정수로 반환
-5. `max` `min` 인자들 중 최대/최소값 반환
-
-
-## Set
-
-`Set`은 중복을 허용하지 않는 배열이라고 생각하면 좋다. 요소를 쉽게 제거할 수 있다는 장점도 가지고 있다.
-
-```javascript
-let mySet = new Set();
-
-mySet.add("first");
-mySet.add("second");
-mySet.delete("second");
-```
-
-## WeakSet
-
-`Set`과 거의 같지만, 객체 요소만 저장할 수 있다.
-```javascript
-let myWs = new WeakSet();
-
-let arr = [1,2,3,4];
-let func = function(){};
-
-myWs.add(arr);
-myWs.add(func);
-```
-위 코드는 아래와 같은 특성을 가짐.
-
-1. 변수의 참조를 제거해도 `WeakSet`을 출력해보면 그대로 남아있다.
-2. 하지만, `has`메소드를 통해 존재하는지 여부를 살펴보면 없다고 나온다.
-3. 즉, `WeakSet`의 요소들은 가비지 컬렉션의 대상이 된다.
-4. 이 말은, `WeakSet`이 그 요소를 참조하고 있더라도 그 요소가 참조하는 값이 사라지면 메모리에서 없어진다.
-```javascript
-arr = null;
-console.log(myWs);
-console.log(myWs.has(arr));
-```
-
-## Map
-
-배열의 상위호환이 `Set`라면, 객체의 상위호환은 `Map`이다.
-
-1. `Key`가 반드시 문자열이 아니어도 된다.
-2. `size`프로퍼티를 통해 크기를 구하기가 쉽다.
-3. 데이터가 입력된 순서대로 반환된다.
-
-`Map`은 `set`메소드로 데이터를 저장하며 `get`메소드로 호출한다.
-```javascript
-let myMap = new Map();
-
-myMap.set("Terran", ["SCV", "Marine"]);
-console.log(myMap.get("Terran"));
-```
-
-## WeakMap
-
-`Map`과 거의 모든점이 같지만 몇몇 다른점이 존재한다.
-
-1. `Key`값으로 객체 요소만 올 수 있다.
-2. `WeakSet`과 마찬가지로 요소들은 가비지 컬렉션의 대상이 된다.
+# 기타 자료형
+1. `undefined` : 값을 할당하지 않은 변수에 자동으로 할당되는 자료형. 사용자가 임의로 할당하는건 좋지 않음. 유일하게 숫자로 형 변환이 불가능한 자료형
+2. `null` : 변수가 아무런 메모리를 가리키고 있지 않다는 것을 의미. `typeof` 연산자를 사용하면 `Object` 자료형으로 출력되는데 이는 설계상 오류.
+3. `NaN` : 숫자가 아님을 의미함. `NaN === NaN` 의 결과가 `false`임. 특정 식의 값이 `NaN`인지 확인하기 위해 `isNaN` 함수를 사용해야함.
