@@ -1,73 +1,43 @@
- this 
+ # this 
+> `this`는 해당 메서드를 포함하고있는 상위 객체를 가리킵니다. 따로 객체를 생성하지 않은 경우 브라우저가 상위 객체가 되므로 이 때 `this`는 `window`객체가 됩니다.
 
+## this 바꾸기
+> 원래 `this`는 자기자신을 포함하고있는 상위 객체를 의미하지만, `call`, `apply`, `bind` 메서드를 사용하면 `this`를 바꿀 수 있음.
+1. `call` : 첫 인자로 바꾸고 싶은 `this`를 할당하고, 두 번째 인자부터는 메서드에 들어갈 인자를 할당한다.
 ```javascript
-function test (arg) {
-    this.arg = arg;
-    function testin() {
-        console.log(this.arg)
-        console.log(arg);
-    }
+const me = {
+	name: "Jun",
+	age: 27,
+	printProfile : function() {
+		console.log(this.name, this.age)
+	}
 }
 
-let one = test("Zz");
-console.log(one);
-
-// 함수 내부에 있는 함수의 this는 전역객체인 window를 가리킴
-// 메소드에서 사용되는 this는 해당 메소드를 가진 object를 가리킴.
-
-let bjs = {
-    name : "Junseong",
-    introduce : function(age, location) {
-        return `I'm ${this.name}. I'm ${age} years old and I live in ${location}`
-    }
+const you = {
+	name: "Yul",
+	age: 25
 }
 
-let ldg = {
-    name : "Dong-gun"
+me.printProfile.call(you)
+```
+2. `apply` : `call`과 사용법이 같음, `call`은 함수의 인자들을 하나씩 받는 대신 `apply`는 함수의 인자들을 하나의 배열로 받음.
+3. `bind` : `bind`는 인자를 받지않고 오직 바꾸고싶은 `this`만 할당받는다. 함수를 메서드를 실행하지 않기때문에 변수에 저장하여 필요할때 사용할 수 있다.
+```javascript
+const me = {
+	name: "Jun",
+	age: 27,
+	printProfile : function() {
+		console.log(this.name, this.age)
+	}
 }
 
-let khy = {
-    name : "Hye-yul"
+const you = {
+	name: "Yul",
+	age: 25
 }
-let js_int = bjs.introduce(27, "Busan");
-console.log(js_int);
 
-let dg_int = bjs.introduce.call(ldg,25,"Seo-dong");
-console.log(dg_int);
-
-let hy_int = bjs.introduce.apply(khy, [24,"Yang-san"]);
-console.log(hy_int);
-
-// bjs에 있는 메소드를 다른 애들이 쓸수있음. call이랑 apply인데,
-// 둘다 첫 인자는 적용할 객체이름, 이후는 call은 나열, apply는 배열로 정리한다는 차이.
-
+const result = me.printProfile.bind(you)
+result()
 ```
 
 
-
-
-## this
-
-`this`를 변경하기 위해 `call` `apply` `bind` 를 사용할 수 있음.
-
-`bind`는 값을 호출하지 않고 정의만 함.
-
-함수의 인자를 담는 `arguments`는 유사배열이기에 배열 메소드를 사용할 수 없음.
-
-```javascript
-function example() {
-    console.log(arguments.join());
-} 
-
-example(1,'string',true);   // 에러발생
-```
-`call` 메소드를 사용한다.
-```javascript
-function example() {
-    console.log(Array.prototype.join.call(arguments));
-}
-
-example(1,'string',true);   // 출력
-```
-
-참고로 `arguments`의 부모는 `arguments.callee`로 호출한다.
