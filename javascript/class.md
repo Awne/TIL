@@ -1,181 +1,90 @@
-## Class
+# Class
+> 클래스는 객체를 생성하기 위한 템플릿입니다. 클래스도 사실 따지고 보면 함수의 일종이지만, 표현 방식이 특이할 뿐입니다.
 
-생성자 함수를 `class` 키워드를 사용해 가독성을 높일 수 있다.
-
-아래 코드는 `name`인자를 받는 생성자 함수임.
+생성자 함수를 이용하여 객체를 만드는 예시
 ```javascript
-function Health(name) {
-    this.name = name;
+function Person_A(name, age) {
+	this.name = name
+	this.age = age
+	this.greeting = function() {
+		console.log(`Hello, ${this.name}`)
+	}
 }
 
-Health.prototype.showHealth = function() {
-    console.log(this.name + "님 안녕하세요");
-}
-
-const h = new Health("Jun");
-h.showHealth();
+const p = new Person_A("Jun", 27)
+p.greeting()
 ```
 
-아래 코드는 `class`키워드를 사용해 모든 요소를 한곳에 넣음.
+클래스를 이용하여 객체를 만드는 예시
 ```javascript
-class Health {
-    constructor(name) {
-        this.name = name;
-    }
-
-    showHealth() {
-        console.log(this.name + "님 안녕하세요.");
-    }
+class Person_B {
+	constructor(name, age) {
+		this.name = name
+		this.age = age
+	}
+	greeting() {
+		console.log(`Hello, ${this.name}`)
+	}
 }
 
-const h = new Health("Jun");
-h.showHealth();
+const p = new Person_B("Jun", 27)
+p.greeting()
 ```
 
+# 상속
+> 생성자 함수를 이용해 객체를 정의하고 상속할때는 `prototype` 프로퍼티에 하나씩 추가해야했지만, `class`를 사용하면 `extends` 키워드를 사용하여 상속받을 수 있습니다.
 
-
-
-
-
- 클래스와 상속  
-
-```javascript
-// ES5에선 prototype을 이용해서 상속받았음.
-function Lair() {}
-function Hive() {}
-
-Lair.prototype = {
-    location  : function () {
-        console.log(Math.random()*10);
-    }   
-    //함수의 prototype 프로퍼티에 메소드 생성
-}
-
-Hive.prototype = new Lair();
-var multi0 = new Lair();
-var multi1 = new Hive();
-var multi2 = new Hive();
-
-
-//ES6에서는 클래스 사용함
-class Lair_ {
-    location() {
-        console.log(Math.random()*10);
-    }
-    //메소드는 클래스 안에서 정의함.
-}
-class Hive_ extends Lair_ {} // 편해짐 :)
-let multi3 = new Hive_();
-let multi4 = new Hive_();
-let multi5 = new Lair_();
-
-// 클래스엔 constructor 메소드가 있음. - 인스턴스가 만들어질때마다 발동 (멀티할때마다)
-//인자를 받아서 인자를 처리하는 역할을 함.
-class Lair_2 {
-    constructor(timing) {
-        this.timing = timing;
-    }
-}
-
-
-//프로퍼티, 메소드 기본적인거
-class CommandCenter {   // 클래스에 관한 내용을 호출하려면 인스턴스 있어야함.
-                        //클래스 안에는 생성자와 메소드만 들어올수있음.
-    getMana() {        
-        return 0;
-    }
-}
-
-CommandCenter.HP = 1500;    // 클래스에 프로퍼티 삽입
-console.log(CommandCenter.HP);
-
-let ter_mul1 = new CommandCenter();  // 메소드는 인스턴스에서만 호출가능
-console.log(ter_mul1.getMana());
-
-//getter setter
-
-let Protoss = {
-    one : "Probe",
-    two : "Zelot",
-    three : "Dragoon",
-    four : "Archon",
-    get six() {             //six메소드를 정의함, 바로 호출하면 this.one을 반환
-        return this.one
-    },
-    set six(unitName) {     //six 메소드에 값을 주고 호출하면 그 값이 this.one으로 들어간 뒤 호출됨.
-        this.one = unitName
-    } ,
-    doubleShoutThisOne () {
-        console.log (this.one, this.one)
-    }
-}
-
-console.log(Protoss.six);   //get 발동
-console.log(Protoss.one)
-Protoss.six = "Arbiter";    // set 발동
-console.log(Protoss.six);
-console.log(Protoss.one);
-Protoss.doubleShoutThisOne();
-
-//super
-class Tax {
-    constructor (income) {
-        this.income = income
-        console.log(`Your income per a year is ${this.income}`)
-    }
-    calculateTax() {
-        console.log("Your basic tax is " + this.income*0.1)
-    }
-}
-
-class YourTax extends Tax {
-    constructor (income, years) {
-        super(income);  // Tax의 생성자에서 income처리과정을 복사
-        this.years = years;
-        console.log("You've been here " + this.years + " years");
-    }
-    calculateYourTax() {
-        super.calculateTax();   // Tax의 메소드를 그대로 복사
-        console.log("Your additional tax is " + this.income*0.08)    
-    }
-}
-
-let tax1 = new Tax(50000000);
-tax1.calculateTax();
-
-let tax2 = new YourTax(50000000, 27);
-tax2.calculateYourTax();
-```
-
-
-
-
-## 클래스
-
-ES6, 간단한 인스턴스 생성, 상속
-
-### 클래스를 통한 인스턴스 생성
-
+## super
+> 자식 클래스에서 부모 클래스에 접근하고 싶을때 `super`키워드를 사용합니다. `this`가 자기 자신 클래스를 의미하는 것과 비슷합니다.
 ```javascript
 class Person {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-    greeting() {}
+	constructor(name) {
+		this.name = name
+	}
+	greeting() {
+		console.log(`Hello, ${this.name}`)
+	}
 }
 
-let Jun = new Person("Jun", 20);
+class Jun extends Person {
+	greeting() {
+		super.greeting()
+	}
+}
+
+const p = new Jun("Junseong")
+p.greeting()
+```
+```
+Hello, Junseong
 ```
 
-### 클래스를 통한 상속
+## Getter, Setter
+> `Getter`는 항상 어떤 값을 `return`해야하고, `Setter`는 항상 어떤 값을 세팅해야합니다. 그렇지 않으면 에러가 발생합니다.
 
-`super`키워드를 통해 `Person`에서 정의한 프로퍼티 및 메소드를 모두 받아온다.
+> `Getter`는 `get`키워드를 사용하여 생성하고, `Setter`는 `set`키워드를 이용하여 생성합니다.
 
+> `Getter`와 `Setter`는 메서드의 형식으로 선언되지만, 실제 사용은 프로퍼티의 형식으로 사용합니다.
 ```javascript
-class Teacher extends Person {
-    constructor(subject) {
-        super(name, age);
-        this.subject = subject;
-    }
+class Person {
+	constructor(name, money) {
+		this.name = name
+		this.money = money
+	}
+
+	get moneySetting() {
+		return this.money
+	}
+
+	set moneySetting(moneyChange) {
+		this.money += moneyChange
+	}
 }
+
+const p = new Person("Jun", 5000)
+p.moneySetting = 10000
+console.log(p.moneySetting)
+```
+```
+15000
+```
