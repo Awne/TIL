@@ -52,3 +52,4 @@ print(Faker, Caps, Chovy)
 ```
 Leblanc Zedd Lucian
 ```
+> 시퀀스 자료형 앞에 `*`를 추가하면 언패킹됨.

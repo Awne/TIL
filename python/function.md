@@ -1,70 +1,50 @@
-## 함수 선언과 반환
-```python
-def calc (a, b):
-    return a+b, a-b, a*b
-    
-print(calc(100,230))
+# Return
+> 파이썬의 함수는 여러 개의 리턴값을 가질 수 있다.
+```py
+def calc(x, y):
+	return x+y, x-y, x*y, x/y
 
-add, sub, mul = calc(100,230)
-print(add, sub, mul)
+add, sub, mul, div = calc(100,20)
+print(add, sub, mul, div)
 ```
-함수의 선언은 매우 간단하다.
-
-살펴볼 점으로는 리턴값이 많은 함수의 경우 여러 변수에 언패킹하여 리턴값을 할당할 수 있다는 것.
-
-## 랜덤모듈
-```python
-import random players = ["Faker", "MadLife", "Uzi", "DoubleLift", "Doinb"]
-
-print(random.choice(players))
-print(random.sample(players, 3))
-
-print("LOTTO", random.sample(range(1,46), 5))
-print("\nWhen I go to school?\n", random.randint(0,24), "O clock")
 ```
-모듈중에 사용 빈도가 매우 높은 랜덤모듈이다.
+120 80 2000 5.0
+```
+# 인자와 매개변수
+> 매개변수 앞에 `*`가 있다면 `가변인자`를 의미합니다.
 
-1. **choice** 함수를 사용하면 랜덤한 하나의 요소를, **sample** 함수를 사용하면 원하는 수만큼의 요소를 추출한다.
+> 매개변수에 `=`가 있다면 `인자의 기본값`을 의미하며, 이 매개변수들은 항상 뒤에 위치합니다.
 
-2. **range와** **sample** 함수를 사용하여 즉석 로또 당첨 번호를 뽑을수도 있다.
+> 인자에 `=`가 있다면 `키워드 인자`를 의미합니다. 키워드인자를 받는 `매개변수`의 앞에는 `**`이 붙어있습니다.
 
-3. **randint** 함수를 통해 해당 범위 내에서 랜덤한 정수를 추출할 수도 있다.
+> 키워드 인자는 함수 내에서 딕셔너리로 저장됩니다.
 
+# 람다식
+```py
+money = 8000
 
+result = lambda x : 'OK' if x > 10000 else 'SOSO' if x > 5000 else 'NO'
 
-함수 반환값이 여러개면 튜플형태로 반환됨
-시퀀스 자료형 언패킹 : *시퀀스자료형 (별 붙인다는말)
-인자앞에 *있으면 가변인자
-매개변수에=있는건 인자기본값 (기본값 있는애는 뒤에 몰아서 배치해야됨)
-인자에 =쓰면 키워드인자
-키워드인자를 받을때는 인자에 **가 있어야함. 그리고 키값쌍이 함수내에서 딕셔너리로 저장됨
-딕셔너리 언패킹 : *한개쓰면 키 언패킹, **쓰면 값 언패킹(키가문자열일때만가능)
+print(result(money))
+```
+```
+SOSO
+```
+1. `lambda 매개변수 : 반환식1 if 조건1 else 반환식2 if 조건2 else 반환식3...`
+> 조건1 만족시 반환식1 반환, 그게 아니라면 조건2 따져서 반환식2 반환 ...
 
+2. 람다식에서 `elif`는 사용하지않음.
 
-lambda 매개변수 : 반환식1 if 조건1 else 반환식2 if 조건2 else 반환식3...
-람다 조건식에서는 elif는 사용하지않음.
-해석은: 조건1만족시 반환1반환, 그게아니라면 조건2따지고 만족시 반환2반환 ...
+# Reduce
+> `functools`에서 `reduce`가져올수있음
+```py
+from functools import reduce
 
-functools에서 reduce가져올수있음
-reduce(func, arr) > 함수값누적
+def func(x, y):
+	return x + y
+nums = [1,2,3,4,5,6,7,8,9,10]
 
-
-클로저
-
-자스와같음
-
-
-데코레이터
-
-함수수정없이 함수꾸미기
-
-함수를 받는 함수를 만듬. 함수안에 함수를또만듬. 그함수의 내용을 인자로받은 함수를 써서 꾸미면됨
-func받앗으면 내부함수에 print(1) func() func(2) 이런식으로.
-만약 인자로받은 함수가 인자를 가지고있으면 내부함수에도 똑같이 인자를 그대로주면됨 그러면 내부함수에서 인자활용가능
-데코레이터를 클래스로 만들수도있음. 동일한방식으로
-데코레이터 적용하고싶은 함수 위에 @데코레이터함수명 달면됨, 여러개의 데코레이터도 중첩가능
-@A
-@B
-func()
-이렇게
-이경우 A(B(func()))
+result = reduce(func, nums)
+print(result)
+```
+> `리스트`의 두 값을 `함수`로 연산하고 그 값을 첫 인덱스에 반환하며 이 과정을 반복합니다.
