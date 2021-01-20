@@ -1,40 +1,60 @@
-### 딕셔너리 구조, 활용
-```python
-test_dic = {}
-test_dic['Faker'] = "Leblanc"
-test_dic["Rookie"] = "Ziggs"
-
-print(test_dic, test_dic["Faker"])
-print("Champs : ",test_dic.values())
-print("Players : ",test_dic.keys())
-print("Champs and Players : ", test_dic.items())
-
-for champ in test_dic.values():
-    print(champ)
-for player in test_dic.keys():
-    print(player)
-for pl, ch in test_dic.items():
-    print("{} plays {}".format(pl, ch))
-del test_dic["Rookie"]
+# 딕셔너리
+1. `setdefault` : 키-값쌍을 추가합니다. 동일한 키가 존재한다면, 무시합니다.
+```py
+LOL = {}
+LOL.setdefault('Faker', 'Leblanc')
+LOL.setdefault('BDD', 'Azir')
+LOL.setdefault('Faker', 'Zedd')
+print(LOL)
 ```
-딕셔너리에 키-값을 직접 추가할 수 있다.
+```
+{'Faker': 'Leblanc', 'BDD': 'Azir'}
+```
+2. `update` : 키-값쌍을 수정하기 위해 사용합니다. 인자로 `키=값`을 받습니다. 인자가 존재하지 않는다면 새로 추가합니다.
+```py
+LOL = {}
+LOL.setdefault('Faker', 'Leblanc')
+LOL.setdefault('BDD', 'Azir')
+LOL.update(Faker='Zedd')
 
-1. **values, keys** 메서드를 통해 딕셔너리에 존재하는 모든 값 또는 키들을 한번에 출력할 수 있다.
+print(LOL)
+```
+```
+{'Faker': 'Zedd', 'BDD': 'Azir'}
+```
+3. `items`, `keys`, `values` : 각 값들을 리스트형태로 반환합니다.
+```py
+LOL = {'Faker': 'Zedd', 'BDD': 'Azir'}
 
-2. **items** 메서드를 통해 모든 키-값 쌍을 출력할 수도 있다.
+print(LOL.items())
+print(LOL.keys())
+print(LOL.values())
+```
+```
+dict_items([('Faker', 'Zedd'), ('BDD', 'Azir')])
+dict_keys(['Faker', 'BDD'])
+dict_values(['Zedd', 'Azir'])
+```
+4. `get` : 할당된 키에 해당하는 값을 반환합니다. 해당 키가 존재하지 않는다면 두 번째 인자를 반환합니다.
+```py
+LOL = {'Faker': 'Zedd', 'BDD': 'Azir'}
+findRookie = LOL.get('Rookie', 'The player is in LPL')
 
-3. **for in** 반복문을 사용하면 많은 양의 데이터를 쉽게 출력할 수 있다.
-
-4. **del** 키워드로 원하는 값을 지울 수도 있다.
-
-
-
-
-setdefault - 키값쌍추가 - 반환값은 해당 값 - 동일한 키가 존재한다면 무시
-update - 덮어쓰기해서 갱신하기위해사용 키=값, 키=값 이런식으로인자줌, 없는키는추가함
-pop(키) - 키값쌍제거 , 해당키가없는경우 두번째인자반환(썬택), del 키워드와역할같음
-popitem() - 마지막키값쌍제거
-get(키) - 값반환, 키없으면 두번째인자반환
-items keys values - 리스트형태로 반환
-dict.fromkeys(키배열) - 키값으로이루어진 리스트로 객체만듦. 모든 값들은 None으로 초기화, 다른값으로초기화하고싶으면 두번째인자에 세팅
-딕셔너리 복사 copy함수, 이중 딕셔너리복사 : copy모듈의 deepcopy
+print(findRookie)
+```
+```
+The player is in LPL
+```
+5. `dict.fromkeys` : 키값으로 이루어진 배열을 인자로 받아 해당 키들로 이루어진 딕셔너리 객체를 생성합니다. 각 키의 값은 기본적으로 `None`이며 두 번째 인자를 통해 값들을 한꺼번에 초기화할 수 있습니다.
+```py
+champs = ['Zedd', 'Talon', 'Lucian']
+AD = dict.fromkeys(champs, 'MID')
+print(AD)
+```
+```
+{'Zedd': 'MID', 'Talon': 'MID', 'Lucian': 'MID'}
+```
+6. `copy`, `deepcopy` : 딕셔너리를 복사할 때 사용합니다. `deepcopy`는 `copy`모듈에 존재하며, 이중 딕셔너리를 복사할때 사용합니다. 
+7. `pop` : 키를 입력받아 해당 키를 가진 키-값쌍을 제거하고, 그 값을 반환합니다.
+8. `popitem` : 가장 마지막에 추가된 키-값쌍을 제거합니다.
+> 키-값쌍의 제거는 `del[key]`를 통해서도 가능합니다.
