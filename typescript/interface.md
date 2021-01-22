@@ -48,3 +48,8 @@ const can_I_victory : funcType = function can_I_victory(pos, age) {
     return true
 }
 ```
+
+# 클래스 타입
+> `클래스`의 상속은 보통 다른 `클래스`를 통해 이루어진다. 하지만, 타입스크립트에서는 `인터페이스`를 상속받을 수 있다. 이 경우 `extends`가 아닌 `implements`를 사용한다.
+
+> 인터페이스의 확장도 가능한데 이 경우 `extends`를 사용한다.
