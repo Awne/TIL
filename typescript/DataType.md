@@ -16,6 +16,15 @@ const hex = 0xFC19
 const numArr : number[] = [2,3,4,5,6]
 const numArr_2 : Array<number> = [1,2,3,4,5]
 ```
+### 읽기전용 배열
+```ts
+let a : number[]
+let b : ReadonlyArray<number> = [3,3,3]
+
+a = b // 에러발생
+a = b as number[] // 성공
+```
+> `읽기 전용 배열`은 일반 배열 변수에 할당이 불가능하다. 할당을 위해 `타입 단언`을 사용해야한다.
 
 # 튜플
 > 튜플은 각 요소별 자료형과 요소의 개수가 정해져있을 때 사용한다.
