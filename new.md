@@ -14,3 +14,7 @@ www.something.com/about.html >> Load about.html
 3. 모든거 다 최적화시켜놓기
 4. 어플도 최적화시켜놓기
 5. 쓸데없는거 과감하게 버리기
+
+sans-serif 같은 기본 글꼴은 web safe fonts라고 하며 모든 브라우저와 장치에서 동작하는 특징이있음
+
+relative 위를 기준으로 좌표이동하는게 absolute
