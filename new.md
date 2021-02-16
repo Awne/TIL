@@ -18,3 +18,12 @@ www.something.com/about.html >> Load about.html
 sans-serif 같은 기본 글꼴은 web safe fonts라고 하며 모든 브라우저와 장치에서 동작하는 특징이있음
 
 relative 위를 기준으로 좌표이동하는게 absolute
+
+ul의 li중 첫번째 요소 선택하는건
+
+ul:first-child가 아니라
+ul li:first-child임
+
+즉, 형제들 중 고르는거임
+
+float는 주로 좌,우로 배치하고싶을때 사용함
