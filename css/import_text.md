@@ -4,16 +4,6 @@
 ## important
 CSS의 키-값 쌍 뒤에 `!important`를 추가하면 항상 이 옵션이 적용된다.
 
-## line-height
-문자의 위아래 공백을 설정합니다.
->리딩이라고 하며, 박스모델의 `padding-top` + `padding-bottom`과 비슷한 개념인듯
-
-## letter-spacing
-옆에 오는 문자열과의 거리를 설정합니다.
->커닝이라고 하며, 박스모델의 `margin-right`와 같은 개념인듯.
-
-## word-spacing
-공백의 크기를 설정합니다.
 
 ## text-align
 박스모델 내에서 컨텐츠들의 수평정렬을 설정합니다.
@@ -27,8 +17,6 @@ CSS의 키-값 쌍 뒤에 `!important`를 추가하면 항상 이 옵션이 적�
 4. `middle` 부모요소의 가운데
 5. `top` `bottom` 부모요소의 위/아래
 
-## text-decoration
-줄긋기를 설정합니다.
 
 ## text-overflow
 > `overflow: visible`이외 값이 설정되었을때, 넘치는 문자에 대한 설정을 합니다.
