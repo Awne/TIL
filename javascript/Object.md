@@ -92,27 +92,6 @@ false
 true
 false
 ```
-# 객체 디스트럭팅
-> 변수의 이름을 객체의 프로퍼티와 동일하게 지어야하는 이유는 그렇게 해야만 필요한 프로퍼티만 해제할 수 있기 때문입니다.
-```javascript
-const obj = {
-	name: 'Jun',
-	age: 27,
-	job: 'unemployed'
-}
-
-const {name, age, job} = obj
-```
-> 변수의 이름을 변경할 수도 있습니다. 아래 코드는 `age`를 `나이`로 변경한 코드입니다.
-```javascript
-const obj = {
-	name: 'Jun',
-	age: 27,
-	job: 'unemployed'
-}
-
-const {name, age : 나이, job} = obj
-```
 
 # 프로퍼티, 메서드
 1. 프로퍼티나 객체를 제거하기 위해 `delete` 키워드를 사용합니다.

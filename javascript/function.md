@@ -1,17 +1,3 @@
-# Arrow Function
-아래 코드는 `function` 키워드로 `callback function`을 작성하는 코드.
-```javascript
-let arr = [1,2,3,4,5];
-let newArr = arr.map(function(value) {
-    return value * 2;
-})
-```
-
-아래 코드는 `ES6`의 `Arrow function`으로 콜백함수를 작성함.
-```javascript
-let arr = [1,2,3,4,5];
-let newArr = arr.map((v) => v * 2);
-```
 
 ## Arrow Function을 사용하면 안되는 경우
 1. `객체의 메서드` : 전역 객체를 가리킨다.
@@ -22,15 +8,6 @@ let newArr = arr.map((v) => v * 2);
 > 
 > 그런데 `Arrow Function`은 `prototype` 프로퍼티 자체가 존재하지 않기때문에 객체 선언시 에러가 발생한다.
 
-
-# Rest parameters
-인자를 원하는 만큼 할당받을 수 있습니다.
-```javascript
-function restParameter(...args) {
-    return args;
-}
-restParameter(1,2,3,4,[true, false]);
-```
 # Argument, Parameter
 함수의 길이는 매개변수의 수를, `arguments`의 길이는 인자의 수를 나타낸다.
 
