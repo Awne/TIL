@@ -1,29 +1,3 @@
-# 객체
-
-## 객체 인스턴스 생성 : Object.create vs new
-> 둘 다 `prototype`상속은 가능합니다.
-> 
-> `Object.create`는 `생성자 함수`를 실행하지 않기때문에 `this.age`에 접근할 수 없습니다.
-```javascript
-function Dog() {
-	this.age = 27
-}
-
-Dog.prototype.isTall = true
-
-const d1 = new Dog()
-const d2 = Object.create(Dog.prototype)
-
-console.log(d1.isTall, d2.isTall)
-console.log(d1.age, d2.age)
-```
-```
-true true
-27 undefined
-```
-> 다른 언어들과 다르게 생성자 함수를 이용해 객체를 생성할 때는 함수 앞에 `new` 키워드만 사용하면 된다.
-> 
-> 일반 함수와 구분하기 위해 첫 문자를 대문자로 쓸 뿐, `new` 키워드를 사용하지 않으면 일반적인 함수호출이 된다.
 ## 객체 합치기 : Object.assign
 > 첫 번째 인자에는 합쳐지는 대상, 두 번째 인자부터는 합쳐질 객체들을 할당합니다.
 ```javascript
@@ -119,19 +93,3 @@ const obj = {
 console.log(obj.myname)
 ```
 3. 생성자 함수 내에서 만든 변수는 외부에서 접근할 수 없는 `private`한 변수가 됩니다.
-
-4. 메서드 축약 표현을 사용하면 더 간단하게 메서드를 선언할 수 있습니다.
-```javascript
-var obj = {
-	hello: function() {
-		console.log("Hello")
-	},
-	bye() {
-		console.log("Bye")
-	}
-}
-
-obj.hello()
-obj.bye()
-```
-5. 객체의 프로퍼티와 메서드는 반드시 `,`로 구분해야합니다.
