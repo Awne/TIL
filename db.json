@@ -1,0 +1,10 @@
+{
+  "tasks": [
+    {
+      "text": "Go to school",
+      "day": "2020",
+      "reminder": false,
+      "id": 1
+    }
+  ]
+}
