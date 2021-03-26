@@ -4,9 +4,9 @@
 ```
 npm i react-router-dom
 ```
-## 🔔 Using Json-Server
+## 🔔 Using JSON Server
 ```
 npm i json-server
 npm run server
 ```
-### 🧿 Json Data in `localhost:5000/tasks`
+### 🧿 JSON Datas in `localhost:5000/tasks`
